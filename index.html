@@ -32,13 +32,33 @@
   .section-label{font-size:11px;text-transform:uppercase;letter-spacing:1.5px;color:var(--muted);margin:30px 2px 10px;}
   .section-note{font-size:11px;color:var(--muted);margin:-4px 2px 12px;line-height:1.5;}
 
-  .runway-banner{border-radius:14px;padding:16px 18px;margin-top:14px;display:flex;align-items:center;gap:14px;}
-  .runway-banner .icon{font-size:26px;}
-  .runway-banner .big{font-size:20px;font-weight:700;}
-  .runway-banner .lbl{font-size:11px;opacity:0.85;margin-top:2px;}
-  .rw-rojo{background:var(--coral-dim);color:#F8D2CD;}
-  .rw-ambar{background:var(--brass-dim);color:#F5E3B0;}
-  .rw-verde{background:var(--green-dim);color:#CFEFDF;}
+  .runway-rojo{background:var(--coral-dim);color:#F8D2CD;}
+  .runway-ambar{background:var(--brass-dim);color:#F5E3B0;}
+  .runway-verde{background:var(--green-dim);color:#CFEFDF;}
+
+  .runway-card{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:18px;margin-top:14px;}
+  .runway-stack{display:flex;width:100%;height:22px;border-radius:8px;overflow:hidden;background:var(--panel-2);}
+  .runway-seg{height:100%;transition:width 0.3s;}
+  .seg-caja{background:var(--teal);}
+  .seg-fin{background:var(--brass);}
+  .runway-labels{display:flex;justify-content:space-between;gap:10px;margin-top:14px;}
+  .runway-lbl-block{display:flex;align-items:flex-start;gap:8px;flex:1;}
+  .rl-dot{width:10px;height:10px;border-radius:50%;margin-top:4px;flex-shrink:0;}
+  .rl-val{font-size:17px;font-weight:700;}
+  .rl-sub{font-size:10.5px;color:var(--muted);margin-top:1px;line-height:1.3;}
+  .runway-total{font-size:12px;color:var(--paper);margin-top:14px;padding-top:12px;border-top:1px solid var(--line);text-align:center;}
+  .runway-total b{font-size:15px;}
+  .runway-endnote{font-size:10.5px;color:var(--coral);text-align:center;margin-top:6px;}
+
+  .polizas-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:12px;}
+  .poliza-card{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:12px;}
+  .poliza-card .pz-name{font-size:11.5px;font-weight:600;}
+  .poliza-card .pz-tag{display:inline-block;font-size:9px;padding:2px 7px;border-radius:10px;margin-top:4px;font-weight:600;letter-spacing:0.3px;}
+  .pz-tag.mantener{background:var(--green-dim);color:#CFEFDF;}
+  .pz-tag.eliminar{background:var(--coral-dim);color:#F8D2CD;}
+  .poliza-card .pz-bar{width:100%;height:6px;border-radius:4px;background:var(--panel-2);margin-top:10px;overflow:hidden;}
+  .poliza-card .pz-bar-fill{height:100%;background:var(--teal);}
+  .poliza-card .pz-nums{display:flex;justify-content:space-between;font-size:10px;color:var(--muted);margin-top:5px;}
 
   .kpi-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:14px;}
   .kpi-card{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:14px;position:relative;}
@@ -101,15 +121,29 @@
     <div class="updated" id="updated-label">cargando...</div>
   </header>
 
-  <div class="section-label">Colchón de tesorería</div>
-  <div class="section-note">Liquidez actual ÷ gasto fijo medio mensual (hipoteca + alquiler local + SS + financiación + seguros).</div>
-  <div class="runway-banner" id="runway-banner">
-    <div class="icon">⏳</div>
-    <div>
-      <div class="big" id="runway-val">—</div>
-      <div class="lbl" id="runway-lbl">calculando…</div>
+  <div class="section-label">Colchón de tesorería — caja vs. financiación disponible</div>
+  <div class="section-note">Si la venta cae fuerte, ¿cuánto aguantamos solo con lo que hay en cuenta, y cuánto más si hace falta tirar de las pólizas de crédito?</div>
+  <div class="runway-card">
+    <div class="runway-stack" id="runway-stack">
+      <div class="runway-seg seg-caja" id="seg-caja"></div>
+      <div class="runway-seg seg-fin" id="seg-fin"></div>
     </div>
+    <div class="runway-labels">
+      <div class="runway-lbl-block">
+        <div class="rl-dot" style="background:var(--teal)"></div>
+        <div><div class="rl-val" id="rw-caja-val">—</div><div class="rl-sub">meses con caja propia</div></div>
+      </div>
+      <div class="runway-lbl-block">
+        <div class="rl-dot" style="background:var(--brass)"></div>
+        <div><div class="rl-val" id="rw-fin-val">—</div><div class="rl-sub">meses adicionales con líneas de crédito</div></div>
+      </div>
+    </div>
+    <div class="runway-total" id="rw-total-lbl">—</div>
+    <div class="runway-endnote">Más allá de este punto haría falta pedir financiación nueva.</div>
   </div>
+
+  <div class="polizas-grid" id="polizas-grid"></div>
+  <div class="section-note" id="polizas-nota"></div>
 
   <div class="section-label">Ratios del último mes cerrado — vs. estándares de hostelería</div>
   <div class="section-note" id="kpi-month-note"></div>
@@ -216,11 +250,31 @@
     document.getElementById('footnote').innerHTML = 'Generado por Ancora CFO a partir de Era + extractos bancarios. Cobertura: ' + data.cobertura + '.';
 
     var rw = data.runway || {};
-    var rwClass = rw.meses===null ? 'rw-ambar' : (rw.meses < 1.5 ? 'rw-rojo' : (rw.meses < 3 ? 'rw-ambar' : 'rw-verde'));
-    var banner = document.getElementById('runway-banner');
-    banner.className = 'runway-banner ' + rwClass;
-    document.getElementById('runway-val').textContent = rw.meses!==null ? (rw.meses+' meses de colchón') : 'sin datos suficientes';
-    document.getElementById('runway-lbl').textContent = 'Gasto fijo medio: '+fmtEUR(rw.gastoFijoMensual)+'/mes · Liquidez: '+fmtEUR(rw.liquidez);
+    var totalMonths = rw.mesesTotal || 0;
+    var cajaMonths = rw.mesesCaja || 0;
+    var finMonths = rw.mesesFinanciacionAdicional || 0;
+    var cajaPct = totalMonths > 0 ? (cajaMonths/totalMonths)*100 : 0;
+    var finPct = totalMonths > 0 ? (finMonths/totalMonths)*100 : 0;
+    document.getElementById('seg-caja').style.width = cajaPct.toFixed(1)+'%';
+    document.getElementById('seg-fin').style.width = finPct.toFixed(1)+'%';
+    document.getElementById('rw-caja-val').textContent = (rw.mesesCaja!==undefined?rw.mesesCaja:'—') + ' meses';
+    document.getElementById('rw-fin-val').textContent = '+' + (rw.mesesFinanciacionAdicional!==undefined?rw.mesesFinanciacionAdicional:'—') + ' meses';
+    document.getElementById('rw-total-lbl').innerHTML = 'Total combinado: <b>'+(rw.mesesTotal!==undefined?rw.mesesTotal:'—')+' meses</b> de colchón (caja '+fmtEUR(rw.cajaPropia)+' + crédito disponible '+fmtEUR(rw.disponibleFinanciacion)+')';
+
+    var pg = document.getElementById('polizas-grid');
+    pg.innerHTML = '';
+    (rw.polizas||[]).forEach(function(p){
+      var usedPct = p.limite>0 ? Math.max(0, (1 - p.disponible/p.limite))*100 : 0;
+      var div = document.createElement('div');
+      div.className='poliza-card';
+      div.innerHTML =
+        '<div class="pz-name">'+p.nombre+'</div>'+
+        '<span class="pz-tag '+(p.prioridad==='MANTENER'?'mantener':'eliminar')+'">'+p.prioridad+'</span>'+
+        '<div class="pz-bar"><div class="pz-bar-fill" style="width:'+usedPct.toFixed(1)+'%"></div></div>'+
+        '<div class="pz-nums"><span>Disponible '+fmtEUR(p.disponible)+'</span><span>Límite '+fmtEUR(p.limite)+'</span></div>';
+      pg.appendChild(div);
+    });
+    document.getElementById('polizas-nota').textContent = rw.nota || '';
 
     var r = data.resumenActual || {};
     var b = data.benchmarks || {};
