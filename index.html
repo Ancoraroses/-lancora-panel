@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<title>L'Àncora — Panel de Tesorería</title>
+<style>
+  :root{
+    --ink:#0B1F33;
+    --panel:#122A44;
+    --panel-2:#0F2440;
+    --line:#25415F;
+    --paper:#EDE6D6;
+    --muted:#8FA5BD;
+    --teal:#3FBFAE;
+    --teal-dim:#1F5B54;
+    --brass:#C9A227;
+    --brass-dim:#5C4A16;
+    --coral:#E15B4F;
+    --coral-dim:#5C2621;
+    --green:#4CAF87;
+    --green-dim:#215B44;
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;}
+  body{
+    background:var(--ink);
+    color:var(--paper);
+    font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
+    -webkit-font-smoothing:antialiased;
+    padding-bottom:4rem;
+  }
+  .wrap{max-width:720px;margin:0 auto;padding:0 18px;}
+  .num{font-family:ui-monospace,'SF Mono','Roboto Mono','Courier New',monospace;font-variant-numeric:tabular-nums;}
+  .display{font-family:ui-serif,Georgia,'Times New Roman',serif;}
+
+  header{padding:34px 16px 20px;text-align:center;border-bottom:1px solid var(--line);}
+  header .mark{font-size:30px;letter-spacing:1px;}
+  header h1{font-family:ui-serif,Georgia,serif;font-size:21px;font-weight:600;margin:8px 0 3px;letter-spacing:0.5px;}
+  header .sub{font-size:12px;color:var(--muted);letter-spacing:0.5px;text-transform:uppercase;}
+  header .updated{font-size:11px;color:var(--teal);margin-top:8px;}
+
+  .section-label{font-size:11px;text-transform:uppercase;letter-spacing:1.5px;color:var(--muted);margin:30px 0 10px 2px;}
+
+  .gauge-card{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:22px 16px 18px;margin-top:14px;text-align:center;}
+  .gauge-card .cap{font-size:11px;text-transform:uppercase;letter-spacing:1.5px;color:var(--muted);}
+  .gauge-wrap{position:relative;width:240px;height:140px;margin:12px auto 0;}
+  .gauge-readout{position:absolute;bottom:6px;left:0;right:0;text-align:center;}
+  .gauge-readout .big{font-size:28px;font-weight:600;}
+  .gauge-readout .small{font-size:11px;color:var(--muted);margin-top:2px;}
+  .gauge-legend{display:flex;justify-content:center;gap:14px;margin-top:8px;font-size:10px;color:var(--muted);}
+  .gauge-legend span{display:inline-flex;align-items:center;gap:4px;}
+  .dot{width:7px;height:7px;border-radius:50%;display:inline-block;}
+
+  .cards3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin-top:14px;}
+  .plaque{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:12px 8px;text-align:center;}
+  .plaque .lbl{font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:0.6px;margin-bottom:5px;}
+  .plaque .val{font-size:16px;font-weight:600;}
+
+  .week-card{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:18px;margin-top:14px;}
+  .week-head{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:2px;}
+  .week-head .wk{font-size:13px;color:var(--muted);}
+  .semaforo{display:inline-flex;align-items:center;gap:6px;padding:5px 12px;border-radius:20px;font-size:12px;font-weight:600;margin:10px 0 6px;}
+  .sf-verde{background:var(--green-dim);color:#B8E6CF;}
+  .sf-ambar{background:var(--brass-dim);color:#F0DA9C;}
+  .sf-rojo{background:var(--coral-dim);color:#F5B7B1;}
+  .sf-sin-datos{background:var(--panel-2);color:var(--muted);}
+
+  .cat-table{margin-top:14px;}
+  .cat-row{
+    background:var(--panel);border:1px solid var(--line);border-radius:12px;
+    padding:12px 14px;margin-bottom:8px;
+  }
+  .cat-row-top{display:flex;justify-content:space-between;align-items:center;gap:10px;}
+  .cat-name{font-size:13.5px;font-weight:600;line-height:1.3;}
+  .cat-meta{font-size:11px;color:var(--muted);margin-top:2px;}
+  .cat-right{text-align:right;flex-shrink:0;}
+  .cat-media{font-size:15px;font-weight:600;}
+  .cat-media small{display:block;font-size:9.5px;color:var(--muted);font-weight:400;}
+  .sf-dot{width:11px;height:11px;border-radius:50%;display:inline-block;margin-left:8px;vertical-align:middle;}
+  .sf-dot.verde{background:var(--green);}
+  .sf-dot.ambar{background:var(--brass);}
+  .sf-dot.rojo{background:var(--coral);}
+  .sf-dot.sin-datos{background:var(--muted);}
+  .spark{margin-top:8px;width:100%;height:28px;display:block;}
+
+  .legend-row{display:flex;gap:16px;justify-content:center;margin:14px 0 4px;font-size:10.5px;color:var(--muted);}
+  .legend-row span{display:inline-flex;align-items:center;gap:5px;}
+
+  .footnote{font-size:10px;color:var(--muted);text-align:center;margin-top:30px;padding:0 20px;line-height:1.6;}
+  a{color:var(--teal);}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <div class="mark">&#9875;</div>
+    <h1>L'ÀNCORA — PANEL DE TESORERÍA</h1>
+    <div class="sub">Categorías y semáforos · conectado a Era</div>
+    <div class="updated" id="updated-label">cargando...</div>
+  </header>
+
+  <div class="section-label">Rumbo — liquidez combinada</div>
+  <div class="gauge-card">
+    <div class="cap">BBVA + CaixaBank</div>
+    <div class="gauge-wrap">
+      <svg viewBox="0 0 240 140" width="240" height="140">
+        <path d="M 22 120 A 98 98 0 0 1 80 32" fill="none" stroke="#5C2621" stroke-width="15" stroke-linecap="round"/>
+        <path d="M 80 32 A 98 98 0 0 1 160 32" fill="none" stroke="#5C4A16" stroke-width="15" stroke-linecap="round"/>
+        <path d="M 160 32 A 98 98 0 0 1 218 120" fill="none" stroke="#215B44" stroke-width="15" stroke-linecap="round"/>
+        <line id="needle" x1="120" y1="120" x2="120" y2="40" stroke="#EDE6D6" stroke-width="3" stroke-linecap="round" transform="rotate(-90 120 120)"/>
+        <circle cx="120" cy="120" r="6" fill="#EDE6D6"/>
+      </svg>
+      <div class="gauge-readout">
+        <div class="big num" id="gauge-value">—</div>
+        <div class="small" id="gauge-caption">actualizando</div>
+      </div>
+    </div>
+    <div class="gauge-legend">
+      <span><span class="dot" style="background:#E15B4F"></span>negativo</span>
+      <span><span class="dot" style="background:#C9A227"></span>0-25k</span>
+      <span><span class="dot" style="background:#4CAF87"></span>25k+</span>
+    </div>
+  </div>
+
+  <div class="cards3">
+    <div class="plaque"><div class="lbl">BBVA</div><div class="val num" id="p-bbva">—</div></div>
+    <div class="plaque"><div class="lbl">CaixaBank</div><div class="val num" id="p-caixa">—</div></div>
+    <div class="plaque"><div class="lbl">Nóminas (oculta)</div><div class="val num" id="p-oculta">—</div></div>
+  </div>
+
+  <div class="section-label">Gasto recurrente por categoría — últimos 12 meses</div>
+  <div class="legend-row">
+    <span><span class="sf-dot verde"></span>bajo control / bajando</span>
+    <span><span class="sf-dot ambar"></span>estable</span>
+    <span><span class="sf-dot rojo"></span>subiendo &gt;15%</span>
+  </div>
+  <div class="cat-table" id="cat-table"></div>
+
+  <div class="footnote" id="footnote">
+    Datos generados por Ancora CFO a partir de Era + extractos bancarios. Cobertura: —.<br>
+    Para actualizar: sube un nuevo <code>data.json</code> a este repositorio.
+  </div>
+
+</div>
+
+<script>
+(function(){
+  function fmtEUR(n){
+    if(n===null||n===undefined||isNaN(n))return '—';
+    return Math.round(n).toLocaleString('es-ES')+'€';
+  }
+  function fmtDateEs(iso){
+    if(!iso) return '';
+    var d = new Date(iso+'T00:00:00');
+    return d.toLocaleDateString('es-ES',{day:'2-digit',month:'long',year:'numeric'});
+  }
+  function monthLabel(ym){
+    var parts = ym.split('-');
+    var meses = ['ene','feb','mar','abr','may','jun','jul','ago','sep','oct','nov','dic'];
+    return meses[parseInt(parts[1],10)-1];
+  }
+
+  function drawGauge(total){
+    var gaugeVal = document.getElementById('gauge-value');
+    var gaugeCap = document.getElementById('gauge-caption');
+    gaugeVal.textContent = fmtEUR(total);
+    gaugeCap.textContent = total>=25000 ? 'buen rumbo' : (total>=0 ? 'positivo, sigue así' : 'atención, negativo');
+    var min=-40000, max=60000;
+    var clamped = Math.max(min, Math.min(max,total));
+    var pct = (clamped-min)/(max-min);
+    var angle = -90 + pct*180;
+    document.getElementById('needle').setAttribute('transform','rotate('+angle+' 120 120)');
+  }
+
+  function sparkline(vals){
+    var w=280, h=28, pad=2;
+    var max = Math.max.apply(null, vals.concat([1]));
+    var min = 0;
+    var stepX = (w-2*pad)/(vals.length-1);
+    var pts = vals.map(function(v,i){
+      var x = pad + i*stepX;
+      var y = h - pad - ( (v-min)/(max-min||1) ) * (h-2*pad);
+      return x.toFixed(1)+','+y.toFixed(1);
+    }).join(' ');
+    return '<svg class="spark" viewBox="0 0 '+w+' '+h+'" preserveAspectRatio="none">' +
+      '<polyline points="'+pts+'" fill="none" stroke="#3FBFAE" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/>' +
+      '</svg>';
+  }
+
+  function render(data){
+    document.getElementById('updated-label').textContent = 'Actualizado ' + fmtDateEs(data.actualizado);
+    document.getElementById('footnote').innerHTML =
+      'Datos generados por Ancora CFO a partir de Era + extractos bancarios. Cobertura: ' + data.cobertura + '.<br>' +
+      'Para actualizar: sube un nuevo <code>data.json</code> a este repositorio.';
+
+    var t = data.tesoreria || {};
+    document.getElementById('p-bbva').textContent = fmtEUR(t.bbva);
+    document.getElementById('p-caixa').textContent = fmtEUR(t.caixa);
+    document.getElementById('p-oculta').textContent = fmtEUR(t.bbvaNominas);
+    var total = (t.bbva||0) + (t.caixa||0);
+    drawGauge(total);
+
+    var body = document.getElementById('cat-table');
+    body.innerHTML = '';
+    (data.categorias||[]).forEach(function(c){
+      var row = document.createElement('div');
+      row.className = 'cat-row';
+      row.innerHTML =
+        '<div class="cat-row-top">' +
+          '<div>' +
+            '<div class="cat-name">'+c.categoria+'</div>' +
+            '<div class="cat-meta">Total 12m: '+fmtEUR(c.total)+' · activo '+c.mesesActivo+'/12 meses</div>' +
+          '</div>' +
+          '<div class="cat-right">' +
+            '<div class="cat-media">'+fmtEUR(c.mediaMensual)+'<small>media/mes</small></div>' +
+          '</div>' +
+          '<span class="sf-dot '+c.semaforo+'"></span>' +
+        '</div>' +
+        sparkline(c.meses);
+      body.appendChild(row);
+    });
+  }
+
+  fetch('data.json?_=' + Date.now())
+    .then(function(r){ return r.json(); })
+    .then(render)
+    .catch(function(err){
+      document.getElementById('updated-label').textContent = 'No se pudo cargar data.json';
+      console.error(err);
+    });
+})();
+</script>
+</body>
+</html>
