@@ -60,6 +60,11 @@
   .poliza-card .pz-bar-fill{height:100%;background:var(--teal);}
   .poliza-card .pz-nums{display:flex;justify-content:space-between;font-size:10px;color:var(--muted);margin-top:5px;}
 
+  .yoy-total{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:12px 16px;margin-top:10px;font-size:12px;text-align:center;}
+  .yoy-total b{font-size:15px;}
+  .yoy-total.positivo b{color:var(--green);}
+  .yoy-total.negativo b{color:var(--coral);}
+
   .kpi-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:14px;}
   .kpi-card{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:14px;position:relative;}
   .kpi-card .kpi-lbl{font-size:10.5px;color:var(--muted);text-transform:uppercase;letter-spacing:0.6px;}
@@ -181,6 +186,18 @@
     <svg id="rev-chart" class="bar-chart" viewBox="0 0 720 160"></svg>
   </div>
 
+  <div class="section-label">Comparativa interanual — mismo mes, año anterior vs vigente</div>
+  <div class="section-note">Ingresos, mes a mes. Barras con rayado = año anterior con datos parciales (solo CaixaBank, falta BBVA sep-abr).</div>
+  <div class="chart-card">
+    <svg id="yoy-chart" class="bar-chart" viewBox="0 0 720 190"></svg>
+    <div class="legend-row" style="margin-top:10px;">
+      <span><span class="dot" style="background:#5C7A94"></span>año anterior</span>
+      <span><span class="dot" style="background:#3FBFAE"></span>año vigente</span>
+      <span><span class="dot" style="background:#8FA5BD;opacity:0.5"></span>rayado = parcial</span>
+    </div>
+  </div>
+  <div class="yoy-total" id="yoy-total"></div>
+
   <div class="section-label">Gasto recurrente por categoría — últimos 12 meses</div>
   <div class="legend-row">
     <span><span class="sf-dot verde"></span>bajo control / bajando</span>
@@ -245,6 +262,30 @@
       '<div class="kpi-dot '+semaforo+'"></div></div>';
   }
 
+  function yoyChart(comparativa){
+    var w=720,h=190, padL=6,padR=6,padB=26,padT=10;
+    var innerW=w-padL-padR, innerH=h-padT-padB;
+    var maxVal = Math.max.apply(null, comparativa.flatMap(function(c){return [c.ingresosAnterior, c.ingresosVigente];}).concat([1]));
+    var groupW = innerW/comparativa.length;
+    var barW = groupW*0.36;
+    var svg = '';
+    comparativa.forEach(function(c, i){
+      var gx = padL + i*groupW;
+      var hAnt = maxVal>0 ? (c.ingresosAnterior/maxVal)*innerH : 0;
+      var hVig = maxVal>0 ? (c.ingresosVigente/maxVal)*innerH : 0;
+      var xAnt = gx + groupW*0.08;
+      var xVig = gx + groupW*0.08 + barW + 3;
+      var yAnt = padT + innerH - hAnt;
+      var yVig = padT + innerH - hVig;
+      var fillAnt = c.anteriorDatosParciales ? 'url(#hatch)' : '#5C7A94';
+      svg += '<rect x="'+xAnt.toFixed(1)+'" y="'+yAnt.toFixed(1)+'" width="'+barW.toFixed(1)+'" height="'+hAnt.toFixed(1)+'" rx="2" fill="'+fillAnt+'"/>';
+      svg += '<rect x="'+xVig.toFixed(1)+'" y="'+yVig.toFixed(1)+'" width="'+barW.toFixed(1)+'" height="'+hVig.toFixed(1)+'" rx="2" fill="#3FBFAE"/>';
+      svg += '<text class="bar-label" x="'+(gx+groupW/2).toFixed(1)+'" y="'+(h-8)+'" text-anchor="middle">'+c.mes.slice(0,3)+'</text>';
+    });
+    var defs = '<defs><pattern id="hatch" width="5" height="5" patternTransform="rotate(45)" patternUnits="userSpaceOnUse"><line x1="0" y1="0" x2="0" y2="5" stroke="#5C7A94" stroke-width="3"/></pattern></defs>';
+    return defs + svg;
+  }
+
   function render(data){
     document.getElementById('updated-label').textContent = 'Actualizado ' + fmtDateEs(data.actualizado);
     document.getElementById('footnote').innerHTML = 'Generado por Ancora CFO a partir de Era + extractos bancarios. Cobertura: ' + data.cobertura + '.';
@@ -297,6 +338,17 @@
     var months = kpis.map(function(k){return k.mes;});
     var revs = kpis.map(function(k){return k.ingresos;});
     document.getElementById('rev-chart').innerHTML = barChart(months, revs);
+
+    var comp = data.comparativaInteranual || [];
+    if (comp.length) {
+      document.getElementById('yoy-chart').innerHTML = yoyChart(comp);
+      var totAnt = comp.reduce(function(s,c){return s+c.ingresosAnterior;}, 0);
+      var totVig = comp.reduce(function(s,c){return s+c.ingresosVigente;}, 0);
+      var delta = totAnt>0 ? ((totVig-totAnt)/totAnt*100) : 0;
+      var totEl = document.getElementById('yoy-total');
+      totEl.className = 'yoy-total ' + (delta>=0 ? 'positivo' : 'negativo');
+      totEl.innerHTML = 'Total 12 meses: '+fmtEUR(totAnt)+' → '+fmtEUR(totVig)+' &nbsp; <b>'+(delta>=0?'+':'')+delta.toFixed(1)+'%</b><br><span style="color:var(--muted);font-size:10.5px;">Incluye meses con año anterior parcial (solo CaixaBank) — la comparación real podría ser algo distinta.</span>';
+    }
 
     var body = document.getElementById('cat-table');
     body.innerHTML='';
