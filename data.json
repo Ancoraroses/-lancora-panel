@@ -11,9 +11,28 @@
   },
   "runway": {
     "gastoFijoMensual": 25493.0,
-    "liquidez": 33246.0,
-    "meses": 1.3,
-    "nota": "Gasto fijo = hipoteca casa + lloguer local (cifras conocidas, no siempre visibles en banco) + media 6m de SS + financiación + seguros."
+    "cajaPropia": 40681.0,
+    "mesesCaja": 1.6,
+    "disponibleFinanciacion": 80000,
+    "mesesFinanciacionAdicional": 3.1,
+    "mesesTotal": 4.7,
+    "polizas": [
+      {
+        "nombre": "BBVA (5 años, 3,7%)",
+        "limite": 50000,
+        "saldoActual": 27922.86,
+        "disponible": 50000,
+        "prioridad": "MANTENER"
+      },
+      {
+        "nombre": "CaixaBank (renov. 27 ene, 5%)",
+        "limite": 30000,
+        "saldoActual": 4166.29,
+        "disponible": 30000,
+        "prioridad": "ELIMINAR"
+      }
+    ],
+    "nota": "Gasto fijo = hipoteca casa + lloguer local (cifras conocidas, no siempre visibles en banco) + media 6m de SS + financiación + seguros. 'Caja propia' no incluye crédito sin disponer; 'financiación adicional' es lo que queda sin usar en las dos pólizas si hiciera falta tirar de ellas — la de CaixaBank está marcada para ELIMINAR en el plan, no para usar como colchón."
   },
   "benchmarks": {
     "food": 0.3,
