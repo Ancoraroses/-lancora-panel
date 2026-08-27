@@ -43,9 +43,9 @@
   "resumenActual": {
     "mes": "2026-07",
     "ingresos": 81517.0,
-    "foodPct": 0.1878,
+    "foodPct": 0.1486,
     "foodSemaforo": "verde",
-    "bevPct": 0.0268,
+    "bevPct": 0.066,
     "bevSemaforo": "verde",
     "personnelPct": 0.1158,
     "personnelSemaforo": "verde",
@@ -56,55 +56,55 @@
     {
       "mes": "2025-09",
       "ingresos": 25299.0,
-      "costeAlimentacion": 24646.0,
-      "costeBebidas": 3372.0,
+      "costeAlimentacion": 21166.0,
+      "costeBebidas": 6852.0,
       "costePersonal": 11179.0,
-      "foodPct": 0.9742,
-      "bevPct": 0.1333,
+      "foodPct": 0.8366,
+      "bevPct": 0.2708,
       "personnelPct": 0.4419,
       "primeCostPct": 1.5494
     },
     {
       "mes": "2025-10",
       "ingresos": 31770.0,
-      "costeAlimentacion": 13969.0,
-      "costeBebidas": 2266.0,
+      "costeAlimentacion": 11100.0,
+      "costeBebidas": 5135.0,
       "costePersonal": 12742.0,
-      "foodPct": 0.4397,
-      "bevPct": 0.0713,
+      "foodPct": 0.3494,
+      "bevPct": 0.1616,
       "personnelPct": 0.4011,
       "primeCostPct": 0.9121
     },
     {
       "mes": "2025-11",
       "ingresos": 23858.0,
-      "costeAlimentacion": 13085.0,
-      "costeBebidas": 1074.0,
+      "costeAlimentacion": 8635.0,
+      "costeBebidas": 5524.0,
       "costePersonal": 11909.0,
-      "foodPct": 0.5485,
-      "bevPct": 0.045,
+      "foodPct": 0.3619,
+      "bevPct": 0.2316,
       "personnelPct": 0.4992,
       "primeCostPct": 1.0927
     },
     {
       "mes": "2025-12",
       "ingresos": 20753.0,
-      "costeAlimentacion": 12997.0,
-      "costeBebidas": 2614.0,
+      "costeAlimentacion": 5856.0,
+      "costeBebidas": 9755.0,
       "costePersonal": 9851.0,
-      "foodPct": 0.6263,
-      "bevPct": 0.1259,
+      "foodPct": 0.2822,
+      "bevPct": 0.4701,
       "personnelPct": 0.4747,
       "primeCostPct": 1.2269
     },
     {
       "mes": "2026-01",
       "ingresos": 17574.0,
-      "costeAlimentacion": 7466.0,
-      "costeBebidas": 704.0,
+      "costeAlimentacion": 6125.0,
+      "costeBebidas": 2045.0,
       "costePersonal": 10223.0,
-      "foodPct": 0.4248,
-      "bevPct": 0.0401,
+      "foodPct": 0.3485,
+      "bevPct": 0.1164,
       "personnelPct": 0.5817,
       "primeCostPct": 1.0466
     },
@@ -122,55 +122,55 @@
     {
       "mes": "2026-03",
       "ingresos": 23827.0,
-      "costeAlimentacion": 2650.0,
-      "costeBebidas": 444.0,
+      "costeAlimentacion": 2565.0,
+      "costeBebidas": 529.0,
       "costePersonal": 0.0,
-      "foodPct": 0.1112,
-      "bevPct": 0.0186,
+      "foodPct": 0.1076,
+      "bevPct": 0.0222,
       "personnelPct": 0.0,
       "primeCostPct": 0.1299
     },
     {
       "mes": "2026-04",
       "ingresos": 62507.0,
-      "costeAlimentacion": 9822.0,
-      "costeBebidas": 1067.0,
+      "costeAlimentacion": 8242.0,
+      "costeBebidas": 2648.0,
       "costePersonal": 6366.0,
-      "foodPct": 0.1571,
-      "bevPct": 0.0171,
+      "foodPct": 0.1319,
+      "bevPct": 0.0424,
       "personnelPct": 0.1018,
       "primeCostPct": 0.2761
     },
     {
       "mes": "2026-05",
       "ingresos": 61504.0,
-      "costeAlimentacion": 14620.0,
-      "costeBebidas": 4784.0,
+      "costeAlimentacion": 11804.0,
+      "costeBebidas": 7599.0,
       "costePersonal": 13463.0,
-      "foodPct": 0.2377,
-      "bevPct": 0.0778,
+      "foodPct": 0.1919,
+      "bevPct": 0.1236,
       "personnelPct": 0.2189,
       "primeCostPct": 0.5344
     },
     {
       "mes": "2026-06",
       "ingresos": 67194.0,
-      "costeAlimentacion": 15521.0,
-      "costeBebidas": 3905.0,
+      "costeAlimentacion": 12183.0,
+      "costeBebidas": 7242.0,
       "costePersonal": 9570.0,
-      "foodPct": 0.231,
-      "bevPct": 0.0581,
+      "foodPct": 0.1813,
+      "bevPct": 0.1078,
       "personnelPct": 0.1424,
       "primeCostPct": 0.4315
     },
     {
       "mes": "2026-07",
       "ingresos": 81517.0,
-      "costeAlimentacion": 15310.0,
-      "costeBebidas": 2185.0,
+      "costeAlimentacion": 12117.0,
+      "costeBebidas": 5379.0,
       "costePersonal": 9443.0,
-      "foodPct": 0.1878,
-      "bevPct": 0.0268,
+      "foodPct": 0.1486,
+      "bevPct": 0.066,
       "personnelPct": 0.1158,
       "primeCostPct": 0.3305
     },
@@ -187,27 +187,6 @@
     }
   ],
   "categorias": [
-    {
-      "categoria": "Proveedores alimentación",
-      "total": 148119.0,
-      "mediaMensual": 12343.0,
-      "mesesActivo": 12,
-      "semaforo": "ambar",
-      "meses": [
-        24646.0,
-        13969.0,
-        13085.0,
-        12997.0,
-        7466.0,
-        1349.0,
-        2650.0,
-        9822.0,
-        14620.0,
-        15521.0,
-        15310.0,
-        16683.0
-      ]
-    },
     {
       "categoria": "Préstamos y financiación",
       "total": 139956.0,
@@ -230,6 +209,27 @@
       ]
     },
     {
+      "categoria": "Proveedores alimentación",
+      "total": 117824.0,
+      "mediaMensual": 9819.0,
+      "mesesActivo": 12,
+      "semaforo": "ambar",
+      "meses": [
+        21166.0,
+        11100.0,
+        8635.0,
+        5856.0,
+        6125.0,
+        1349.0,
+        2565.0,
+        8242.0,
+        11804.0,
+        12183.0,
+        12117.0,
+        16683.0
+      ]
+    },
+    {
       "categoria": "Nóminas y personal",
       "total": 94747.0,
       "mediaMensual": 10527.0,
@@ -248,6 +248,27 @@
         9570.0,
         9443.0,
         0.0
+      ]
+    },
+    {
+      "categoria": "Proveedores bebidas",
+      "total": 53228.0,
+      "mediaMensual": 4839.0,
+      "mesesActivo": 11,
+      "semaforo": "verde",
+      "meses": [
+        6852.0,
+        5135.0,
+        5524.0,
+        9755.0,
+        2045.0,
+        0.0,
+        529.0,
+        2648.0,
+        7599.0,
+        7242.0,
+        5379.0,
+        519.0
       ]
     },
     {
@@ -311,27 +332,6 @@
         2809.0,
         1500.0,
         11383.0
-      ]
-    },
-    {
-      "categoria": "Proveedores bebidas",
-      "total": 22933.0,
-      "mediaMensual": 2085.0,
-      "mesesActivo": 11,
-      "semaforo": "verde",
-      "meses": [
-        3372.0,
-        2266.0,
-        1074.0,
-        2614.0,
-        704.0,
-        0.0,
-        444.0,
-        1067.0,
-        4784.0,
-        3905.0,
-        2185.0,
-        519.0
       ]
     },
     {
