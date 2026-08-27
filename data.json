@@ -10,7 +10,7 @@
     "nota": "BBVA incluye ajuste manual +1.990€ +750€ ingresados 27/08, pendiente de confirmar en Era (plan Basic sin refresco bajo demanda)."
   },
   "runway": {
-    "gastoFijoMensual": 25493.0,
+    "gastoFijoMensual": 25595.0,
     "cajaPropia": 40681.0,
     "mesesCaja": 1.6,
     "disponibleFinanciacion": 80000,
@@ -43,147 +43,147 @@
   "resumenActual": {
     "mes": "2026-07",
     "ingresos": 81517.0,
-    "foodPct": 0.1486,
+    "foodPct": 0.148,
     "foodSemaforo": "verde",
     "bevPct": 0.066,
     "bevSemaforo": "verde",
     "personnelPct": 0.1158,
     "personnelSemaforo": "verde",
-    "primeCostPct": 0.3305,
+    "primeCostPct": 0.3298,
     "primeCostSemaforo": "verde"
   },
   "kpisMensuales": [
     {
       "mes": "2025-09",
       "ingresos": 25299.0,
-      "costeAlimentacion": 21166.0,
+      "costeAlimentacion": 20103.0,
       "costeBebidas": 6852.0,
       "costePersonal": 11179.0,
-      "foodPct": 0.8366,
+      "foodPct": 0.7946,
       "bevPct": 0.2708,
       "personnelPct": 0.4419,
-      "primeCostPct": 1.5494
+      "primeCostPct": 1.5074
     },
     {
       "mes": "2025-10",
       "ingresos": 31770.0,
-      "costeAlimentacion": 11100.0,
+      "costeAlimentacion": 9894.0,
       "costeBebidas": 5135.0,
       "costePersonal": 12742.0,
-      "foodPct": 0.3494,
+      "foodPct": 0.3114,
       "bevPct": 0.1616,
       "personnelPct": 0.4011,
-      "primeCostPct": 0.9121
+      "primeCostPct": 0.8742
     },
     {
       "mes": "2025-11",
       "ingresos": 23858.0,
-      "costeAlimentacion": 8635.0,
+      "costeAlimentacion": 8286.0,
       "costeBebidas": 5524.0,
       "costePersonal": 11909.0,
-      "foodPct": 0.3619,
+      "foodPct": 0.3473,
       "bevPct": 0.2316,
       "personnelPct": 0.4992,
-      "primeCostPct": 1.0927
+      "primeCostPct": 1.078
     },
     {
       "mes": "2025-12",
       "ingresos": 20753.0,
-      "costeAlimentacion": 5856.0,
+      "costeAlimentacion": 4670.0,
       "costeBebidas": 9755.0,
       "costePersonal": 9851.0,
-      "foodPct": 0.2822,
+      "foodPct": 0.225,
       "bevPct": 0.4701,
       "personnelPct": 0.4747,
-      "primeCostPct": 1.2269
+      "primeCostPct": 1.1698
     },
     {
       "mes": "2026-01",
       "ingresos": 17574.0,
-      "costeAlimentacion": 6125.0,
+      "costeAlimentacion": 5382.0,
       "costeBebidas": 2045.0,
       "costePersonal": 10223.0,
-      "foodPct": 0.3485,
+      "foodPct": 0.3062,
       "bevPct": 0.1164,
       "personnelPct": 0.5817,
-      "primeCostPct": 1.0466
+      "primeCostPct": 1.0043
     },
     {
       "mes": "2026-02",
       "ingresos": 3826.0,
-      "costeAlimentacion": 1349.0,
+      "costeAlimentacion": 1031.0,
       "costeBebidas": 0.0,
       "costePersonal": 0.0,
-      "foodPct": 0.3526,
+      "foodPct": 0.2696,
       "bevPct": 0.0,
       "personnelPct": 0.0,
-      "primeCostPct": 0.3526
+      "primeCostPct": 0.2696
     },
     {
       "mes": "2026-03",
       "ingresos": 23827.0,
-      "costeAlimentacion": 2565.0,
+      "costeAlimentacion": 1576.0,
       "costeBebidas": 529.0,
       "costePersonal": 0.0,
-      "foodPct": 0.1076,
+      "foodPct": 0.0662,
       "bevPct": 0.0222,
       "personnelPct": 0.0,
-      "primeCostPct": 0.1299
+      "primeCostPct": 0.0884
     },
     {
       "mes": "2026-04",
       "ingresos": 62507.0,
-      "costeAlimentacion": 8242.0,
+      "costeAlimentacion": 7906.0,
       "costeBebidas": 2648.0,
       "costePersonal": 6366.0,
-      "foodPct": 0.1319,
+      "foodPct": 0.1265,
       "bevPct": 0.0424,
       "personnelPct": 0.1018,
-      "primeCostPct": 0.2761
+      "primeCostPct": 0.2707
     },
     {
       "mes": "2026-05",
       "ingresos": 61504.0,
-      "costeAlimentacion": 11804.0,
+      "costeAlimentacion": 11093.0,
       "costeBebidas": 7599.0,
       "costePersonal": 13463.0,
-      "foodPct": 0.1919,
+      "foodPct": 0.1804,
       "bevPct": 0.1236,
       "personnelPct": 0.2189,
-      "primeCostPct": 0.5344
+      "primeCostPct": 0.5228
     },
     {
       "mes": "2026-06",
       "ingresos": 67194.0,
-      "costeAlimentacion": 12183.0,
-      "costeBebidas": 7242.0,
+      "costeAlimentacion": 11835.0,
+      "costeBebidas": 7406.0,
       "costePersonal": 9570.0,
-      "foodPct": 0.1813,
-      "bevPct": 0.1078,
+      "foodPct": 0.1761,
+      "bevPct": 0.1102,
       "personnelPct": 0.1424,
-      "primeCostPct": 0.4315
+      "primeCostPct": 0.4288
     },
     {
       "mes": "2026-07",
       "ingresos": 81517.0,
-      "costeAlimentacion": 12117.0,
+      "costeAlimentacion": 12062.0,
       "costeBebidas": 5379.0,
       "costePersonal": 9443.0,
-      "foodPct": 0.1486,
+      "foodPct": 0.148,
       "bevPct": 0.066,
       "personnelPct": 0.1158,
-      "primeCostPct": 0.3305
+      "primeCostPct": 0.3298
     },
     {
       "mes": "2026-08",
-      "ingresos": 112550.0,
-      "costeAlimentacion": 16683.0,
+      "ingresos": 116484.0,
+      "costeAlimentacion": 16565.0,
       "costeBebidas": 519.0,
       "costePersonal": 25909.0,
-      "foodPct": 0.1482,
-      "bevPct": 0.0046,
-      "personnelPct": 0.2302,
-      "primeCostPct": 0.383
+      "foodPct": 0.1422,
+      "bevPct": 0.0045,
+      "personnelPct": 0.2224,
+      "primeCostPct": 0.3691
     }
   ],
   "categorias": [
@@ -210,23 +210,23 @@
     },
     {
       "categoria": "Proveedores alimentación",
-      "total": 117824.0,
-      "mediaMensual": 9819.0,
+      "total": 110403.0,
+      "mediaMensual": 9200.0,
       "mesesActivo": 12,
-      "semaforo": "ambar",
+      "semaforo": "rojo",
       "meses": [
-        21166.0,
-        11100.0,
-        8635.0,
-        5856.0,
-        6125.0,
-        1349.0,
-        2565.0,
-        8242.0,
-        11804.0,
-        12183.0,
-        12117.0,
-        16683.0
+        20103.0,
+        9894.0,
+        8286.0,
+        4670.0,
+        5382.0,
+        1031.0,
+        1576.0,
+        7906.0,
+        11093.0,
+        11835.0,
+        12062.0,
+        16565.0
       ]
     },
     {
@@ -252,8 +252,8 @@
     },
     {
       "categoria": "Proveedores bebidas",
-      "total": 53228.0,
-      "mediaMensual": 4839.0,
+      "total": 53392.0,
+      "mediaMensual": 4854.0,
       "mesesActivo": 11,
       "semaforo": "verde",
       "meses": [
@@ -266,7 +266,7 @@
         529.0,
         2648.0,
         7599.0,
-        7242.0,
+        7406.0,
         5379.0,
         519.0
       ]
@@ -294,44 +294,44 @@
     },
     {
       "categoria": "Impuestos (Hacienda/AEAT)",
-      "total": 37650.0,
-      "mediaMensual": 3765.0,
-      "mesesActivo": 10,
-      "semaforo": "ambar",
+      "total": 32685.0,
+      "mediaMensual": 3632.0,
+      "mesesActivo": 9,
+      "semaforo": "verde",
       "meses": [
         1402.0,
-        7591.0,
-        1858.0,
+        7479.0,
+        1164.0,
         1168.0,
-        8419.0,
-        1457.0,
+        8012.0,
+        1195.0,
         0.0,
-        9837.0,
-        1102.0,
-        995.0,
-        3821.0,
+        9560.0,
+        29.0,
+        0.0,
+        2677.0,
         0.0
       ]
     },
     {
       "categoria": "Mantenimiento / limpieza / varios operativos",
-      "total": 26521.0,
-      "mediaMensual": 2210.0,
+      "total": 25452.0,
+      "mediaMensual": 2121.0,
       "mesesActivo": 12,
       "semaforo": "verde",
       "meses": [
-        2448.0,
-        944.0,
-        187.0,
-        253.0,
-        90.0,
-        2044.0,
-        301.0,
-        3857.0,
-        707.0,
-        2809.0,
-        1500.0,
-        11383.0
+        2375.0,
+        871.0,
+        114.0,
+        180.0,
+        17.0,
+        1954.0,
+        212.0,
+        3813.0,
+        646.0,
+        2748.0,
+        1439.0,
+        11081.0
       ]
     },
     {
@@ -357,8 +357,8 @@
     },
     {
       "categoria": "Suministros: electricidad/gas",
-      "total": 16639.0,
-      "mediaMensual": 1387.0,
+      "total": 17109.0,
+      "mediaMensual": 1426.0,
       "mesesActivo": 12,
       "semaforo": "rojo",
       "meses": [
@@ -367,7 +367,7 @@
         984.0,
         2494.0,
         1859.0,
-        696.0,
+        1166.0,
         663.0,
         70.0,
         2098.0,
@@ -399,10 +399,10 @@
     },
     {
       "categoria": "Ayuntamiento / tasas municipales",
-      "total": 11639.0,
-      "mediaMensual": 2328.0,
-      "mesesActivo": 5,
-      "semaforo": "sin-datos",
+      "total": 11795.0,
+      "mediaMensual": 1966.0,
+      "mesesActivo": 6,
+      "semaforo": "rojo",
       "meses": [
         1278.0,
         2706.0,
@@ -412,7 +412,7 @@
         0.0,
         0.0,
         0.0,
-        0.0,
+        157.0,
         0.0,
         1121.0,
         0.0
@@ -420,50 +420,50 @@
     },
     {
       "categoria": "Seguros",
-      "total": 8528.0,
-      "mediaMensual": 711.0,
+      "total": 9911.0,
+      "mediaMensual": 826.0,
       "mesesActivo": 12,
       "semaforo": "verde",
       "meses": [
-        1200.0,
-        558.0,
-        608.0,
-        570.0,
-        601.0,
-        600.0,
-        722.0,
-        1269.0,
-        600.0,
-        600.0,
-        600.0,
-        600.0
+        1333.0,
+        691.0,
+        741.0,
+        703.0,
+        734.0,
+        703.0,
+        825.0,
+        1372.0,
+        703.0,
+        703.0,
+        703.0,
+        703.0
       ]
     },
     {
-      "categoria": "Sin clasificar",
-      "total": 7366.0,
-      "mediaMensual": 737.0,
-      "mesesActivo": 10,
+      "categoria": "Tarjetas Amex/Carrefour (gasto empresa)",
+      "total": 7663.0,
+      "mediaMensual": 958.0,
+      "mesesActivo": 8,
       "semaforo": "rojo",
       "meses": [
         0.0,
-        146.0,
+        112.0,
+        694.0,
         0.0,
-        150.0,
-        12.0,
-        500.0,
-        30.0,
-        240.0,
-        1790.0,
-        164.0,
-        2057.0,
-        2276.0
+        407.0,
+        263.0,
+        0.0,
+        369.0,
+        1525.0,
+        1997.0,
+        2296.0,
+        0.0
       ]
     },
     {
       "categoria": "Comisiones y gastos bancarios",
-      "total": 7176.0,
-      "mediaMensual": 598.0,
+      "total": 7385.0,
+      "mediaMensual": 615.0,
       "mesesActivo": 12,
       "semaforo": "verde",
       "meses": [
@@ -471,13 +471,13 @@
         916.0,
         76.0,
         52.0,
-        342.0,
-        52.0,
-        243.0,
+        355.0,
+        82.0,
+        341.0,
         998.0,
-        972.0,
+        1023.0,
         784.0,
-        564.0,
+        582.0,
         539.0
       ]
     },
@@ -503,6 +503,48 @@
       ]
     },
     {
+      "categoria": "Servicios profesionales / gestoría",
+      "total": 6756.0,
+      "mediaMensual": 563.0,
+      "mesesActivo": 12,
+      "semaforo": "rojo",
+      "meses": [
+        729.0,
+        342.0,
+        332.0,
+        322.0,
+        303.0,
+        318.0,
+        262.0,
+        302.0,
+        415.0,
+        332.0,
+        2127.0,
+        972.0
+      ]
+    },
+    {
+      "categoria": "Telecom / Software / TPV",
+      "total": 5148.0,
+      "mediaMensual": 429.0,
+      "mesesActivo": 12,
+      "semaforo": "verde",
+      "meses": [
+        316.0,
+        343.0,
+        328.0,
+        282.0,
+        287.0,
+        520.0,
+        280.0,
+        692.0,
+        412.0,
+        1178.0,
+        412.0,
+        97.0
+      ]
+    },
+    {
       "categoria": "Renting maquinaria (coctelera)",
       "total": 4489.0,
       "mediaMensual": 374.0,
@@ -524,73 +566,52 @@
       ]
     },
     {
-      "categoria": "Telecom / Software / TPV",
-      "total": 4059.0,
-      "mediaMensual": 338.0,
-      "mesesActivo": 12,
+      "categoria": "Sin clasificar",
+      "total": 4374.0,
+      "mediaMensual": 875.0,
+      "mesesActivo": 5,
       "semaforo": "verde",
       "meses": [
-        227.0,
-        254.0,
-        239.0,
-        192.0,
-        198.0,
-        430.0,
-        259.0,
-        614.0,
-        236.0,
-        1038.0,
-        272.0,
-        101.0
+        0.0,
+        146.0,
+        0.0,
+        150.0,
+        0.0,
+        0.0,
+        0.0,
+        240.0,
+        1583.0,
+        0.0,
+        0.0,
+        2256.0
       ]
     },
     {
-      "categoria": "Tarjetas Amex/Carrefour (gasto empresa)",
-      "total": 2903.0,
-      "mediaMensual": 726.0,
-      "mesesActivo": 4,
-      "semaforo": "rojo",
+      "categoria": "Publicidad",
+      "total": 4002.0,
+      "mediaMensual": 572.0,
+      "mesesActivo": 7,
+      "semaforo": "verde",
       "meses": [
+        714.0,
+        847.0,
+        0.0,
+        847.0,
+        424.0,
+        0.0,
+        726.0,
+        0.0,
+        363.0,
         0.0,
         0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        92.0,
-        551.0,
-        1065.0,
-        1195.0,
-        0.0
-      ]
-    },
-    {
-      "categoria": "Servicios profesionales / gestoría",
-      "total": 2703.0,
-      "mediaMensual": 225.0,
-      "mesesActivo": 12,
-      "semaforo": "rojo",
-      "meses": [
-        530.0,
-        133.0,
-        133.0,
-        133.0,
-        133.0,
-        103.0,
-        103.0,
-        103.0,
-        186.0,
-        103.0,
-        313.0,
-        733.0
+        81.0
       ]
     },
     {
       "categoria": "Donaciones / cuotas asociativas",
-      "total": 949.0,
-      "mediaMensual": 86.0,
-      "mesesActivo": 11,
+      "total": 969.0,
+      "mediaMensual": 81.0,
+      "mesesActivo": 12,
       "semaforo": "rojo",
       "meses": [
         20.0,
@@ -604,6 +625,27 @@
         20.0,
         20.0,
         101.0,
+        20.0
+      ]
+    },
+    {
+      "categoria": "Vehículo (combustible/taller)",
+      "total": 638.0,
+      "mediaMensual": 319.0,
+      "mesesActivo": 2,
+      "semaforo": "verde",
+      "meses": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        496.0,
+        0.0,
+        0.0,
+        142.0,
         0.0
       ]
     },
@@ -626,27 +668,6 @@
         0.0,
         0.0,
         271.0
-      ]
-    },
-    {
-      "categoria": "Vehículo (combustible/taller)",
-      "total": 496.0,
-      "mediaMensual": 496.0,
-      "mesesActivo": 1,
-      "semaforo": "verde",
-      "meses": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        496.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
       ]
     },
     {
