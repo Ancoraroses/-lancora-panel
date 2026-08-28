@@ -1,33 +1,33 @@
 {
-  "actualizado": "2026-08-27",
+  "actualizado": "2026-08-28",
   "cobertura": "01/09/2025 – 26/08/2026",
   "tesoreria": {
-    "bbva": 27922.86,
-    "caixa": 4166.29,
+    "bbva": 30030.39,
+    "caixa": 3728.68,
     "bbvaNominas": 7435.42,
     "cajaCashdro": 1156.8,
     "actualizado": "2026-08-27",
-    "nota": "BBVA incluye ajuste manual +1.990€ +750€ ingresados 27/08, pendiente de confirmar en Era (plan Basic sin refresco bajo demanda)."
+    "nota": "Saldos confirmados por Era (ya no es ajuste manual)."
   },
   "runway": {
-    "gastoFijoMensual": 25595.0,
-    "cajaPropia": 40681.0,
+    "gastoFijoMensual": 25681.0,
+    "cajaPropia": 42351.0,
     "mesesCaja": 1.6,
     "disponibleFinanciacion": 80000,
     "mesesFinanciacionAdicional": 3.1,
-    "mesesTotal": 4.7,
+    "mesesTotal": 4.8,
     "polizas": [
       {
         "nombre": "BBVA (5 años, 3,7%)",
         "limite": 50000,
-        "saldoActual": 27922.86,
+        "saldoActual": 30030.39,
         "disponible": 50000,
         "prioridad": "MANTENER"
       },
       {
         "nombre": "CaixaBank (renov. 27 ene, 5%)",
         "limite": 30000,
-        "saldoActual": 4166.29,
+        "saldoActual": 3728.68,
         "disponible": 30000,
         "prioridad": "ELIMINAR"
       }
@@ -176,14 +176,14 @@
     },
     {
       "mes": "2026-08",
-      "ingresos": 116484.0,
+      "ingresos": 121848.0,
       "costeAlimentacion": 16565.0,
       "costeBebidas": 519.0,
       "costePersonal": 25909.0,
-      "foodPct": 0.1422,
-      "bevPct": 0.0045,
-      "personnelPct": 0.2224,
-      "primeCostPct": 0.3691
+      "foodPct": 0.136,
+      "bevPct": 0.0043,
+      "personnelPct": 0.2126,
+      "primeCostPct": 0.3528
     }
   ],
   "categorias": [
@@ -485,6 +485,39 @@
       ]
     },
     {
+      "categoria": "Sin clasificar",
+      "total": 24206.0,
+      "mediaMensual": 1424.0,
+      "mesesActivo": 17,
+      "semaforo": "verde",
+      "meses": [
+        2509.0,
+        591.0,
+        851.0,
+        2911.0,
+        4127.0,
+        56.0,
+        1162.0,
+        498.0,
+        1792.0,
+        1564.0,
+        187.0,
+        3146.0,
+        0.0,
+        146.0,
+        0.0,
+        150.0,
+        0.0,
+        0.0,
+        0.0,
+        240.0,
+        1583.0,
+        0.0,
+        0.0,
+        2693.0
+      ]
+    },
+    {
       "categoria": "Ayuntamiento / tasas municipales",
       "total": 23832.0,
       "mediaMensual": 1702.0,
@@ -515,39 +548,6 @@
         0.0,
         1121.0,
         0.0
-      ]
-    },
-    {
-      "categoria": "Sin clasificar",
-      "total": 23768.0,
-      "mediaMensual": 1398.0,
-      "mesesActivo": 17,
-      "semaforo": "verde",
-      "meses": [
-        2509.0,
-        591.0,
-        851.0,
-        2911.0,
-        4127.0,
-        56.0,
-        1162.0,
-        498.0,
-        1792.0,
-        1564.0,
-        187.0,
-        3146.0,
-        0.0,
-        146.0,
-        0.0,
-        150.0,
-        0.0,
-        0.0,
-        0.0,
-        240.0,
-        1583.0,
-        0.0,
-        0.0,
-        2256.0
       ]
     },
     {
@@ -617,6 +617,39 @@
       ]
     },
     {
+      "categoria": "Leasing vehículo (Xpeng G6)",
+      "total": 12584.0,
+      "mediaMensual": 2097.0,
+      "mesesActivo": 6,
+      "semaforo": "ambar",
+      "meses": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        10000.0,
+        517.0,
+        517.0,
+        517.0,
+        517.0,
+        517.0
+      ]
+    },
+    {
       "categoria": "Servicios profesionales / gestoría",
       "total": 12101.0,
       "mediaMensual": 504.0,
@@ -647,39 +680,6 @@
         332.0,
         2127.0,
         972.0
-      ]
-    },
-    {
-      "categoria": "Leasing vehículo (Xpeng G6)",
-      "total": 12067.0,
-      "mediaMensual": 2413.0,
-      "mesesActivo": 5,
-      "semaforo": "ambar",
-      "meses": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        10000.0,
-        517.0,
-        517.0,
-        517.0,
-        517.0,
-        0.0
       ]
     },
     {
@@ -984,8 +984,7 @@
     "Coste de personal es parcial en general: parte de las nóminas se paga desde la cuenta BBVA oculta, no siempre visible en el histórico bancario capturado. Agosto 2026 es la excepción: usa el coste total real (25.909,02€) del resumen de nómina, incluida Seg. Social empresa.",
     "El reparto alimentación/bebidas es una aproximación por nombre de proveedor, no una categorización contable exacta.",
     "Ingresos = TPV + efectivo detectado en banco; puede diferir ligeramente de la venta real de caja.",
-    "Agosto 2026 sigue en curso — sus ratios de food/beverage no son comparables aún a un mes cerrado; se muestra julio como referencia del último mes completo.",
-    "Comparativa interanual: el año anterior (sep24-ago25) solo tiene BBVA a partir de mayo 2025 — los meses sep-abr de ese año están marcados como parciales (sin BBVA) y probablemente subestiman el gasto/ingreso real de ese periodo. 13 filas del extracto CaixaBank del año anterior llegaron corruptas en el fichero original y se excluyeron."
+    "Agosto 2026 sigue en curso — sus ratios de food/beverage no son comparables aún a un mes cerrado; se muestra julio como referencia del último mes completo."
   ],
   "comparativaInteranual": [
     {
@@ -1158,8 +1157,8 @@
       "periodoAnterior": "2025-08",
       "periodoVigente": "2026-08",
       "ingresosAnterior": 79608.0,
-      "ingresosVigente": 116484.0,
-      "deltaIngresosPct": 0.4632,
+      "ingresosVigente": 121848.0,
+      "deltaIngresosPct": 0.5306,
       "costeAlimentacionAnterior": 16573.0,
       "costeAlimentacionVigente": 16565.0,
       "costeBebidasAnterior": 8878.0,
