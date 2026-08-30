@@ -10,12 +10,12 @@
     "nota": "Saldos confirmados por Era (ya no es ajuste manual)."
   },
   "runway": {
-    "gastoFijoMensual": 25681.0,
+    "gastoFijoMensual": 21741.0,
     "cajaPropia": 42351.0,
-    "mesesCaja": 1.6,
+    "mesesCaja": 1.9,
     "disponibleFinanciacion": 80000,
-    "mesesFinanciacionAdicional": 3.1,
-    "mesesTotal": 4.8,
+    "mesesFinanciacionAdicional": 3.7,
+    "mesesTotal": 5.6,
     "polizas": [
       {
         "nombre": "BBVA (5 años, 3,7%)",
@@ -32,7 +32,7 @@
         "prioridad": "ELIMINAR"
       }
     ],
-    "nota": "Gasto fijo = hipoteca casa + lloguer local (cifras conocidas, no siempre visibles en banco) + media 6m de SS + financiación + seguros. 'Caja propia' no incluye crédito sin disponer; 'financiación adicional' es lo que queda sin usar en las dos pólizas si hiciera falta tirar de ellas — la de CaixaBank está marcada para ELIMINAR en el plan, no para usar como colchón."
+    "nota": "Gasto fijo = media 6m de: alquiler local (real, banco) + Seguridad Social + préstamos/financiación (incluye hipoteca) + seguros — corregido 28/08/2026, antes la hipoteca se contaba dos veces. 'Caja propia' no incluye crédito sin disponer; 'financiación adicional' es lo que queda sin usar en las dos pólizas si hiciera falta tirar de ellas — la de CaixaBank está marcada para ELIMINAR en el plan, no para usar como colchón."
   },
   "benchmarks": {
     "food": 0.3,
@@ -482,6 +482,39 @@
         1480.0,
         1917.0,
         95.0
+      ]
+    },
+    {
+      "categoria": "Alquiler local",
+      "total": 24240.0,
+      "mediaMensual": 3030.0,
+      "mesesActivo": 8,
+      "semaforo": "ambar",
+      "meses": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        3000.0,
+        3000.0,
+        3000.0,
+        3000.0,
+        3060.0,
+        3060.0,
+        3060.0,
+        3060.0
       ]
     },
     {
@@ -984,7 +1017,8 @@
     "Coste de personal es parcial en general: parte de las nóminas se paga desde la cuenta BBVA oculta, no siempre visible en el histórico bancario capturado. Agosto 2026 es la excepción: usa el coste total real (25.909,02€) del resumen de nómina, incluida Seg. Social empresa.",
     "El reparto alimentación/bebidas es una aproximación por nombre de proveedor, no una categorización contable exacta.",
     "Ingresos = TPV + efectivo detectado en banco; puede diferir ligeramente de la venta real de caja.",
-    "Agosto 2026 sigue en curso — sus ratios de food/beverage no son comparables aún a un mes cerrado; se muestra julio como referencia del último mes completo."
+    "Agosto 2026 sigue en curso — sus ratios de food/beverage no son comparables aún a un mes cerrado; se muestra julio como referencia del último mes completo.",
+    "28/08/2026 — Auditoria cruzada: corregidos 3 fallos (alquiler local mal clasificado como traspaso interno, aportaciones de Carlos mal clasificadas como nomina, hipoteca contada dos veces en el gasto fijo). Runway recalculado con datos mas precisos."
   ],
   "comparativaInteranual": [
     {
