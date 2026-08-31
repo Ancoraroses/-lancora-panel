@@ -198,6 +198,19 @@
   </div>
   <div class="yoy-total" id="yoy-total"></div>
 
+  <div class="section-label">Camino hacia el 31 de diciembre</div>
+  <div class="section-note">Saldo combinado BBVA + CaixaBank, semana a semana. 🔴 mínimo = 0€ dispuesto en pólizas · 🟢 objetivo = +50.000€.</div>
+  <div class="chart-card">
+    <svg id="goal-chart" class="bar-chart" viewBox="0 0 720 220"></svg>
+    <div class="legend-row" style="margin-top:10px;">
+      <span><span class="dot" style="background:#8FA5BD"></span>ritmo año anterior</span>
+      <span><span class="dot" style="background:#C9A227"></span>escenario mínimo</span>
+      <span><span class="dot" style="background:#4CAF87"></span>escenario objetivo</span>
+      <span><span class="dot" style="background:#E15B4F"></span>real</span>
+    </div>
+  </div>
+  <div class="yoy-total" id="goal-total"></div>
+
   <div class="section-label">Gasto recurrente por categoría — últimos 12 meses</div>
   <div class="legend-row">
     <span><span class="sf-dot verde"></span>bajo control / bajando</span>
@@ -286,6 +299,47 @@
     return defs + svg;
   }
 
+  function goalChart(weeks){
+    var w=720,h=220, padL=45,padR=10,padB=26,padT=14;
+    var innerW=w-padL-padR, innerH=h-padT-padB;
+    var allVals = weeks.flatMap(function(k){
+      return [k.saldoRitmoAnterior, k.saldoEscMinimo, k.saldoEscObjetivo, k.saldoRealCombinado].filter(function(v){return v!==null && v!==undefined;});
+    }).concat([0, 50000]);
+    var minV = Math.min.apply(null, allVals), maxV = Math.max.apply(null, allVals);
+    var range = (maxV-minV) || 1;
+    var stepX = innerW/(weeks.length-1);
+    function xAt(i){ return padL + i*stepX; }
+    function yAt(v){ return padT + innerH - ((v-minV)/range)*innerH; }
+    function line(vals, color, dashed){
+      var pts = vals.map(function(v,i){ return v===null||v===undefined ? null : xAt(i).toFixed(1)+','+yAt(v).toFixed(1); }).filter(Boolean);
+      if(pts.length<2) return '';
+      return '<polyline points="'+pts.join(' ')+'" fill="none" stroke="'+color+'" stroke-width="2" '+(dashed?'stroke-dasharray="4,3"':'')+'/>';
+    }
+    var svg = '';
+    // zero and 50k reference lines
+    svg += '<line x1="'+padL+'" y1="'+yAt(0).toFixed(1)+'" x2="'+(w-padR)+'" y2="'+yAt(0).toFixed(1)+'" stroke="#E15B4F" stroke-width="1" stroke-dasharray="2,3" opacity="0.6"/>';
+    svg += '<line x1="'+padL+'" y1="'+yAt(50000).toFixed(1)+'" x2="'+(w-padR)+'" y2="'+yAt(50000).toFixed(1)+'" stroke="#4CAF87" stroke-width="1" stroke-dasharray="2,3" opacity="0.6"/>';
+    svg += line(weeks.map(function(k){return k.saldoRitmoAnterior;}), '#8FA5BD', true);
+    svg += line(weeks.map(function(k){return k.saldoEscMinimo;}), '#C9A227', false);
+    svg += line(weeks.map(function(k){return k.saldoEscObjetivo;}), '#4CAF87', false);
+    var realVals = weeks.map(function(k){return k.saldoRealCombinado;});
+    if(realVals.some(function(v){return v!==null && v!==undefined;})){
+      svg += line(realVals, '#E15B4F', false);
+      realVals.forEach(function(v,i){
+        if(v!==null && v!==undefined){
+          svg += '<circle cx="'+xAt(i).toFixed(1)+'" cy="'+yAt(v).toFixed(1)+'" r="3" fill="#E15B4F"/>';
+        }
+      });
+    }
+    // x labels every other week
+    weeks.forEach(function(k,i){
+      if(i%2===0){
+        svg += '<text class="bar-label" x="'+xAt(i).toFixed(1)+'" y="'+(h-6)+'" text-anchor="middle">'+k.inicio.slice(5)+'</text>';
+      }
+    });
+    return svg;
+  }
+
   function render(data){
     document.getElementById('updated-label').textContent = 'Actualizado ' + fmtDateEs(data.actualizado);
     document.getElementById('footnote').innerHTML = 'Generado por Ancora CFO a partir de Era + extractos bancarios. Cobertura: ' + data.cobertura + '.';
@@ -348,6 +402,15 @@
       var totEl = document.getElementById('yoy-total');
       totEl.className = 'yoy-total ' + (delta>=0 ? 'positivo' : 'negativo');
       totEl.innerHTML = 'Total 12 meses: '+fmtEUR(totAnt)+' → '+fmtEUR(totVig)+' &nbsp; <b>'+(delta>=0?'+':'')+delta.toFixed(1)+'%</b><br><span style="color:var(--muted);font-size:10.5px;">Incluye meses con año anterior parcial (solo CaixaBank) — la comparación real podría ser algo distinta.</span>';
+    }
+
+    var weeks = data.seguimientoSemanal || [];
+    if (weeks.length) {
+      document.getElementById('goal-chart').innerHTML = goalChart(weeks);
+      var last = weeks[weeks.length-1];
+      var goalEl = document.getElementById('goal-total');
+      goalEl.innerHTML = 'A 14/12: ritmo año anterior '+fmtEUR(last.saldoRitmoAnterior)+' · escenario mínimo '+fmtEUR(last.saldoEscMinimo)+' · escenario objetivo '+fmtEUR(last.saldoEscObjetivo)+
+        '<br><span style="color:var(--muted);font-size:10.5px;">Tabla hasta el 14/12 (16 semanas) — quedan ~17 días hasta el 31/12 sin cubrir aún. Rellena el saldo real cada semana en el Excel para que aparezca aquí.</span>';
     }
 
     var body = document.getElementById('cat-table');
