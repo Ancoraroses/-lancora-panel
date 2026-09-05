@@ -43,13 +43,13 @@
   "resumenActual": {
     "mes": "2026-08",
     "ingresos": 129853.0,
-    "foodPct": 0.132,
+    "foodPct": 0.1592,
     "foodSemaforo": "verde",
-    "bevPct": 0.004,
+    "bevPct": 0.1428,
     "bevSemaforo": "verde",
-    "personnelPct": 0.1995,
+    "personnelPct": 0.2253,
     "personnelSemaforo": "verde",
-    "primeCostPct": 0.3355,
+    "primeCostPct": 0.5273,
     "primeCostSemaforo": "verde"
   },
   "kpisMensuales": [
@@ -180,10 +180,10 @@
       "costeAlimentacion": 17143.0,
       "costeBebidas": 519.0,
       "costePersonal": 25909.0,
-      "foodPct": 0.132,
-      "bevPct": 0.004,
-      "personnelPct": 0.1995,
-      "primeCostPct": 0.3355
+      "foodPct": 0.1592,
+      "bevPct": 0.1428,
+      "personnelPct": 0.2253,
+      "primeCostPct": 0.5273
     },
     {
       "mes": "2026-09",
@@ -1054,7 +1054,8 @@
     "El reparto alimentación/bebidas es una aproximación por nombre de proveedor, no una categorización contable exacta.",
     "Ingresos = TPV + efectivo detectado en banco; puede diferir ligeramente de la venta real de caja.",
     "Agosto 2026 sigue en curso — sus ratios de food/beverage no son comparables aún a un mes cerrado; se muestra julio como referencia del último mes completo.",
-    "03/09/2026: Nóminas y Cashdro confirmados por Carlos (680€ y 300€), ya no son estimados. Liquidez total baja a 28.277,19€."
+    "03/09/2026: Nóminas y Cashdro confirmados por Carlos (680€ y 300€), ya no son estimados. Liquidez total baja a 28.277,19€.",
+    "04/09/2026: Ratios de agosto actualizados con datos REALES de Haddock (antes eran estimación bancaria, muy por debajo de la realidad). Bebidas 14,28% incluye una compra grande de stock para cumplir acuerdos de proveedor (vino/refrescos) — no es el ritmo mensual normal, que Carlos estima en ~3% en meses sin reposición grande."
   ],
   "comparativaInteranual": [
     {
