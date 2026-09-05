@@ -1054,7 +1054,8 @@
     "El reparto alimentación/bebidas es una aproximación por nombre de proveedor, no una categorización contable exacta.",
     "Ingresos = TPV + efectivo detectado en banco; puede diferir ligeramente de la venta real de caja.",
     "Agosto 2026 sigue en curso — sus ratios de food/beverage no son comparables aún a un mes cerrado; se muestra julio como referencia del último mes completo.",
-    "Ratios de agosto usan datos REALES de Haddock (food 15,92%, personal 22,53%). Bebidas 14,28% incluye una compra grande de stock, no es el ritmo mensual normal (~3% estimado por Carlos en meses sin reposición grande)."
+    "Ratios de agosto usan datos REALES de Haddock (food 15,92%, personal 22,53%). Bebidas 14,28% incluye una compra grande de stock, no es el ritmo mensual normal (~3% estimado por Carlos en meses sin reposición grande).",
+    "05/09/2026: se ha añadido a la proyección el pago pendiente de proveedores de agosto (~34.727€ según Haddock, devengado pero aún no desembolsado), repartido según el patrón real histórico de cobro (día 1-5: 22,6%, día 6-15: 26,7%, día 16-fin: 50,8%). Esto empeora la trayectoria proyectada de septiembre respecto a semanas anteriores."
   ],
   "comparativaInteranual": [
     {
@@ -1258,7 +1259,7 @@
       "mes": "Septiembre",
       "objetivoIngresos": 16250,
       "ventaReal": null,
-      "saldoRitmoAnterior": 3090.0,
+      "saldoRitmoAnterior": -6182.0,
       "saldoEscMinimo": 9721.0,
       "saldoEscObjetivo": 19602.0,
       "saldoRealCombinado": null
@@ -1270,7 +1271,7 @@
       "mes": "Septiembre",
       "objetivoIngresos": 16250,
       "ventaReal": null,
-      "saldoRitmoAnterior": 3997.0,
+      "saldoRitmoAnterior": -14096.0,
       "saldoEscMinimo": 13278.0,
       "saldoEscObjetivo": 27112.0,
       "saldoRealCombinado": null
@@ -1282,7 +1283,7 @@
       "mes": "Septiembre",
       "objetivoIngresos": 16250,
       "ventaReal": null,
-      "saldoRitmoAnterior": 11878.0,
+      "saldoRitmoAnterior": -15036.0,
       "saldoEscMinimo": 23322.0,
       "saldoEscObjetivo": 40381.0,
       "saldoRealCombinado": null
@@ -1294,7 +1295,7 @@
       "mes": "Octubre",
       "objetivoIngresos": 11250,
       "ventaReal": null,
-      "saldoRitmoAnterior": -7824.0,
+      "saldoRitmoAnterior": -34738.0,
       "saldoEscMinimo": 6877.0,
       "saldoEscObjetivo": 28787.0,
       "saldoRealCombinado": null
@@ -1306,7 +1307,7 @@
       "mes": "Octubre",
       "objetivoIngresos": 11250,
       "ventaReal": null,
-      "saldoRitmoAnterior": -3583.0,
+      "saldoRitmoAnterior": -30497.0,
       "saldoEscMinimo": 12700.0,
       "saldoEscObjetivo": 36970.0,
       "saldoRealCombinado": null
@@ -1318,7 +1319,7 @@
       "mes": "Octubre",
       "objetivoIngresos": 11250,
       "ventaReal": null,
-      "saldoRitmoAnterior": -4053.0,
+      "saldoRitmoAnterior": -30967.0,
       "saldoEscMinimo": 14142.0,
       "saldoEscObjetivo": 41263.0,
       "saldoRealCombinado": null
@@ -1330,7 +1331,7 @@
       "mes": "Octubre",
       "objetivoIngresos": 11250,
       "ventaReal": null,
-      "saldoRitmoAnterior": 805.0,
+      "saldoRitmoAnterior": -26109.0,
       "saldoEscMinimo": 20539.0,
       "saldoEscObjetivo": 49955.0,
       "saldoRealCombinado": null
@@ -1342,7 +1343,7 @@
       "mes": "Noviembre",
       "objetivoIngresos": 5000,
       "ventaReal": null,
-      "saldoRitmoAnterior": -26392.0,
+      "saldoRitmoAnterior": -53306.0,
       "saldoEscMinimo": -3919.0,
       "saldoEscObjetivo": 29571.0,
       "saldoRealCombinado": null
@@ -1354,7 +1355,7 @@
       "mes": "Noviembre",
       "objetivoIngresos": 5000,
       "ventaReal": null,
-      "saldoRitmoAnterior": -28682.0,
+      "saldoRitmoAnterior": -55596.0,
       "saldoEscMinimo": -5214.0,
       "saldoEscObjetivo": 29759.0,
       "saldoRealCombinado": null
@@ -1366,7 +1367,7 @@
       "mes": "Noviembre",
       "objetivoIngresos": 5000,
       "ventaReal": null,
-      "saldoRitmoAnterior": -35873.0,
+      "saldoRitmoAnterior": -62787.0,
       "saldoEscMinimo": -11066.0,
       "saldoEscObjetivo": 25899.0,
       "saldoRealCombinado": null
@@ -1378,7 +1379,7 @@
       "mes": "Noviembre",
       "objetivoIngresos": 5000,
       "ventaReal": null,
-      "saldoRitmoAnterior": -37522.0,
+      "saldoRitmoAnterior": -64436.0,
       "saldoEscMinimo": -11765.0,
       "saldoEscObjetivo": 26617.0,
       "saldoRealCombinado": null
@@ -1390,7 +1391,7 @@
       "mes": "Diciembre",
       "objetivoIngresos": 10500,
       "ventaReal": null,
-      "saldoRitmoAnterior": -55312.0,
+      "saldoRitmoAnterior": -82226.0,
       "saldoEscMinimo": -26556.0,
       "saldoEscObjetivo": 16291.0,
       "saldoRealCombinado": null
@@ -1402,7 +1403,7 @@
       "mes": "Diciembre",
       "objetivoIngresos": 10500,
       "ventaReal": null,
-      "saldoRitmoAnterior": -51218.0,
+      "saldoRitmoAnterior": -78132.0,
       "saldoEscMinimo": -20996.0,
       "saldoEscObjetivo": 24040.0,
       "saldoRealCombinado": null
@@ -1414,7 +1415,7 @@
       "mes": "Diciembre",
       "objetivoIngresos": 10500,
       "ventaReal": null,
-      "saldoRitmoAnterior": -51430.0,
+      "saldoRitmoAnterior": -78344.0,
       "saldoEscMinimo": -19439.0,
       "saldoEscObjetivo": 28233.0,
       "saldoRealCombinado": null
@@ -1426,7 +1427,7 @@
       "mes": "Diciembre",
       "objetivoIngresos": 10500,
       "ventaReal": null,
-      "saldoRitmoAnterior": -46772.0,
+      "saldoRitmoAnterior": -73686.0,
       "saldoEscMinimo": -13354.0,
       "saldoEscObjetivo": 36449.0,
       "saldoRealCombinado": null
