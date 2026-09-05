@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<title>L'Àncora — Empleados (interno)</title>
+<style>
+  :root{
+    --ink:#0B1F33; --panel:#122A44; --panel-2:#0F2440; --line:#25415F;
+    --paper:#EDE6D6; --muted:#8FA5BD;
+    --teal:#3FBFAE; --teal-dim:#1F5B54;
+    --brass:#C9A227; --brass-dim:#5C4A16;
+    --coral:#E15B4F; --coral-dim:#5C2621;
+    --green:#4CAF87; --green-dim:#215B44;
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;}
+  body{
+    background:var(--ink); color:var(--paper);
+    font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
+    -webkit-font-smoothing:antialiased; padding-bottom:4rem;
+  }
+  .wrap{max-width:720px;margin:0 auto;padding:0 18px;}
+  .num{font-family:ui-monospace,'SF Mono','Roboto Mono','Courier New',monospace;font-variant-numeric:tabular-nums;}
+
+  header{padding:32px 16px 18px;text-align:center;border-bottom:1px solid var(--line);}
+  header .mark{font-size:30px;}
+  header h1{font-family:ui-serif,Georgia,serif;font-size:19px;font-weight:600;margin:8px 0 3px;letter-spacing:0.5px;}
+  header .sub{font-size:11px;color:var(--muted);letter-spacing:0.5px;text-transform:uppercase;}
+  header .updated{font-size:11px;color:var(--teal);margin-top:8px;}
+  header .badge-interno{display:inline-block;background:var(--coral-dim);color:#F8D2CD;font-size:9.5px;font-weight:700;padding:3px 10px;border-radius:10px;margin-top:8px;letter-spacing:0.5px;}
+
+  .section-label{font-size:11px;text-transform:uppercase;letter-spacing:1.5px;color:var(--muted);margin:28px 2px 10px;}
+  .section-note{font-size:11px;color:var(--muted);margin:-4px 2px 14px;line-height:1.5;}
+
+  .emp-card{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:16px;margin-bottom:10px;}
+  .emp-top{display:flex;justify-content:space-between;align-items:center;gap:10px;}
+  .emp-name{font-size:14.5px;font-weight:600;}
+  .emp-badge{display:inline-block;font-size:10px;font-weight:700;padding:3px 10px;border-radius:10px;}
+  .badge-si{background:var(--green-dim);color:#CFEFDF;}
+  .badge-no{background:var(--coral-dim);color:#F8D2CD;}
+  .emp-multiplo{font-size:22px;font-weight:700;margin-top:8px;}
+  .emp-bar{width:100%;height:8px;border-radius:4px;background:var(--panel-2);margin-top:8px;overflow:hidden;position:relative;}
+  .emp-bar-fill{height:100%;border-radius:4px;}
+  .emp-bar-fill.ok{background:var(--green);}
+  .emp-bar-fill.warn{background:var(--brass);}
+  .emp-marker{position:absolute;top:-3px;width:2px;height:14px;background:var(--paper);opacity:0.6;}
+  .emp-nums{display:flex;justify-content:space-between;font-size:10.5px;color:var(--muted);margin-top:6px;}
+
+  .avisos{background:var(--panel-2);border:1px solid var(--line);border-radius:12px;padding:14px 16px;margin-top:20px;}
+  .avisos p{font-size:11px;color:var(--muted);line-height:1.6;margin:0;}
+
+  .footnote{font-size:10px;color:var(--muted);text-align:center;margin-top:30px;padding:0 20px;line-height:1.6;}
+  .back-link{display:block;text-align:center;font-size:12px;color:var(--teal);margin-top:24px;text-decoration:none;}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <div class="mark">&#9875;</div>
+    <h1>L'ÀNCORA — PRODUCTIVIDAD DE SALA</h1>
+    <div class="sub">Filtro de rentabilidad · 6x coste</div>
+    <div class="badge-interno">SOLO USO INTERNO</div>
+    <div class="updated" id="updated-label">cargando...</div>
+  </header>
+
+  <div class="section-label">Filtro de bonus — 6x el coste</div>
+  <div class="section-note" id="periodo-note">Cada camarero debe facturar al menos 6 veces su coste total (nómina + Seguridad Social empresa) para optar al bonus de facturación.</div>
+  <div id="emp-list"></div>
+
+  <div class="avisos">
+    <p id="avisos-text"></p>
+  </div>
+
+  <div class="footnote" id="footnote"></div>
+  <a class="back-link" href="../">← Volver al panel de tesorería</a>
+
+</div>
+
+<script>
+(function(){
+  function fmtEUR(n){ if(n===null||n===undefined||isNaN(n))return '—'; return Math.round(n).toLocaleString('es-ES')+'€'; }
+  function fmtDateEs(iso){ if(!iso)return ''; var d=new Date(iso+'T00:00:00'); return d.toLocaleDateString('es-ES',{day:'2-digit',month:'long',year:'numeric'}); }
+
+  function render(data){
+    document.getElementById('updated-label').textContent = 'Actualizado ' + fmtDateEs(data.actualizado);
+    document.getElementById('periodo-note').textContent = 'Periodo: ' + data.periodo + '. Cada camarero debe facturar al menos 6 veces su coste total (nómina + Seguridad Social empresa) para optar al bonus de facturación.';
+    document.getElementById('footnote').textContent = 'Generado por Ancora CFO a partir de los resúmenes de nómina y la facturación aportada por Carlos.';
+
+    var list = document.getElementById('emp-list');
+    list.innerHTML = '';
+    (data.empleados || []).slice().sort(function(a,b){return b.multiplo-a.multiplo;}).forEach(function(e){
+      var pct = Math.min(100, (e.multiplo/6)*100);
+      var barClass = e.supera ? 'ok' : 'warn';
+      var div = document.createElement('div');
+      div.className = 'emp-card';
+      div.innerHTML =
+        '<div class="emp-top">'+
+          '<div class="emp-name">'+e.nombre+'</div>'+
+          '<span class="emp-badge '+(e.supera?'badge-si':'badge-no')+'">'+(e.supera?'CUMPLE':'NO LLEGA')+'</span>'+
+        '</div>'+
+        '<div class="emp-multiplo num">'+e.multiplo.toFixed(2)+'x</div>'+
+        '<div class="emp-bar"><div class="emp-bar-fill '+barClass+'" style="width:'+pct.toFixed(1)+'%"></div><div class="emp-marker" style="left:100%;"></div></div>'+
+        '<div class="emp-nums"><span>Coste: '+fmtEUR(e.coste)+'</span><span>Umbral 6x: '+fmtEUR(e.umbral6x)+'</span><span>Venta: '+fmtEUR(e.venta)+'</span></div>';
+      list.appendChild(div);
+    });
+
+    document.getElementById('avisos-text').innerHTML = data.nota + '<br><br>' +
+      '<b>' + (data.carlos_referencia ? data.carlos_referencia.nombre : '') + '</b> (referencia, no participa en bonus): ' +
+      (data.carlos_referencia ? (data.carlos_referencia.venta/data.carlos_referencia.coste).toFixed(2) : '') + 'x — ' +
+      (data.carlos_referencia ? data.carlos_referencia.nota : '');
+  }
+
+  fetch('data.json?_=' + Date.now())
+    .then(function(r){ return r.json(); })
+    .then(render)
+    .catch(function(err){ document.getElementById('updated-label').textContent = 'No se pudo cargar data.json'; console.error(err); });
+})();
+</script>
+</body>
+</html>
