@@ -1,0 +1,53 @@
+{
+  "actualizado": "2026-09-04",
+  "periodo": "Marzo - Agosto 2026",
+  "nota": "Coste de abril estimado igual a mayo (no disponible el dato real). Facturación individual proporcionada por Carlos, sin enero. Filtro de rentabilidad: 6x el coste total (nómina + SS empresa) para optar al bonus de facturación.",
+  "empleados": [
+    {
+      "nombre": "Josselyn (Manco Arnao)",
+      "coste": 13606.68,
+      "venta": 73797.15,
+      "umbral6x": 81640.08,
+      "multiplo": 5.42,
+      "supera": false
+    },
+    {
+      "nombre": "Sandra (Llanas Becerra)",
+      "coste": 14334.28,
+      "venta": 75776.34,
+      "umbral6x": 86005.68,
+      "multiplo": 5.29,
+      "supera": false
+    },
+    {
+      "nombre": "Abdel (L'Bahiri El Amri)",
+      "coste": 7529.02,
+      "venta": 70582.65,
+      "umbral6x": 45174.12,
+      "multiplo": 9.37,
+      "supera": true
+    },
+    {
+      "nombre": "Anas (Chourak)",
+      "coste": 11394.37,
+      "venta": 67070.84,
+      "umbral6x": 68366.22,
+      "multiplo": 5.89,
+      "supera": false
+    },
+    {
+      "nombre": "Alberto (Mena Garcia)",
+      "coste": 11394.37,
+      "venta": 58449.69,
+      "umbral6x": 68366.22,
+      "multiplo": 5.13,
+      "supera": false
+    }
+  ],
+  "carlos_referencia": {
+    "nombre": "Carlos Valero Quiles",
+    "coste": 29265.54,
+    "venta": 22211.24,
+    "nota": "No participa en el ranking ni bonus de camareros, por reglas propias del negocio. Se muestra solo de referencia."
+  }
+}
