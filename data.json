@@ -5,17 +5,18 @@
     "bbva": 23986.8,
     "caixa": 39.79,
     "bbvaNominas": 680.0,
-    "cajaCashdro": 300.0,
+    "cajaCashdro": 2206.0,
+    "efectivoCasa": 700.0,
     "actualizado": "2026-09-09",
     "nota": "Saldos confirmados (nominas y Cashdro ya no son estimados, Carlos los confirma) por Era (ya no es ajuste manual)."
   },
   "runway": {
     "gastoFijoMensual": 18701.0,
-    "cajaPropia": 25007.0,
-    "mesesCaja": 1.3,
+    "cajaPropia": 27613.0,
+    "mesesCaja": 1.5,
     "disponibleFinanciacion": 80000,
     "mesesFinanciacionAdicional": 4.3,
-    "mesesTotal": 5.6,
+    "mesesTotal": 5.8,
     "polizas": [
       {
         "nombre": "BBVA (5 años, 3,7%)",
