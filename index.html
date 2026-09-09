@@ -176,8 +176,9 @@
     <div class="plaque"><div class="lbl">CaixaBank</div><div class="val num" id="p-caixa">—</div></div>
     <div class="plaque"><div class="lbl">Nóminas (oculta)</div><div class="val num" id="p-oculta">—</div></div>
   </div>
-  <div class="cards3" style="grid-template-columns:1fr;margin-top:8px;">
+  <div class="cards3" style="grid-template-columns:1fr 1fr;margin-top:8px;">
     <div class="plaque"><div class="lbl">Caja Cashdro (efectivo)</div><div class="val num" id="p-cashdro">—</div></div>
+    <div class="plaque"><div class="lbl">Efectivo en casa</div><div class="val num" id="p-casa">—</div></div>
   </div>
 
   <div class="section-label">Ingresos mensuales (TPV + efectivo detectado en banco)</div>
@@ -386,7 +387,8 @@
     document.getElementById('p-caixa').textContent = fmtEUR(t.caixa);
     document.getElementById('p-oculta').textContent = fmtEUR(t.bbvaNominas);
     document.getElementById('p-cashdro').textContent = fmtEUR(t.cajaCashdro);
-    drawGauge((t.bbva||0)+(t.caixa||0)+(t.cajaCashdro||0));
+    document.getElementById('p-casa').textContent = fmtEUR(t.efectivoCasa);
+    drawGauge((t.bbva||0)+(t.caixa||0)+(t.cajaCashdro||0)+(t.efectivoCasa||0));
 
     var kpis = data.kpisMensuales || [];
     var months = kpis.map(function(k){return k.mes;});
