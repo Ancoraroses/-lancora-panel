@@ -753,7 +753,8 @@
     "RECUPERACIÓN 11/09/2026: el entorno de trabajo se reinició y se reconstruyó la lógica de categorización a partir de la auditoría guardada — los totales deberían coincidir con los de antes del reinicio.",
     "Coste de personal es parcial en general (parte de nóminas vía cuenta BBVA oculta).",
     "El reparto alimentación/bebidas es una aproximación por nombre de proveedor.",
-    "Ratios de agosto usan datos REALES de Haddock (food 15,92%, personal 22,53%). Bebidas 14,28% incluye una compra grande de stock, no es el ritmo mensual normal."
+    "Ratios de agosto usan datos REALES de Haddock (food 15,92%, personal 22,53%). Bebidas 14,28% incluye una compra grande de stock, no es el ritmo mensual normal.",
+    "14/09/2026: venta real de septiembre por debajo del objetivo (semana 1: -55,5%, semana 2 parcial: -56,3%) y por debajo del mismo periodo de 2025 (-22,4% los primeros 11 días). Septiembre esta flojeando — menos afluencia de público. Carlos está reforzando ads y menús para atraer clientela."
   ],
   "seguimientoSemanal": [
     {
@@ -762,7 +763,7 @@
       "fin": "2026-09-06",
       "mes": "Septiembre",
       "objetivoIngresos": 16250,
-      "ventaReal": null,
+      "ventaReal": 7231,
       "saldoRitmoAnterior": -5864.0,
       "saldoEscMinimo": -1451.0,
       "saldoEscObjetivo": 5120.0,
@@ -774,7 +775,7 @@
       "fin": "2026-09-13",
       "mes": "Septiembre",
       "objetivoIngresos": 16250,
-      "ventaReal": null,
+      "ventaReal": 7097,
       "saldoRitmoAnterior": -8062.0,
       "saldoEscMinimo": 7841.0,
       "saldoEscObjetivo": 17722.0,
