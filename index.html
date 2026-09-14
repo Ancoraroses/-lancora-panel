@@ -212,6 +212,15 @@
   </div>
   <div class="yoy-total" id="goal-total"></div>
 
+  <div class="section-label">Venta semanal real vs. objetivo</div>
+  <div class="chart-card">
+    <svg id="weekly-sales-chart" class="bar-chart" viewBox="0 0 720 190"></svg>
+    <div class="legend-row" style="margin-top:10px;">
+      <span><span class="dot" style="background:#5C7A94"></span>objetivo</span>
+      <span><span class="dot" style="background:#3FBFAE"></span>real</span>
+    </div>
+  </div>
+
   <div class="section-label">Gasto recurrente por categoría — últimos 12 meses</div>
   <div class="legend-row">
     <span><span class="sf-dot verde"></span>bajo control / bajando</span>
@@ -341,6 +350,31 @@
     return svg;
   }
 
+  function weeklySalesChart(weeks){
+    var withData = weeks.filter(function(k){ return k.ventaReal !== null && k.ventaReal !== undefined; });
+    if (!withData.length) return '<text x="360" y="95" fill="#8FA5BD" font-size="12" text-anchor="middle">Sin datos reales todavía</text>';
+    var w=720,h=190, padL=6,padR=6,padB=26,padT=10;
+    var innerW=w-padL-padR, innerH=h-padT-padB;
+    var maxVal = Math.max.apply(null, withData.flatMap(function(k){return [k.objetivoIngresos, k.ventaReal];}).concat([1]));
+    var groupW = innerW/withData.length;
+    var barW = groupW*0.36;
+    var svg = '';
+    withData.forEach(function(k, i){
+      var gx = padL + i*groupW;
+      var hObj = maxVal>0 ? (k.objetivoIngresos/maxVal)*innerH : 0;
+      var hReal = maxVal>0 ? (k.ventaReal/maxVal)*innerH : 0;
+      var xObj = gx + groupW*0.08;
+      var xReal = xObj + barW + 3;
+      var yObj = padT + innerH - hObj;
+      var yReal = padT + innerH - hReal;
+      svg += '<rect x="'+xObj.toFixed(1)+'" y="'+yObj.toFixed(1)+'" width="'+barW.toFixed(1)+'" height="'+hObj.toFixed(1)+'" rx="2" fill="#5C7A94"/>';
+      var color = k.ventaReal >= k.objetivoIngresos ? '#4CAF87' : '#E15B4F';
+      svg += '<rect x="'+xReal.toFixed(1)+'" y="'+yReal.toFixed(1)+'" width="'+barW.toFixed(1)+'" height="'+hReal.toFixed(1)+'" rx="2" fill="'+color+'"/>';
+      svg += '<text class="bar-label" x="'+(gx+groupW/2).toFixed(1)+'" y="'+(h-8)+'" text-anchor="middle">S'+k.semana+'</text>';
+    });
+    return svg;
+  }
+
   function render(data){
     document.getElementById('updated-label').textContent = 'Actualizado ' + fmtDateEs(data.actualizado);
     document.getElementById('footnote').innerHTML = 'Generado por Ancora CFO a partir de Era + extractos bancarios. Cobertura: ' + data.cobertura + '.';
@@ -413,6 +447,7 @@
       var goalEl = document.getElementById('goal-total');
       goalEl.innerHTML = 'A 14/12: ritmo año anterior '+fmtEUR(last.saldoRitmoAnterior)+' · escenario mínimo '+fmtEUR(last.saldoEscMinimo)+' · escenario objetivo '+fmtEUR(last.saldoEscObjetivo)+
         '<br><span style="color:var(--muted);font-size:10.5px;">Tabla hasta el 14/12 (16 semanas) — quedan ~17 días hasta el 31/12 sin cubrir aún. Rellena el saldo real cada semana en el Excel para que aparezca aquí.</span>';
+      document.getElementById('weekly-sales-chart').innerHTML = weeklySalesChart(weeks);
     }
 
     var body = document.getElementById('cat-table');
