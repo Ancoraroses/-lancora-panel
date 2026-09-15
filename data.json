@@ -1,34 +1,34 @@
 {
-  "actualizado": "2026-09-14",
+  "actualizado": "2026-09-15",
   "cobertura": "01/09/2024 – 10/09/2026",
   "tesoreria": {
-    "bbva": 30100.0,
-    "caixa": -11691.0,
+    "bbva": 30144.56,
+    "caixa": -7891.75,
     "bbvaNominas": 696.0,
-    "cajaCashdro": 4500.0,
+    "cajaCashdro": 445.0,
     "efectivoCasa": 700.0,
     "actualizado": "2026-09-12"
   },
   "runway": {
-    "gastoFijoMensual": 18701.0,
-    "cajaPropia": 24305.0,
+    "gastoFijoMensual": 18764.0,
+    "cajaPropia": 24094.0,
     "mesesCaja": 1.3,
-    "disponibleFinanciacion": 68309.0,
-    "mesesFinanciacionAdicional": 3.7,
-    "mesesTotal": 5.0,
+    "disponibleFinanciacion": 72108.0,
+    "mesesFinanciacionAdicional": 3.8,
+    "mesesTotal": 5.1,
     "polizas": [
       {
         "nombre": "BBVA (5 años, 3,7%)",
         "limite": 50000,
-        "saldoActual": 30100.0,
+        "saldoActual": 30144.56,
         "disponible": 50000,
         "prioridad": "MANTENER"
       },
       {
         "nombre": "CaixaBank (renov. 27 ene, 5%)",
         "limite": 30000,
-        "saldoActual": -11691.0,
-        "disponible": 18309.0,
+        "saldoActual": -7891.75,
+        "disponible": 22108.0,
         "prioridad": "ELIMINAR"
       }
     ],
@@ -187,14 +187,14 @@
     },
     {
       "mes": "2026-09",
-      "ingresos": 11598.0,
-      "costeAlimentacion": 4280.0,
-      "costeBebidas": 0.0,
+      "ingresos": 20415.0,
+      "costeAlimentacion": 6818.0,
+      "costeBebidas": 1612.0,
       "costePersonal": 7946.0,
-      "foodPct": 0.369,
-      "bevPct": 0.0,
-      "personnelPct": 0.6851,
-      "primeCostPct": 1.0541
+      "foodPct": 0.334,
+      "bevPct": 0.079,
+      "personnelPct": 0.3892,
+      "primeCostPct": 0.8022
     }
   ],
   "categorias": [
@@ -222,8 +222,8 @@
     },
     {
       "categoria": "Proveedores alimentación",
-      "total": 119180.0,
-      "mediaMensual": 9168.0,
+      "total": 121719.0,
+      "mediaMensual": 9363.0,
       "mesesActivo": 13,
       "semaforo": "rojo",
       "meses": [
@@ -239,7 +239,7 @@
         11835.0,
         12062.0,
         17143.0,
-        4280.0
+        6818.0
       ]
     },
     {
@@ -266,9 +266,9 @@
     },
     {
       "categoria": "Proveedores bebidas",
-      "total": 53392.0,
-      "mediaMensual": 4854.0,
-      "mesesActivo": 11,
+      "total": 55004.0,
+      "mediaMensual": 4584.0,
+      "mesesActivo": 12,
       "semaforo": "verde",
       "meses": [
         6852.0,
@@ -283,7 +283,7 @@
         7406.0,
         5379.0,
         519.0,
-        0.0
+        1612.0
       ]
     },
     {
@@ -485,6 +485,28 @@
       ]
     },
     {
+      "categoria": "Sin clasificar",
+      "total": 7835.0,
+      "mediaMensual": 1306.0,
+      "mesesActivo": 6,
+      "semaforo": "rojo",
+      "meses": [
+        0.0,
+        146.0,
+        0.0,
+        150.0,
+        0.0,
+        0.0,
+        0.0,
+        240.0,
+        1583.0,
+        0.0,
+        0.0,
+        3165.0,
+        2552.0
+      ]
+    },
+    {
       "categoria": "Tarjetas Amex/Carrefour (gasto empresa)",
       "total": 7663.0,
       "mediaMensual": 958.0,
@@ -526,28 +548,6 @@
         582.0,
         539.0,
         115.0
-      ]
-    },
-    {
-      "categoria": "Sin clasificar",
-      "total": 7345.0,
-      "mediaMensual": 1224.0,
-      "mesesActivo": 6,
-      "semaforo": "rojo",
-      "meses": [
-        0.0,
-        146.0,
-        0.0,
-        150.0,
-        0.0,
-        0.0,
-        0.0,
-        240.0,
-        1583.0,
-        0.0,
-        0.0,
-        3165.0,
-        2062.0
       ]
     },
     {
@@ -618,9 +618,9 @@
     },
     {
       "categoria": "Renting maquinaria (coctelera)",
-      "total": 4489.0,
+      "total": 4863.0,
       "mediaMensual": 374.0,
-      "mesesActivo": 12,
+      "mesesActivo": 13,
       "semaforo": "ambar",
       "meses": [
         374.0,
@@ -635,7 +635,7 @@
         374.0,
         374.0,
         374.0,
-        0.0
+        374.0
       ]
     },
     {
@@ -753,8 +753,7 @@
     "RECUPERACIÓN 11/09/2026: el entorno de trabajo se reinició y se reconstruyó la lógica de categorización a partir de la auditoría guardada — los totales deberían coincidir con los de antes del reinicio.",
     "Coste de personal es parcial en general (parte de nóminas vía cuenta BBVA oculta).",
     "El reparto alimentación/bebidas es una aproximación por nombre de proveedor.",
-    "Ratios de agosto usan datos REALES de Haddock (food 15,92%, personal 22,53%). Bebidas 14,28% incluye una compra grande de stock, no es el ritmo mensual normal.",
-    "14/09/2026: venta real de septiembre por debajo del objetivo (semana 1: -55,5%, semana 2 parcial: -56,3%) y por debajo del mismo periodo de 2025 (-22,4% los primeros 11 días). Septiembre esta flojeando — menos afluencia de público. Carlos está reforzando ads y menús para atraer clientela."
+    "Ratios de agosto usan datos REALES de Haddock (food 15,92%, personal 22,53%). Bebidas 14,28% incluye una compra grande de stock, no es el ritmo mensual normal."
   ],
   "seguimientoSemanal": [
     {
@@ -775,7 +774,7 @@
       "fin": "2026-09-13",
       "mes": "Septiembre",
       "objetivoIngresos": 16250,
-      "ventaReal": 7097,
+      "ventaReal": 11127,
       "saldoRitmoAnterior": -8062.0,
       "saldoEscMinimo": 7841.0,
       "saldoEscObjetivo": 17722.0,
