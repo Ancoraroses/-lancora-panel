@@ -199,6 +199,28 @@
   </div>
   <div class="yoy-total" id="yoy-total"></div>
 
+  <div class="section-label">📊 RESUMEN: cómo vamos vs. año anterior + previsión fin de año</div>
+  <div class="section-note">Las tres respuestas directas: saldo bancario, gasto por categoría, y a qué ritmo real vamos llegando.</div>
+
+  <div class="section-label">1. Saldo bancario vs. año anterior</div>
+  <div class="section-note">Combinado BBVA+CaixaBank, mismo número de semana desde el 1 de septiembre. Reconstruido movimiento a movimiento desde el saldo real confirmado.</div>
+  <div class="chart-card">
+    <svg id="balance-yoy-chart" class="bar-chart" viewBox="0 0 720 190"></svg>
+    <div class="legend-row" style="margin-top:10px;">
+      <span><span class="dot" style="background:#8FA5BD"></span>año anterior</span>
+      <span><span class="dot" style="background:#3FBFAE"></span>año vigente</span>
+    </div>
+  </div>
+  <div class="yoy-total" id="balance-yoy-total"></div>
+
+  <div class="section-label">2. Gasto por categoría vs. año anterior</div>
+  <div class="section-note" id="gastos-yoy-note">Últimos 12 meses vs. los 12 anteriores.</div>
+  <div id="gastos-yoy-table"></div>
+
+  <div class="section-label">3. Estimación de cierre (dinámica, se recalcula sola)</div>
+  <div class="section-note">Usa el ritmo real medio (venta real ÷ objetivo) de las semanas ya cerradas y lo aplica a las que faltan — no es un % fijo, cambia cada vez que hay más datos reales.</div>
+  <div class="chart-card" id="dynamic-projection-card"></div>
+
   <div class="section-label">Camino hacia el 31 de diciembre</div>
   <div class="section-note">Saldo combinado BBVA + CaixaBank, semana a semana. 🔴 mínimo = 0€ dispuesto en pólizas · 🟢 objetivo = +50.000€.</div>
   <div class="chart-card">
@@ -375,6 +397,41 @@
     return svg;
   }
 
+  function balanceYoyChart(anterior, vigente){
+    var w=720,h=190, padL=45,padR=10,padB=26,padT=14;
+    var innerW=w-padL-padR, innerH=h-padT-padB;
+    var n = Math.min(anterior.length, vigente.length);
+    var allVals = anterior.slice(0,n).concat(vigente.slice(0,n)).map(function(p){return p.saldo;}).filter(function(v){return v!==null;});
+    var minV = Math.min.apply(null, allVals.concat([0])), maxV = Math.max.apply(null, allVals);
+    var range = (maxV-minV) || 1;
+    var stepX = innerW/(n-1);
+    function xAt(i){ return padL + i*stepX; }
+    function yAt(v){ return padT + innerH - ((v-minV)/range)*innerH; }
+    function line(pts, color){
+      var coords = pts.slice(0,n).map(function(p,i){ return p.saldo===null ? null : xAt(i).toFixed(1)+','+yAt(p.saldo).toFixed(1); }).filter(Boolean);
+      if(coords.length<2) return '';
+      return '<polyline points="'+coords.join(' ')+'" fill="none" stroke="'+color+'" stroke-width="2"/>';
+    }
+    var svg = '<line x1="'+padL+'" y1="'+yAt(0).toFixed(1)+'" x2="'+(w-padR)+'" y2="'+yAt(0).toFixed(1)+'" stroke="#E15B4F" stroke-width="1" stroke-dasharray="2,3" opacity="0.5"/>';
+    svg += line(anterior, '#8FA5BD');
+    svg += line(vigente, '#3FBFAE');
+    return svg;
+  }
+
+  function gastosYoyTable(rows){
+    var html = '<div class="chart-card" style="padding:0;overflow:hidden;">';
+    html += '<table style="width:100%;border-collapse:collapse;font-size:11px;">';
+    html += '<tr style="background:var(--panel-2);"><th style="text-align:left;padding:8px 10px;">Categoría</th><th style="text-align:right;padding:8px 10px;">Año anterior</th><th style="text-align:right;padding:8px 10px;">Año vigente</th><th style="text-align:right;padding:8px 10px;">Δ%</th></tr>';
+    rows.forEach(function(r, i){
+      var bg = i%2===0 ? 'var(--panel)' : 'var(--panel-2)';
+      var deltaTxt = r.deltaPct===null ? '—' : (r.deltaPct>=0?'+':'')+(r.deltaPct*100).toFixed(0)+'%';
+      var deltaColor = r.deltaPct===null ? 'var(--muted)' : (r.deltaPct>0.15 ? 'var(--coral)' : (r.deltaPct<-0.05 ? 'var(--green)' : 'var(--paper)'));
+      html += '<tr style="background:'+bg+';"><td style="padding:7px 10px;">'+r.categoria+'</td><td style="text-align:right;padding:7px 10px;" class="num">'+fmtEUR(r.anterior)+'</td><td style="text-align:right;padding:7px 10px;" class="num">'+fmtEUR(r.vigente)+'</td><td style="text-align:right;padding:7px 10px;color:'+deltaColor+';" class="num">'+deltaTxt+'</td></tr>';
+    });
+    html += '</table></div>';
+    return html;
+  }
+
   function render(data){
     document.getElementById('updated-label').textContent = 'Actualizado ' + fmtDateEs(data.actualizado);
     document.getElementById('footnote').innerHTML = 'Generado por Ancora CFO a partir de Era + extractos bancarios. Cobertura: ' + data.cobertura + '.';
@@ -428,6 +485,37 @@
     var months = kpis.map(function(k){return k.mes;});
     var revs = kpis.map(function(k){return k.ingresos;});
     document.getElementById('rev-chart').innerHTML = barChart(months, revs);
+
+    var byoy = data.balanceYoy;
+    if (byoy && byoy.anterior && byoy.vigente) {
+      document.getElementById('balance-yoy-chart').innerHTML = balanceYoyChart(byoy.anterior, byoy.vigente);
+      var n = Math.min(byoy.anterior.length, byoy.vigente.length);
+      var lastA = byoy.anterior[n-1], lastV = byoy.vigente[n-1];
+      var deltaB = lastA.saldo !== 0 ? ((lastV.saldo-lastA.saldo)) : null;
+      var elB = document.getElementById('balance-yoy-total');
+      elB.className = 'yoy-total ' + (deltaB>=0 ? 'positivo' : 'negativo');
+      elB.innerHTML = 'Mismo punto de temporada: '+fmtEUR(lastA.saldo)+' (año anterior) vs '+fmtEUR(lastV.saldo)+' (ahora) &nbsp; <b>'+(deltaB>=0?'+':'')+fmtEUR(deltaB)+'</b>';
+    }
+
+    var gyoy = data.gastosYoy;
+    if (gyoy && gyoy.length) {
+      document.getElementById('gastos-yoy-table').innerHTML = gastosYoyTable(gyoy);
+      document.getElementById('gastos-yoy-note').innerHTML = 'Últimos 12 meses vs. los 12 anteriores. <b style="color:var(--coral)">Aviso:</b> el año anterior no tiene BBVA completo (falta sep24-abr25) y "Alquiler local" solo existe como categoría propia desde 2026 — algunas subidas grandes (nóminas, SS, impuestos, alquiler) son en parte artefacto de datos, no solo crecimiento real.';
+    }
+
+    var dp = data.proyeccionDinamica;
+    if (dp) {
+      var pctClass = dp.pctDelObjetivo >= 95 ? 'positivo' : 'negativo';
+      document.getElementById('dynamic-projection-card').innerHTML =
+        '<div style="text-align:center;">'+
+        '<div style="font-size:11px;color:var(--muted);">Ritmo real medio ('+dp.semanasConDatoReal+' semana'+(dp.semanasConDatoReal===1?'':'s')+' con dato)</div>'+
+        '<div style="font-size:28px;font-weight:700;margin:6px 0;" class="num">'+(dp.ratioRealVsObjetivo*100).toFixed(1)+'%</div>'+
+        '<div style="font-size:11px;color:var(--muted);">del objetivo semanal</div>'+
+        '<div style="margin-top:14px;padding-top:14px;border-top:1px solid var(--line);font-size:12px;">'+
+        'Si este ritmo se mantiene: <b class="num">'+fmtEUR(dp.proyeccionDinamicaTotal16Semanas)+'</b> de los '+fmtEUR(dp.objetivoTotal16Semanas)+' objetivo &nbsp; '+
+        '<span class="'+(dp.pctDelObjetivo>=95?'':'')+'" style="font-weight:700;color:'+(dp.pctDelObjetivo>=95?'var(--green)':'var(--coral)')+';">('+dp.pctDelObjetivo+'%)</span>'+
+        '</div></div>';
+    }
 
     var comp = data.comparativaInteranual || [];
     if (comp.length) {
