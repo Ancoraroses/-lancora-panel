@@ -1,9 +1,9 @@
 {
-  "actualizado": "2026-09-20",
+  "actualizado": "2026-09-22",
   "cobertura": "01/09/2024 – 10/09/2026",
   "tesoreria": {
-    "bbva": 29710.63,
-    "caixa": -7609.89,
+    "bbva": 32761.64,
+    "caixa": -9586.66,
     "bbvaNominas": 696.0,
     "cajaCashdro": 1242.0,
     "efectivoCasa": 700.0,
@@ -11,24 +11,24 @@
   },
   "runway": {
     "gastoFijoMensual": 18764.0,
-    "cajaPropia": 24739.0,
-    "mesesCaja": 1.3,
-    "disponibleFinanciacion": 72390.0,
-    "mesesFinanciacionAdicional": 3.9,
-    "mesesTotal": 5.2,
+    "cajaPropia": 25813.0,
+    "mesesCaja": 1.4,
+    "disponibleFinanciacion": 70413.0,
+    "mesesFinanciacionAdicional": 3.8,
+    "mesesTotal": 5.1,
     "polizas": [
       {
         "nombre": "BBVA (5 años, 3,7%)",
         "limite": 50000,
-        "saldoActual": 29710.63,
+        "saldoActual": 32761.64,
         "disponible": 50000,
         "prioridad": "MANTENER"
       },
       {
         "nombre": "CaixaBank (renov. 27 ene, 5%)",
         "limite": 30000,
-        "saldoActual": -7609.89,
-        "disponible": 22390.0,
+        "saldoActual": -9586.66,
+        "disponible": 20413.0,
         "prioridad": "ELIMINAR"
       }
     ],
@@ -187,14 +187,14 @@
     },
     {
       "mes": "2026-09",
-      "ingresos": 25436.0,
+      "ingresos": 30064.0,
       "costeAlimentacion": 7299.0,
       "costeBebidas": 2058.0,
       "costePersonal": 7946.0,
-      "foodPct": 0.287,
-      "bevPct": 0.0809,
-      "personnelPct": 0.3124,
-      "primeCostPct": 0.6803
+      "foodPct": 0.2428,
+      "bevPct": 0.0685,
+      "personnelPct": 0.2643,
+      "primeCostPct": 0.5755
     }
   ],
   "categorias": [
@@ -310,8 +310,8 @@
     },
     {
       "categoria": "Mantenimiento / limpieza / varios operativos",
-      "total": 35936.0,
-      "mediaMensual": 2764.0,
+      "total": 37599.0,
+      "mediaMensual": 2892.0,
       "mesesActivo": 13,
       "semaforo": "rojo",
       "meses": [
@@ -327,7 +327,7 @@
         2748.0,
         1439.0,
         13565.0,
-        8000.0
+        9663.0
       ]
     },
     {
@@ -486,8 +486,8 @@
     },
     {
       "categoria": "Sin clasificar",
-      "total": 8707.0,
-      "mediaMensual": 1451.0,
+      "total": 9226.0,
+      "mediaMensual": 1538.0,
       "mesesActivo": 6,
       "semaforo": "rojo",
       "meses": [
@@ -503,7 +503,7 @@
         0.0,
         0.0,
         3165.0,
-        3424.0
+        3943.0
       ]
     },
     {
@@ -763,9 +763,9 @@
       "mes": "Septiembre",
       "objetivoIngresos": 16250,
       "ventaReal": 7231,
-      "saldoRitmoAnterior": -2172.0,
-      "saldoEscMinimo": 2241.0,
-      "saldoEscObjetivo": 8811.0,
+      "saldoRitmoAnterior": -1098.0,
+      "saldoEscMinimo": 3315.0,
+      "saldoEscObjetivo": 9886.0,
       "saldoRealCombinado": null
     },
     {
@@ -775,9 +775,9 @@
       "mes": "Septiembre",
       "objetivoIngresos": 16250,
       "ventaReal": 11127,
-      "saldoRitmoAnterior": -4371.0,
-      "saldoEscMinimo": 11533.0,
-      "saldoEscObjetivo": 21414.0,
+      "saldoRitmoAnterior": -3296.0,
+      "saldoEscMinimo": 12607.0,
+      "saldoEscObjetivo": 22488.0,
       "saldoRealCombinado": null
     },
     {
@@ -787,9 +787,9 @@
       "mes": "Septiembre",
       "objetivoIngresos": 16250,
       "ventaReal": 9808,
-      "saldoRitmoAnterior": -12284.0,
-      "saldoEscMinimo": 15090.0,
-      "saldoEscObjetivo": 28923.0,
+      "saldoRitmoAnterior": -11210.0,
+      "saldoEscMinimo": 16165.0,
+      "saldoEscObjetivo": 29998.0,
       "saldoRealCombinado": null
     },
     {
@@ -799,9 +799,9 @@
       "mes": "Septiembre",
       "objetivoIngresos": 16250,
       "ventaReal": null,
-      "saldoRitmoAnterior": -13224.0,
-      "saldoEscMinimo": 25134.0,
-      "saldoEscObjetivo": 42193.0,
+      "saldoRitmoAnterior": -12150.0,
+      "saldoEscMinimo": 26208.0,
+      "saldoEscObjetivo": 43267.0,
       "saldoRealCombinado": null
     },
     {
@@ -811,9 +811,9 @@
       "mes": "Octubre",
       "objetivoIngresos": 11250,
       "ventaReal": null,
-      "saldoRitmoAnterior": -32927.0,
-      "saldoEscMinimo": 8689.0,
-      "saldoEscObjetivo": 30599.0,
+      "saldoRitmoAnterior": -31852.0,
+      "saldoEscMinimo": 9763.0,
+      "saldoEscObjetivo": 31673.0,
       "saldoRealCombinado": null
     },
     {
@@ -823,9 +823,9 @@
       "mes": "Octubre",
       "objetivoIngresos": 11250,
       "ventaReal": null,
-      "saldoRitmoAnterior": -28686.0,
-      "saldoEscMinimo": 14512.0,
-      "saldoEscObjetivo": 38782.0,
+      "saldoRitmoAnterior": -27611.0,
+      "saldoEscMinimo": 15586.0,
+      "saldoEscObjetivo": 39856.0,
       "saldoRealCombinado": null
     },
     {
@@ -835,9 +835,9 @@
       "mes": "Octubre",
       "objetivoIngresos": 11250,
       "ventaReal": null,
-      "saldoRitmoAnterior": -29155.0,
-      "saldoEscMinimo": 15954.0,
-      "saldoEscObjetivo": 43075.0,
+      "saldoRitmoAnterior": -28081.0,
+      "saldoEscMinimo": 17028.0,
+      "saldoEscObjetivo": 44149.0,
       "saldoRealCombinado": null
     },
     {
@@ -847,9 +847,9 @@
       "mes": "Octubre",
       "objetivoIngresos": 11250,
       "ventaReal": null,
-      "saldoRitmoAnterior": -24297.0,
-      "saldoEscMinimo": 22351.0,
-      "saldoEscObjetivo": 51767.0,
+      "saldoRitmoAnterior": -23223.0,
+      "saldoEscMinimo": 23425.0,
+      "saldoEscObjetivo": 52841.0,
       "saldoRealCombinado": null
     },
     {
@@ -859,9 +859,9 @@
       "mes": "Noviembre",
       "objetivoIngresos": 5000,
       "ventaReal": null,
-      "saldoRitmoAnterior": -51494.0,
-      "saldoEscMinimo": -2107.0,
-      "saldoEscObjetivo": 31383.0,
+      "saldoRitmoAnterior": -50420.0,
+      "saldoEscMinimo": -1033.0,
+      "saldoEscObjetivo": 32457.0,
       "saldoRealCombinado": null
     },
     {
@@ -871,9 +871,9 @@
       "mes": "Noviembre",
       "objetivoIngresos": 5000,
       "ventaReal": null,
-      "saldoRitmoAnterior": -53785.0,
-      "saldoEscMinimo": -3403.0,
-      "saldoEscObjetivo": 31570.0,
+      "saldoRitmoAnterior": -52710.0,
+      "saldoEscMinimo": -2328.0,
+      "saldoEscObjetivo": 32645.0,
       "saldoRealCombinado": null
     },
     {
@@ -883,9 +883,9 @@
       "mes": "Noviembre",
       "objetivoIngresos": 5000,
       "ventaReal": null,
-      "saldoRitmoAnterior": -60975.0,
-      "saldoEscMinimo": -9255.0,
-      "saldoEscObjetivo": 27711.0,
+      "saldoRitmoAnterior": -59901.0,
+      "saldoEscMinimo": -8180.0,
+      "saldoEscObjetivo": 28785.0,
       "saldoRealCombinado": null
     },
     {
@@ -895,9 +895,9 @@
       "mes": "Noviembre",
       "objetivoIngresos": 5000,
       "ventaReal": null,
-      "saldoRitmoAnterior": -62624.0,
-      "saldoEscMinimo": -9953.0,
-      "saldoEscObjetivo": 28429.0,
+      "saldoRitmoAnterior": -61550.0,
+      "saldoEscMinimo": -8879.0,
+      "saldoEscObjetivo": 29503.0,
       "saldoRealCombinado": null
     },
     {
@@ -907,9 +907,9 @@
       "mes": "Diciembre",
       "objetivoIngresos": 10500,
       "ventaReal": null,
-      "saldoRitmoAnterior": -80414.0,
-      "saldoEscMinimo": -24745.0,
-      "saldoEscObjetivo": 18102.0,
+      "saldoRitmoAnterior": -79340.0,
+      "saldoEscMinimo": -23670.0,
+      "saldoEscObjetivo": 19177.0,
       "saldoRealCombinado": null
     },
     {
@@ -919,9 +919,9 @@
       "mes": "Diciembre",
       "objetivoIngresos": 10500,
       "ventaReal": null,
-      "saldoRitmoAnterior": -76321.0,
-      "saldoEscMinimo": -19184.0,
-      "saldoEscObjetivo": 25852.0,
+      "saldoRitmoAnterior": -75246.0,
+      "saldoEscMinimo": -18110.0,
+      "saldoEscObjetivo": 26926.0,
       "saldoRealCombinado": null
     },
     {
@@ -931,9 +931,9 @@
       "mes": "Diciembre",
       "objetivoIngresos": 10500,
       "ventaReal": null,
-      "saldoRitmoAnterior": -76532.0,
-      "saldoEscMinimo": -17627.0,
-      "saldoEscObjetivo": 30045.0,
+      "saldoRitmoAnterior": -75458.0,
+      "saldoEscMinimo": -16553.0,
+      "saldoEscObjetivo": 31119.0,
       "saldoRealCombinado": null
     },
     {
@@ -943,9 +943,9 @@
       "mes": "Diciembre",
       "objetivoIngresos": 10500,
       "ventaReal": null,
-      "saldoRitmoAnterior": -71874.0,
-      "saldoEscMinimo": -11542.0,
-      "saldoEscObjetivo": 38260.0,
+      "saldoRitmoAnterior": -70800.0,
+      "saldoEscMinimo": -10468.0,
+      "saldoEscObjetivo": 39335.0,
       "saldoRealCombinado": null
     }
   ],
@@ -954,534 +954,534 @@
       {
         "semana": 0,
         "fecha": "2024-09-01",
-        "saldo": -49297.0
+        "saldo": -50670.0
       },
       {
         "semana": 1,
         "fecha": "2024-09-08",
-        "saldo": -53447.0
+        "saldo": -54819.0
       },
       {
         "semana": 2,
         "fecha": "2024-09-15",
-        "saldo": -56090.0
+        "saldo": -57462.0
       },
       {
         "semana": 3,
         "fecha": "2024-09-22",
-        "saldo": -52144.0
+        "saldo": -53517.0
       },
       {
         "semana": 4,
         "fecha": "2024-09-29",
-        "saldo": -45679.0
+        "saldo": -47052.0
       },
       {
         "semana": 5,
         "fecha": "2024-10-06",
-        "saldo": -55626.0
+        "saldo": -56998.0
       },
       {
         "semana": 6,
         "fecha": "2024-10-13",
-        "saldo": -51627.0
+        "saldo": -53000.0
       },
       {
         "semana": 7,
         "fecha": "2024-10-20",
-        "saldo": -48229.0
+        "saldo": -49601.0
       },
       {
         "semana": 8,
         "fecha": "2024-10-27",
-        "saldo": -48815.0
+        "saldo": -50188.0
       },
       {
         "semana": 9,
         "fecha": "2024-11-03",
-        "saldo": -51755.0
+        "saldo": -53127.0
       },
       {
         "semana": 10,
         "fecha": "2024-11-10",
-        "saldo": -49295.0
+        "saldo": -50667.0
       },
       {
         "semana": 11,
         "fecha": "2024-11-17",
-        "saldo": -53754.0
+        "saldo": -55127.0
       },
       {
         "semana": 12,
         "fecha": "2024-11-24",
-        "saldo": -51137.0
+        "saldo": -52510.0
       },
       {
         "semana": 13,
         "fecha": "2024-12-01",
-        "saldo": -57147.0
+        "saldo": -58519.0
       },
       {
         "semana": 14,
         "fecha": "2024-12-08",
-        "saldo": -62784.0
+        "saldo": -64157.0
       },
       {
         "semana": 15,
         "fecha": "2024-12-15",
-        "saldo": -63952.0
+        "saldo": -65324.0
       },
       {
         "semana": 16,
         "fecha": "2024-12-22",
-        "saldo": -65371.0
+        "saldo": -66744.0
       },
       {
         "semana": 17,
         "fecha": "2024-12-29",
-        "saldo": -55062.0
+        "saldo": -56435.0
       },
       {
         "semana": 18,
         "fecha": "2025-01-05",
-        "saldo": -59888.0
+        "saldo": -61261.0
       },
       {
         "semana": 19,
         "fecha": "2025-01-12",
-        "saldo": -64713.0
+        "saldo": -66086.0
       },
       {
         "semana": 20,
         "fecha": "2025-01-19",
-        "saldo": -71296.0
+        "saldo": -72668.0
       },
       {
         "semana": 21,
         "fecha": "2025-01-26",
-        "saldo": -66909.0
+        "saldo": -68282.0
       },
       {
         "semana": 22,
         "fecha": "2025-02-02",
-        "saldo": -76896.0
+        "saldo": -78269.0
       },
       {
         "semana": 23,
         "fecha": "2025-02-09",
-        "saldo": -78770.0
+        "saldo": -80143.0
       },
       {
         "semana": 24,
         "fecha": "2025-02-16",
-        "saldo": -79286.0
+        "saldo": -80659.0
       },
       {
         "semana": 25,
         "fecha": "2025-02-23",
-        "saldo": -79800.0
+        "saldo": -81172.0
       },
       {
         "semana": 26,
         "fecha": "2025-03-02",
-        "saldo": -82591.0
+        "saldo": -83964.0
       },
       {
         "semana": 27,
         "fecha": "2025-03-09",
-        "saldo": -82270.0
+        "saldo": -83643.0
       },
       {
         "semana": 28,
         "fecha": "2025-03-16",
-        "saldo": -78484.0
+        "saldo": -79856.0
       },
       {
         "semana": 29,
         "fecha": "2025-03-23",
-        "saldo": -77991.0
+        "saldo": -79364.0
       },
       {
         "semana": 30,
         "fecha": "2025-03-30",
-        "saldo": -78734.0
+        "saldo": -80107.0
       },
       {
         "semana": 31,
         "fecha": "2025-04-06",
-        "saldo": -79981.0
+        "saldo": -81354.0
       },
       {
         "semana": 32,
         "fecha": "2025-04-13",
-        "saldo": -79002.0
+        "saldo": -80375.0
       },
       {
         "semana": 33,
         "fecha": "2025-04-20",
-        "saldo": -47356.0
+        "saldo": -48728.0
       },
       {
         "semana": 34,
         "fecha": "2025-04-27",
-        "saldo": -41801.0
+        "saldo": -43173.0
       },
       {
         "semana": 35,
         "fecha": "2025-05-04",
-        "saldo": -49691.0
+        "saldo": -51063.0
       },
       {
         "semana": 36,
         "fecha": "2025-05-11",
-        "saldo": -101273.0
+        "saldo": -102646.0
       },
       {
         "semana": 37,
         "fecha": "2025-05-18",
-        "saldo": -76219.0
+        "saldo": -77591.0
       },
       {
         "semana": 38,
         "fecha": "2025-05-25",
-        "saldo": -43456.0
+        "saldo": -44828.0
       },
       {
         "semana": 39,
         "fecha": "2025-06-01",
-        "saldo": -9587.0
+        "saldo": -10959.0
       },
       {
         "semana": 40,
         "fecha": "2025-06-08",
-        "saldo": 1821.0
+        "saldo": 449.0
       },
       {
         "semana": 41,
         "fecha": "2025-06-15",
-        "saldo": 9336.0
+        "saldo": 7963.0
       },
       {
         "semana": 42,
         "fecha": "2025-06-22",
-        "saldo": 10917.0
+        "saldo": 9544.0
       },
       {
         "semana": 43,
         "fecha": "2025-06-29",
-        "saldo": 24769.0
+        "saldo": 23397.0
       },
       {
         "semana": 44,
         "fecha": "2025-07-06",
-        "saldo": -1748.0
+        "saldo": -3121.0
       },
       {
         "semana": 45,
         "fecha": "2025-07-13",
-        "saldo": 4511.0
+        "saldo": 3138.0
       },
       {
         "semana": 46,
         "fecha": "2025-07-20",
-        "saldo": 14505.0
+        "saldo": 13133.0
       },
       {
         "semana": 47,
         "fecha": "2025-07-27",
-        "saldo": 16350.0
+        "saldo": 14977.0
       },
       {
         "semana": 48,
         "fecha": "2025-08-03",
-        "saldo": 37353.0
+        "saldo": 35980.0
       },
       {
         "semana": 49,
         "fecha": "2025-08-10",
-        "saldo": 26294.0
+        "saldo": 24921.0
       },
       {
         "semana": 50,
         "fecha": "2025-08-17",
-        "saldo": 41138.0
+        "saldo": 39765.0
       },
       {
         "semana": 51,
         "fecha": "2025-08-24",
-        "saldo": 59025.0
+        "saldo": 57652.0
       },
       {
         "semana": 52,
         "fecha": "2025-08-31",
-        "saldo": 55891.0
+        "saldo": 54518.0
       }
     ],
     "vigente": [
       {
         "semana": 0,
         "fecha": "2025-09-01",
-        "saldo": 35265.0
+        "saldo": 33893.0
       },
       {
         "semana": 1,
         "fecha": "2025-09-08",
-        "saldo": 27662.0
+        "saldo": 26290.0
       },
       {
         "semana": 2,
         "fecha": "2025-09-15",
-        "saldo": 23561.0
+        "saldo": 22188.0
       },
       {
         "semana": 3,
         "fecha": "2025-09-22",
-        "saldo": 14320.0
+        "saldo": 12948.0
       },
       {
         "semana": 4,
         "fecha": "2025-09-29",
-        "saldo": 16181.0
+        "saldo": 14808.0
       },
       {
         "semana": 5,
         "fecha": "2025-10-06",
-        "saldo": -49.0
+        "saldo": -1421.0
       },
       {
         "semana": 6,
         "fecha": "2025-10-13",
-        "saldo": 4561.0
+        "saldo": 3189.0
       },
       {
         "semana": 7,
         "fecha": "2025-10-20",
-        "saldo": -3391.0
+        "saldo": -4763.0
       },
       {
         "semana": 8,
         "fecha": "2025-10-27",
-        "saldo": 4526.0
+        "saldo": 3154.0
       },
       {
         "semana": 9,
         "fecha": "2025-11-03",
-        "saldo": -2453.0
+        "saldo": -3825.0
       },
       {
         "semana": 10,
         "fecha": "2025-11-10",
-        "saldo": -15088.0
+        "saldo": -16461.0
       },
       {
         "semana": 11,
         "fecha": "2025-11-17",
-        "saldo": -12617.0
+        "saldo": -13989.0
       },
       {
         "semana": 12,
         "fecha": "2025-11-24",
-        "saldo": -15451.0
+        "saldo": -16824.0
       },
       {
         "semana": 13,
         "fecha": "2025-12-01",
-        "saldo": -19067.0
+        "saldo": -20440.0
       },
       {
         "semana": 14,
         "fecha": "2025-12-08",
-        "saldo": -49138.0
+        "saldo": -50510.0
       },
       {
         "semana": 15,
         "fecha": "2025-12-15",
-        "saldo": -45811.0
+        "saldo": -47184.0
       },
       {
         "semana": 16,
         "fecha": "2025-12-22",
-        "saldo": -48834.0
+        "saldo": -50207.0
       },
       {
         "semana": 17,
         "fecha": "2025-12-29",
-        "saldo": -34445.0
+        "saldo": -35818.0
       },
       {
         "semana": 18,
         "fecha": "2026-01-05",
-        "saldo": -28938.0
+        "saldo": -30311.0
       },
       {
         "semana": 19,
         "fecha": "2026-01-12",
-        "saldo": -29379.0
+        "saldo": -30752.0
       },
       {
         "semana": 20,
         "fecha": "2026-01-19",
-        "saldo": -30701.0
+        "saldo": -32073.0
       },
       {
         "semana": 21,
         "fecha": "2026-01-26",
-        "saldo": -38837.0
+        "saldo": -40210.0
       },
       {
         "semana": 22,
         "fecha": "2026-02-02",
-        "saldo": -62404.0
+        "saldo": -63777.0
       },
       {
         "semana": 23,
         "fecha": "2026-02-09",
-        "saldo": -66346.0
+        "saldo": -67719.0
       },
       {
         "semana": 24,
         "fecha": "2026-02-16",
-        "saldo": -66821.0
+        "saldo": -68193.0
       },
       {
         "semana": 25,
         "fecha": "2026-02-23",
-        "saldo": -65335.0
+        "saldo": -66707.0
       },
       {
         "semana": 26,
         "fecha": "2026-03-02",
-        "saldo": -70012.0
+        "saldo": -71385.0
       },
       {
         "semana": 27,
         "fecha": "2026-03-09",
-        "saldo": -71414.0
+        "saldo": -72786.0
       },
       {
         "semana": 28,
         "fecha": "2026-03-16",
-        "saldo": -69869.0
+        "saldo": -71242.0
       },
       {
         "semana": 29,
         "fecha": "2026-03-23",
-        "saldo": -65362.0
+        "saldo": -66735.0
       },
       {
         "semana": 30,
         "fecha": "2026-03-30",
-        "saldo": -70675.0
+        "saldo": -72048.0
       },
       {
         "semana": 31,
         "fecha": "2026-04-06",
-        "saldo": -56849.0
+        "saldo": -58222.0
       },
       {
         "semana": 32,
         "fecha": "2026-04-13",
-        "saldo": -46259.0
+        "saldo": -47632.0
       },
       {
         "semana": 33,
         "fecha": "2026-04-20",
-        "saldo": -53783.0
+        "saldo": -55155.0
       },
       {
         "semana": 34,
         "fecha": "2026-04-27",
-        "saldo": -48790.0
+        "saldo": -50162.0
       },
       {
         "semana": 35,
         "fecha": "2026-05-04",
-        "saldo": -62732.0
+        "saldo": -64105.0
       },
       {
         "semana": 36,
         "fecha": "2026-05-11",
-        "saldo": -58464.0
+        "saldo": -59837.0
       },
       {
         "semana": 37,
         "fecha": "2026-05-18",
-        "saldo": -68282.0
+        "saldo": -69655.0
       },
       {
         "semana": 38,
         "fecha": "2026-05-25",
-        "saldo": -56008.0
+        "saldo": -57381.0
       },
       {
         "semana": 39,
         "fecha": "2026-06-01",
-        "saldo": -48037.0
+        "saldo": -49409.0
       },
       {
         "semana": 40,
         "fecha": "2026-06-08",
-        "saldo": -56218.0
+        "saldo": -57590.0
       },
       {
         "semana": 41,
         "fecha": "2026-06-15",
-        "saldo": -58875.0
+        "saldo": -60248.0
       },
       {
         "semana": 42,
         "fecha": "2026-06-22",
-        "saldo": -43905.0
+        "saldo": -45278.0
       },
       {
         "semana": 43,
         "fecha": "2026-06-29",
-        "saldo": -28931.0
+        "saldo": -30303.0
       },
       {
         "semana": 44,
         "fecha": "2026-07-06",
-        "saldo": -51491.0
+        "saldo": -52864.0
       },
       {
         "semana": 45,
         "fecha": "2026-07-13",
-        "saldo": -46341.0
+        "saldo": -47713.0
       },
       {
         "semana": 46,
         "fecha": "2026-07-20",
-        "saldo": -44606.0
+        "saldo": -45979.0
       },
       {
         "semana": 47,
         "fecha": "2026-07-27",
-        "saldo": -29028.0
+        "saldo": -30400.0
       },
       {
         "semana": 48,
         "fecha": "2026-08-03",
-        "saldo": -23350.0
+        "saldo": -24723.0
       },
       {
         "semana": 49,
         "fecha": "2026-08-10",
-        "saldo": -5086.0
+        "saldo": -6458.0
       },
       {
         "semana": 50,
         "fecha": "2026-08-17",
-        "saldo": 22091.0
+        "saldo": 20719.0
       },
       {
         "semana": 51,
         "fecha": "2026-08-24",
-        "saldo": 31518.0
+        "saldo": 30146.0
       },
       {
         "semana": 52,
         "fecha": "2026-08-31",
-        "saldo": 33475.0
+        "saldo": 32102.0
       }
     ]
   },
