@@ -543,8 +543,8 @@
       chartSvg.innerHTML = impact.svg;
       document.getElementById('gastos-yoy-table').innerHTML = gastosYoyTable(gyoy);
       var periodo = data.gastosYoyPeriodo;
-      var periodoTxt = periodo ? (periodo.anterior + ' vs. ' + periodo.vigente + ' — ventana con datos completos en ambas cuentas (BBVA solo disponible desde 07/05/2025).') : 'Últimos 12 meses vs. los 12 anteriores.';
-      document.getElementById('gastos-yoy-note').innerHTML = periodoTxt + ' <b style="color:var(--coral)">Pendiente:</b> "Alquiler local" en 2025 aparecía como dos pagos distintos (2.332,47€+2.463,50€/mes) — sin confirmar si es lo mismo, se deja como no fiable.';
+      var periodoTxt = periodo ? (periodo.anterior + ' vs. ' + periodo.vigente + ' — ventana con datos completos en ambas cuentas (BBVA solo disponible desde 07/05/2025). Todas las categorías son fiables en esta ventana.') : 'Últimos 12 meses vs. los 12 anteriores.';
+      document.getElementById('gastos-yoy-note').innerHTML = periodoTxt;
     }
 
     var dp = data.proyeccionDinamica;
