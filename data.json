@@ -10,12 +10,12 @@
     "actualizado": "2026-09-12"
   },
   "runway": {
-    "gastoFijoMensual": 19229.0,
+    "gastoFijoMensual": 20479.0,
     "cajaPropia": 27604.0,
-    "mesesCaja": 1.4,
+    "mesesCaja": 1.3,
     "disponibleFinanciacion": 77906.0,
-    "mesesFinanciacionAdicional": 4.1,
-    "mesesTotal": 5.5,
+    "mesesFinanciacionAdicional": 3.8,
+    "mesesTotal": 5.2,
     "polizas": [
       {
         "nombre": "BBVA (5 años, 3,7%)",
@@ -200,8 +200,8 @@
   "categorias": [
     {
       "categoria": "Préstamos y financiación",
-      "total": 152349.0,
-      "mediaMensual": 11719.0,
+      "total": 159849.0,
+      "mediaMensual": 12296.0,
       "mesesActivo": 13,
       "semaforo": "verde",
       "meses": [
@@ -212,9 +212,9 @@
         6674.0,
         13624.0,
         16506.0,
-        9035.0,
-        21942.0,
-        8559.0,
+        11535.0,
+        24442.0,
+        11059.0,
         8559.0,
         5372.0,
         4674.0
@@ -759,9 +759,9 @@
     {
       "categoria": "Préstamos y financiación",
       "anterior": 74632.0,
-      "vigente": 37472.0,
-      "deltaPct": -0.4979,
-      "impactoEur": -37160.0,
+      "vigente": 42472.0,
+      "deltaPct": -0.4309,
+      "impactoEur": -32160.0,
       "confiable": true
     },
     {
@@ -956,10 +956,5 @@
       "impactoEur": 0.0,
       "confiable": true
     }
-  ],
-  "gastosYoyPeriodo": {
-    "anterior": "07/05/2025 - 25/09/2025",
-    "vigente": "07/05/2026 - 25/09/2026",
-    "nota": "Ventana con datos completos (BBVA desde 07/05/2025). Alquiler local y devolución de préstamo personal ya identificados y separados correctamente."
-  }
+  ]
 }
