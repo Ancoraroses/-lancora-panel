@@ -332,19 +332,19 @@
     },
     {
       "categoria": "Mantenimiento / limpieza / varios operativos",
-      "total": 37719.0,
-      "mediaMensual": 2901.0,
+      "total": 43482.0,
+      "mediaMensual": 3345.0,
       "mesesActivo": 13,
       "semaforo": "rojo",
       "meses": [
         2375.0,
         871.0,
-        114.0,
+        596.0,
         180.0,
         17.0,
         1954.0,
         212.0,
-        3813.0,
+        9095.0,
         646.0,
         2748.0,
         1439.0,
@@ -397,25 +397,25 @@
       ]
     },
     {
-      "categoria": "Tarjeta American Express (pago)",
-      "total": 18999.0,
-      "mediaMensual": 1727.0,
-      "mesesActivo": 11,
-      "semaforo": "verde",
+      "categoria": "Sin clasificar",
+      "total": 15421.0,
+      "mediaMensual": 2203.0,
+      "mesesActivo": 7,
+      "semaforo": "rojo",
       "meses": [
-        463.0,
-        3263.0,
-        3675.0,
-        154.0,
-        76.0,
-        130.0,
-        3.0,
-        7399.0,
-        334.0,
-        615.0,
-        2888.0,
         0.0,
-        0.0
+        3171.0,
+        3025.0,
+        150.0,
+        0.0,
+        0.0,
+        0.0,
+        240.0,
+        1583.0,
+        0.0,
+        0.0,
+        3165.0,
+        4088.0
       ]
     },
     {
@@ -485,28 +485,6 @@
       ]
     },
     {
-      "categoria": "Sin clasificar",
-      "total": 9371.0,
-      "mediaMensual": 1562.0,
-      "mesesActivo": 6,
-      "semaforo": "rojo",
-      "meses": [
-        0.0,
-        146.0,
-        0.0,
-        150.0,
-        0.0,
-        0.0,
-        0.0,
-        240.0,
-        1583.0,
-        0.0,
-        0.0,
-        3165.0,
-        4088.0
-      ]
-    },
-    {
       "categoria": "Tarjetas Amex/Carrefour (gasto empresa)",
       "total": 7663.0,
       "mediaMensual": 958.0,
@@ -548,6 +526,28 @@
         582.0,
         539.0,
         115.0
+      ]
+    },
+    {
+      "categoria": "Tarjeta American Express (pago)",
+      "total": 7186.0,
+      "mediaMensual": 653.0,
+      "mesesActivo": 11,
+      "semaforo": "verde",
+      "meses": [
+        463.0,
+        238.0,
+        168.0,
+        154.0,
+        76.0,
+        130.0,
+        3.0,
+        2117.0,
+        334.0,
+        615.0,
+        2888.0,
+        0.0,
+        0.0
       ]
     },
     {
