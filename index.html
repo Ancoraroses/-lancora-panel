@@ -256,10 +256,9 @@
   </div>
 
   <div class="section-label">Gasto recurrente por categoría — explorar</div>
-  <div class="section-note">Elige categoría y mes para ver el detalle. El gráfico muestra los 13 meses de esa categoría, con el mes elegido resaltado.</div>
+  <div class="section-note">Elige categoría. Cada par de barras es el mismo mes en los dos años, uno al lado del otro, con el importe exacto encima.</div>
   <div class="selector-row">
     <select id="cat-select" class="dash-select"></select>
-    <select id="month-select" class="dash-select"></select>
   </div>
   <div class="chart-card">
     <svg id="cat-explorer-chart" class="bar-chart" viewBox="0 0 720 190"></svg>
@@ -476,6 +475,32 @@
     return html;
   }
 
+  function catBarChartPaired(mesesPareados){
+    var w=720, padL=6, padR=6, padB=26, padT=24;
+    var innerW=w-padL-padR;
+    var n = mesesPareados.length;
+    var groupW = innerW/n;
+    var barW = groupW*0.32;
+    var maxVal = Math.max.apply(null, mesesPareados.flatMap(function(m){return [m.anterior, m.vigente];}).concat([1]));
+    var innerH = 190 - padT - padB;
+    var svg = '';
+    mesesPareados.forEach(function(m,i){
+      var gx = padL + i*groupW;
+      var hA = maxVal>0 ? (m.anterior/maxVal)*innerH : 0;
+      var hV = maxVal>0 ? (m.vigente/maxVal)*innerH : 0;
+      var xA = gx + groupW*0.08;
+      var xV = xA + barW + 3;
+      var yA = padT + innerH - hA;
+      var yV = padT + innerH - hV;
+      svg += '<rect x="'+xA.toFixed(1)+'" y="'+yA.toFixed(1)+'" width="'+barW.toFixed(1)+'" height="'+hA.toFixed(1)+'" rx="2" fill="#5C7A94"/>';
+      svg += '<rect x="'+xV.toFixed(1)+'" y="'+yV.toFixed(1)+'" width="'+barW.toFixed(1)+'" height="'+hV.toFixed(1)+'" rx="2" fill="#3FBFAE"/>';
+      if(m.anterior>0) svg += '<text x="'+(xA+barW/2).toFixed(1)+'" y="'+(yA-4).toFixed(1)+'" text-anchor="middle" font-size="8.5" fill="#8FA5BD">'+Math.round(m.anterior).toLocaleString('es-ES')+'</text>';
+      if(m.vigente>0) svg += '<text x="'+(xV+barW/2).toFixed(1)+'" y="'+(yV-4).toFixed(1)+'" text-anchor="middle" font-size="8.5" fill="#3FBFAE">'+Math.round(m.vigente).toLocaleString('es-ES')+'</text>';
+      svg += '<text class="bar-label" x="'+(gx+groupW/2).toFixed(1)+'" y="'+(190-8)+'" text-anchor="middle">'+m.mes+'</text>';
+    });
+    return svg;
+  }
+
   function catBarChart(values, monthLabels, highlightIdx){
     var w=720,h=190, padL=6,padR=6,padB=26,padT=10;
     var innerW=w-padL-padR, innerH=h-padT-padB;
@@ -495,31 +520,20 @@
   }
 
   function setupCatExplorer(data){
-    var cats = data.categorias || [];
-    var kpis = data.kpisMensuales || [];
-    var monthLabels = kpis.map(function(k){
-      var p = k.mes.split('-'); var names=['','Ene','Feb','Mar','Abr','May','Jun','Jul','Ago','Sep','Oct','Nov','Dic'];
-      return names[parseInt(p[1],10)]+' '+p[0].slice(2);
-    });
+    var cats = data.categoriasPareadas || data.categorias || [];
     var catSel = document.getElementById('cat-select');
-    var monthSel = document.getElementById('month-select');
     catSel.innerHTML = cats.map(function(c,i){ return '<option value="'+i+'">'+c.categoria+'</option>'; }).join('');
-    monthSel.innerHTML = monthLabels.map(function(m,i){ return '<option value="'+i+'"'+(i===monthLabels.length-1?' selected':'')+'>'+m+'</option>'; }).join('');
 
     function update(){
       var ci = parseInt(catSel.value,10);
-      var mi = parseInt(monthSel.value,10);
       var cat = cats[ci];
-      if(!cat) return;
-      var vals = cat.meses || [];
-      document.getElementById('cat-explorer-chart').innerHTML = catBarChart(vals, monthLabels, mi);
-      var valMes = vals[mi];
+      if(!cat || !cat.mesesPareados) return;
+      document.getElementById('cat-explorer-chart').innerHTML = catBarChartPaired(cat.mesesPareados);
       document.getElementById('cat-explorer-detail').innerHTML =
-        cat.categoria+' — '+monthLabels[mi]+': <b class="num">'+fmtEUR(valMes)+'</b>'+
-        '<br><span style="color:var(--muted);font-size:10.5px;">Media 12m: '+fmtEUR(cat.mediaMensual)+' · Total 12m: '+fmtEUR(cat.total)+' · Semáforo: '+cat.semaforo+'</span>';
+        cat.categoria+' — Total año anterior: <b class="num">'+fmtEUR(cat.totalAnterior)+'</b> · Total año vigente: <b class="num">'+fmtEUR(cat.totalVigente)+'</b>'+
+        '<br><span style="color:var(--muted);font-size:10.5px;">Azul = año anterior · Verde = año vigente. Cada par de barras es el mismo mes, un año y otro.</span>';
     }
     catSel.onchange = update;
-    monthSel.onchange = update;
     update();
   }
 
