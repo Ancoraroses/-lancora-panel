@@ -1487,196 +1487,209 @@
   },
   "gastosYoy": [
     {
-      "categoria": "Nóminas y personal",
-      "anterior": 42543.0,
-      "vigente": 94747.0,
-      "deltaPct": 1.2271,
-      "impactoEur": 52204.0,
-      "confiable": false
-    },
-    {
-      "categoria": "Seguridad Social",
-      "anterior": 17406.0,
-      "vigente": 47968.0,
-      "deltaPct": 1.7559,
-      "impactoEur": 30562.0,
-      "confiable": false
-    },
-    {
       "categoria": "Préstamos y financiación",
-      "anterior": 109930.0,
-      "vigente": 139956.0,
-      "deltaPct": 0.2731,
-      "impactoEur": 30026.0,
-      "confiable": false
+      "anterior": 64778.0,
+      "vigente": 34680.0,
+      "deltaPct": -0.4646,
+      "impactoEur": -30098.0,
+      "confiable": true
+    },
+    {
+      "categoria": "Nóminas y personal",
+      "anterior": 51720.0,
+      "vigente": 28494.0,
+      "deltaPct": -0.4491,
+      "impactoEur": -23226.0,
+      "confiable": true
+    },
+    {
+      "categoria": "Proveedores alimentación",
+      "anterior": 78787.0,
+      "vigente": 58136.0,
+      "deltaPct": -0.2621,
+      "impactoEur": -20651.0,
+      "confiable": true
+    },
+    {
+      "categoria": "Mantenimiento / limpieza / varios operativos",
+      "anterior": 9064.0,
+      "vigente": 28182.0,
+      "deltaPct": 2.1093,
+      "impactoEur": 19118.0,
+      "confiable": true
     },
     {
       "categoria": "Alquiler local",
       "anterior": 0.0,
-      "vigente": 24240.0,
+      "vigente": 12240.0,
       "deltaPct": null,
-      "impactoEur": 24240.0,
+      "impactoEur": 12240.0,
       "confiable": false
+    },
+    {
+      "categoria": "Proveedores bebidas",
+      "anterior": 29815.0,
+      "vigente": 21785.0,
+      "deltaPct": -0.2693,
+      "impactoEur": -8029.0,
+      "confiable": true
+    },
+    {
+      "categoria": "Seguridad Social",
+      "anterior": 17406.0,
+      "vigente": 24720.0,
+      "deltaPct": 0.4202,
+      "impactoEur": 7314.0,
+      "confiable": true
+    },
+    {
+      "categoria": "Tarjetas Amex/Carrefour (gasto empresa)",
+      "anterior": 160.0,
+      "vigente": 4746.0,
+      "deltaPct": 28.6635,
+      "impactoEur": 4586.0,
+      "confiable": true
+    },
+    {
+      "categoria": "Comisiones y gastos bancarios",
+      "anterior": 6821.0,
+      "vigente": 2518.0,
+      "deltaPct": -0.6309,
+      "impactoEur": -4303.0,
+      "confiable": true
     },
     {
       "categoria": "Impuestos (Hacienda/AEAT)",
-      "anterior": 11039.0,
-      "vigente": 33380.0,
-      "deltaPct": 2.0238,
-      "impactoEur": 22341.0,
-      "confiable": false
+      "anterior": 7518.0,
+      "vigente": 3401.0,
+      "deltaPct": -0.5477,
+      "impactoEur": -4118.0,
+      "confiable": true
+    },
+    {
+      "categoria": "Alquiler vivienda personal",
+      "anterior": 2480.0,
+      "vigente": 0.0,
+      "deltaPct": -1.0,
+      "impactoEur": -2480.0,
+      "confiable": true
+    },
+    {
+      "categoria": "Ayuntamiento / tasas municipales",
+      "anterior": 4414.0,
+      "vigente": 2117.0,
+      "deltaPct": -0.5204,
+      "impactoEur": -2297.0,
+      "confiable": true
     },
     {
       "categoria": "Sin clasificar",
-      "anterior": 21450.0,
-      "vigente": 5283.0,
-      "deltaPct": -0.7537,
-      "impactoEur": -16167.0,
+      "anterior": 6609.0,
+      "vigente": 8835.0,
+      "deltaPct": 0.3368,
+      "impactoEur": 2226.0,
       "confiable": true
     },
     {
       "categoria": "Leasing vehículo (Xpeng G6)",
       "anterior": 0.0,
-      "vigente": 12584.0,
+      "vigente": 2067.0,
       "deltaPct": null,
-      "impactoEur": 12584.0,
-      "confiable": true
-    },
-    {
-      "categoria": "Proveedores bebidas",
-      "anterior": 59295.0,
-      "vigente": 53392.0,
-      "deltaPct": -0.0996,
-      "impactoEur": -5903.0,
-      "confiable": true
-    },
-    {
-      "categoria": "Alquiler vivienda personal",
-      "anterior": 1693.0,
-      "vigente": 7078.0,
-      "deltaPct": 3.1804,
-      "impactoEur": 5385.0,
-      "confiable": true
-    },
-    {
-      "categoria": "Proveedores alimentación",
-      "anterior": 119300.0,
-      "vigente": 114901.0,
-      "deltaPct": -0.0369,
-      "impactoEur": -4399.0,
-      "confiable": true
-    },
-    {
-      "categoria": "Tarjetas Amex/Carrefour (gasto empresa)",
-      "anterior": 3288.0,
-      "vigente": 7663.0,
-      "deltaPct": 1.3309,
-      "impactoEur": 4375.0,
-      "confiable": true
-    },
-    {
-      "categoria": "Suministros: electricidad/gas",
-      "anterior": 21384.0,
-      "vigente": 17109.0,
-      "deltaPct": -0.1999,
-      "impactoEur": -4275.0,
-      "confiable": true
-    },
-    {
-      "categoria": "Comisiones y gastos bancarios",
-      "anterior": 11202.0,
-      "vigente": 7385.0,
-      "deltaPct": -0.3407,
-      "impactoEur": -3817.0,
-      "confiable": true
-    },
-    {
-      "categoria": "Renting maquinaria (coctelera)",
-      "anterior": 1496.0,
-      "vigente": 4489.0,
-      "deltaPct": 2.0,
-      "impactoEur": 2993.0,
-      "confiable": true
-    },
-    {
-      "categoria": "Mantenimiento / limpieza / varios operativos",
-      "anterior": 25238.0,
-      "vigente": 27935.0,
-      "deltaPct": 0.1069,
-      "impactoEur": 2697.0,
+      "impactoEur": 2067.0,
       "confiable": true
     },
     {
       "categoria": "Servicios profesionales / gestoría",
-      "anterior": 5345.0,
-      "vigente": 6756.0,
-      "deltaPct": 0.2639,
-      "impactoEur": 1411.0,
+      "anterior": 2482.0,
+      "vigente": 4187.0,
+      "deltaPct": 0.6872,
+      "impactoEur": 1705.0,
+      "confiable": true
+    },
+    {
+      "categoria": "Suministros: electricidad/gas",
+      "anterior": 9639.0,
+      "vigente": 7997.0,
+      "deltaPct": -0.1704,
+      "impactoEur": -1643.0,
       "confiable": true
     },
     {
       "categoria": "Tarjeta American Express (pago)",
-      "anterior": 22967.0,
-      "vigente": 21791.0,
-      "deltaPct": -0.0512,
-      "impactoEur": -1176.0,
+      "anterior": 5756.0,
+      "vigente": 6629.0,
+      "deltaPct": 0.1516,
+      "impactoEur": 873.0,
+      "confiable": true
+    },
+    {
+      "categoria": "Seguros",
+      "anterior": 3787.0,
+      "vigente": 3169.0,
+      "deltaPct": -0.1633,
+      "impactoEur": -618.0,
+      "confiable": true
+    },
+    {
+      "categoria": "Telecom / Software / TPV",
+      "anterior": 2446.0,
+      "vigente": 2116.0,
+      "deltaPct": -0.1349,
+      "impactoEur": -330.0,
+      "confiable": true
+    },
+    {
+      "categoria": "Prevención de riesgos laborales",
+      "anterior": 525.0,
+      "vigente": 271.0,
+      "deltaPct": -0.4834,
+      "impactoEur": -254.0,
+      "confiable": true
+    },
+    {
+      "categoria": "Publicidad",
+      "anterior": 0.0,
+      "vigente": 156.0,
+      "deltaPct": null,
+      "impactoEur": 156.0,
       "confiable": true
     },
     {
       "categoria": "Vehículo (combustible/taller)",
       "anterior": 0.0,
-      "vigente": 638.0,
+      "vigente": 142.0,
       "deltaPct": null,
-      "impactoEur": 638.0,
-      "confiable": true
-    },
-    {
-      "categoria": "Telecom / Software / TPV",
-      "anterior": 4745.0,
-      "vigente": 5229.0,
-      "deltaPct": 0.1021,
-      "impactoEur": 484.0,
-      "confiable": true
-    },
-    {
-      "categoria": "Prevención de riesgos laborales",
-      "anterior": 263.0,
-      "vigente": 595.0,
-      "deltaPct": 1.2635,
-      "impactoEur": 332.0,
-      "confiable": true
-    },
-    {
-      "categoria": "Ayuntamiento / tasas municipales",
-      "anterior": 12036.0,
-      "vigente": 11795.0,
-      "deltaPct": -0.02,
-      "impactoEur": -241.0,
-      "confiable": true
-    },
-    {
-      "categoria": "Seguros",
-      "anterior": 9749.0,
-      "vigente": 9911.0,
-      "deltaPct": 0.0166,
-      "impactoEur": 162.0,
-      "confiable": true
-    },
-    {
-      "categoria": "Donaciones / cuotas asociativas",
-      "anterior": 944.0,
-      "vigente": 969.0,
-      "deltaPct": 0.0262,
-      "impactoEur": 25.0,
+      "impactoEur": 142.0,
       "confiable": true
     },
     {
       "categoria": "Seguridad: alarma (centralita)",
-      "anterior": 436.0,
-      "vigente": 445.0,
-      "deltaPct": 0.0222,
-      "impactoEur": 9.0,
+      "anterior": 179.0,
+      "vigente": 145.0,
+      "deltaPct": -0.1892,
+      "impactoEur": -34.0,
+      "confiable": true
+    },
+    {
+      "categoria": "Donaciones / cuotas asociativas",
+      "anterior": 159.0,
+      "vigente": 181.0,
+      "deltaPct": 0.1384,
+      "impactoEur": 22.0,
+      "confiable": true
+    },
+    {
+      "categoria": "Renting maquinaria (coctelera)",
+      "anterior": 1870.0,
+      "vigente": 1870.0,
+      "deltaPct": 0.0,
+      "impactoEur": 0.0,
       "confiable": true
     }
-  ]
+  ],
+  "gastosYoyPeriodo": {
+    "anterior": "07/05/2025 - 25/09/2025",
+    "vigente": "07/05/2026 - 25/09/2026",
+    "nota": "Ventana reducida a los meses con datos completos de BBVA en ambos años (BBVA solo disponible desde 07/05/2025). No es el año completo, pero es una comparativa real, mes a mes homogénea."
+  }
 }
