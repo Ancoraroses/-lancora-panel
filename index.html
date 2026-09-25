@@ -108,6 +108,9 @@
 
   .legend-row{display:flex;gap:14px;justify-content:center;margin:12px 0 4px;font-size:10px;color:var(--muted);flex-wrap:wrap;}
   .legend-row span{display:inline-flex;align-items:center;gap:5px;}
+  .dot{width:11px;height:11px;border-radius:50%;display:inline-block;flex-shrink:0;}
+  .selector-row{display:flex;gap:10px;margin-top:12px;}
+  .dash-select{flex:1;background:var(--panel);color:var(--paper);border:1px solid var(--line);border-radius:10px;padding:10px 12px;font-size:12.5px;font-family:inherit;}
 
   .avisos{background:var(--panel-2);border:1px solid var(--line);border-radius:12px;padding:14px 16px;margin-top:14px;}
   .avisos ul{margin:6px 0 0;padding-left:18px;}
@@ -252,13 +255,16 @@
     </div>
   </div>
 
-  <div class="section-label">Gasto recurrente por categoría — últimos 12 meses</div>
-  <div class="legend-row">
-    <span><span class="sf-dot verde"></span>bajo control / bajando</span>
-    <span><span class="sf-dot ambar"></span>estable</span>
-    <span><span class="sf-dot rojo"></span>subiendo &gt;15%</span>
+  <div class="section-label">Gasto recurrente por categoría — explorar</div>
+  <div class="section-note">Elige categoría y mes para ver el detalle. El gráfico muestra los 13 meses de esa categoría, con el mes elegido resaltado.</div>
+  <div class="selector-row">
+    <select id="cat-select" class="dash-select"></select>
+    <select id="month-select" class="dash-select"></select>
   </div>
-  <div id="cat-table"></div>
+  <div class="chart-card">
+    <svg id="cat-explorer-chart" class="bar-chart" viewBox="0 0 720 190"></svg>
+  </div>
+  <div class="yoy-total" id="cat-explorer-detail"></div>
 
   <div class="section-label">Avisos sobre los datos</div>
   <div class="avisos"><ul id="avisos-list"></ul></div>
@@ -470,6 +476,53 @@
     return html;
   }
 
+  function catBarChart(values, monthLabels, highlightIdx){
+    var w=720,h=190, padL=6,padR=6,padB=26,padT=10;
+    var innerW=w-padL-padR, innerH=h-padT-padB;
+    var maxVal = Math.max.apply(null, values.concat([1]));
+    var barW = (innerW/values.length)*0.6;
+    var groupW = innerW/values.length;
+    var svg = '';
+    values.forEach(function(v,i){
+      var bh = maxVal>0 ? (v/maxVal)*innerH : 0;
+      var x = padL + i*groupW + (groupW-barW)/2;
+      var y = padT + innerH - bh;
+      var color = i===highlightIdx ? '#3FBFAE' : '#5C7A94';
+      svg += '<rect x="'+x.toFixed(1)+'" y="'+y.toFixed(1)+'" width="'+barW.toFixed(1)+'" height="'+bh.toFixed(1)+'" rx="2" fill="'+color+'"/>';
+      svg += '<text class="bar-label" x="'+(padL+i*groupW+groupW/2).toFixed(1)+'" y="'+(h-8)+'" text-anchor="middle">'+monthLabels[i]+'</text>';
+    });
+    return svg;
+  }
+
+  function setupCatExplorer(data){
+    var cats = data.categorias || [];
+    var kpis = data.kpisMensuales || [];
+    var monthLabels = kpis.map(function(k){
+      var p = k.mes.split('-'); var names=['','Ene','Feb','Mar','Abr','May','Jun','Jul','Ago','Sep','Oct','Nov','Dic'];
+      return names[parseInt(p[1],10)]+' '+p[0].slice(2);
+    });
+    var catSel = document.getElementById('cat-select');
+    var monthSel = document.getElementById('month-select');
+    catSel.innerHTML = cats.map(function(c,i){ return '<option value="'+i+'">'+c.categoria+'</option>'; }).join('');
+    monthSel.innerHTML = monthLabels.map(function(m,i){ return '<option value="'+i+'"'+(i===monthLabels.length-1?' selected':'')+'>'+m+'</option>'; }).join('');
+
+    function update(){
+      var ci = parseInt(catSel.value,10);
+      var mi = parseInt(monthSel.value,10);
+      var cat = cats[ci];
+      if(!cat) return;
+      var vals = cat.meses || [];
+      document.getElementById('cat-explorer-chart').innerHTML = catBarChart(vals, monthLabels, mi);
+      var valMes = vals[mi];
+      document.getElementById('cat-explorer-detail').innerHTML =
+        cat.categoria+' — '+monthLabels[mi]+': <b class="num">'+fmtEUR(valMes)+'</b>'+
+        '<br><span style="color:var(--muted);font-size:10.5px;">Media 12m: '+fmtEUR(cat.mediaMensual)+' · Total 12m: '+fmtEUR(cat.total)+' · Semáforo: '+cat.semaforo+'</span>';
+    }
+    catSel.onchange = update;
+    monthSel.onchange = update;
+    update();
+  }
+
   function render(data){
     document.getElementById('updated-label').textContent = 'Actualizado ' + fmtDateEs(data.actualizado);
     document.getElementById('footnote').innerHTML = 'Generado por Ancora CFO a partir de Era + extractos bancarios. Cobertura: ' + data.cobertura + '.';
@@ -582,20 +635,7 @@
       document.getElementById('weekly-sales-chart').innerHTML = weeklySalesChart(weeks);
     }
 
-    var body = document.getElementById('cat-table');
-    body.innerHTML='';
-    (data.categorias||[]).forEach(function(c){
-      var row = document.createElement('div');
-      row.className='cat-row';
-      row.innerHTML =
-        '<div class="cat-row-top">'+
-          '<div><div class="cat-name">'+c.categoria+'</div>'+
-          '<div class="cat-meta">Total 12m: '+fmtEUR(c.total)+' · activo '+c.mesesActivo+'/12 meses</div></div>'+
-          '<div class="cat-media">'+fmtEUR(c.mediaMensual)+'<small>media/mes</small></div>'+
-          '<span class="sf-dot '+c.semaforo+'"></span>'+
-        '</div>' + sparkline(c.meses);
-      body.appendChild(row);
-    });
+    setupCatExplorer(data);
 
     var ul = document.getElementById('avisos-list');
     ul.innerHTML='';
