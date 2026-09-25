@@ -1803,5 +1803,1682 @@
     "objetivoTotal16Semanas": 172000,
     "proyeccionDinamicaTotal16Semanas": 99375,
     "pctDelObjetivo": 57.8
-  }
+  },
+  "categoriasPareadas": [
+    {
+      "categoria": "Préstamos y financiación",
+      "mesesPareados": [
+        {
+          "mes": "Sep",
+          "anterior": 6576.0,
+          "vigente": 18493.0
+        },
+        {
+          "mes": "Oct",
+          "anterior": 6576.0,
+          "vigente": 7137.0
+        },
+        {
+          "mes": "Nov",
+          "anterior": 6576.0,
+          "vigente": 17416.0
+        },
+        {
+          "mes": "Dic",
+          "anterior": 6576.0,
+          "vigente": 14358.0
+        },
+        {
+          "mes": "Ene",
+          "anterior": 6576.0,
+          "vigente": 6674.0
+        },
+        {
+          "mes": "Feb",
+          "anterior": 6576.0,
+          "vigente": 13624.0
+        },
+        {
+          "mes": "Mar",
+          "anterior": 6576.0,
+          "vigente": 16506.0
+        },
+        {
+          "mes": "Abr",
+          "anterior": 13732.0,
+          "vigente": 11535.0
+        },
+        {
+          "mes": "May",
+          "anterior": 13229.0,
+          "vigente": 24442.0
+        },
+        {
+          "mes": "Jun",
+          "anterior": 12742.0,
+          "vigente": 11059.0
+        },
+        {
+          "mes": "Jul",
+          "anterior": 18643.0,
+          "vigente": 8559.0
+        },
+        {
+          "mes": "Ago",
+          "anterior": 17869.0,
+          "vigente": 5372.0
+        }
+      ],
+      "totalAnterior": 122247.0,
+      "totalVigente": 155175.0
+    },
+    {
+      "categoria": "Proveedores alimentación",
+      "mesesPareados": [
+        {
+          "mes": "Sep",
+          "anterior": 20601.0,
+          "vigente": 20817.0
+        },
+        {
+          "mes": "Oct",
+          "anterior": 10332.0,
+          "vigente": 10741.0
+        },
+        {
+          "mes": "Nov",
+          "anterior": 9009.0,
+          "vigente": 8286.0
+        },
+        {
+          "mes": "Dic",
+          "anterior": 4722.0,
+          "vigente": 5517.0
+        },
+        {
+          "mes": "Ene",
+          "anterior": 5505.0,
+          "vigente": 5805.0
+        },
+        {
+          "mes": "Feb",
+          "anterior": 741.0,
+          "vigente": 1031.0
+        },
+        {
+          "mes": "Mar",
+          "anterior": 821.0,
+          "vigente": 2302.0
+        },
+        {
+          "mes": "Abr",
+          "anterior": 7063.0,
+          "vigente": 7906.0
+        },
+        {
+          "mes": "May",
+          "anterior": 10066.0,
+          "vigente": 11456.0
+        },
+        {
+          "mes": "Jun",
+          "anterior": 19297.0,
+          "vigente": 11835.0
+        },
+        {
+          "mes": "Jul",
+          "anterior": 13857.0,
+          "vigente": 12062.0
+        },
+        {
+          "mes": "Ago",
+          "anterior": 17287.0,
+          "vigente": 17143.0
+        }
+      ],
+      "totalAnterior": 119301.0,
+      "totalVigente": 114901.0
+    },
+    {
+      "categoria": "Nóminas y personal",
+      "mesesPareados": [
+        {
+          "mes": "Sep",
+          "anterior": 0.0,
+          "vigente": 11179.0
+        },
+        {
+          "mes": "Oct",
+          "anterior": 0.0,
+          "vigente": 12742.0
+        },
+        {
+          "mes": "Nov",
+          "anterior": 0.0,
+          "vigente": 11909.0
+        },
+        {
+          "mes": "Dic",
+          "anterior": 0.0,
+          "vigente": 9851.0
+        },
+        {
+          "mes": "Ene",
+          "anterior": 0.0,
+          "vigente": 10223.0
+        },
+        {
+          "mes": "Feb",
+          "anterior": 0.0,
+          "vigente": 0.0
+        },
+        {
+          "mes": "Mar",
+          "anterior": 0.0,
+          "vigente": 0.0
+        },
+        {
+          "mes": "Abr",
+          "anterior": 0.0,
+          "vigente": 6366.0
+        },
+        {
+          "mes": "May",
+          "anterior": 3719.0,
+          "vigente": 13463.0
+        },
+        {
+          "mes": "Jun",
+          "anterior": 16038.0,
+          "vigente": 9570.0
+        },
+        {
+          "mes": "Jul",
+          "anterior": 11428.0,
+          "vigente": 9443.0
+        },
+        {
+          "mes": "Ago",
+          "anterior": 11358.0,
+          "vigente": 0.0
+        }
+      ],
+      "totalAnterior": 42543.0,
+      "totalVigente": 94746.0
+    },
+    {
+      "categoria": "Proveedores bebidas",
+      "mesesPareados": [
+        {
+          "mes": "Sep",
+          "anterior": 9806.0,
+          "vigente": 6852.0
+        },
+        {
+          "mes": "Oct",
+          "anterior": 8255.0,
+          "vigente": 5135.0
+        },
+        {
+          "mes": "Nov",
+          "anterior": 4484.0,
+          "vigente": 5524.0
+        },
+        {
+          "mes": "Dic",
+          "anterior": 3101.0,
+          "vigente": 9755.0
+        },
+        {
+          "mes": "Ene",
+          "anterior": 3376.0,
+          "vigente": 2045.0
+        },
+        {
+          "mes": "Feb",
+          "anterior": 1550.0,
+          "vigente": 0.0
+        },
+        {
+          "mes": "Mar",
+          "anterior": 1550.0,
+          "vigente": 529.0
+        },
+        {
+          "mes": "Abr",
+          "anterior": 2022.0,
+          "vigente": 2648.0
+        },
+        {
+          "mes": "May",
+          "anterior": 6188.0,
+          "vigente": 7599.0
+        },
+        {
+          "mes": "Jun",
+          "anterior": 3449.0,
+          "vigente": 7406.0
+        },
+        {
+          "mes": "Jul",
+          "anterior": 6634.0,
+          "vigente": 5379.0
+        },
+        {
+          "mes": "Ago",
+          "anterior": 8878.0,
+          "vigente": 519.0
+        }
+      ],
+      "totalAnterior": 59293.0,
+      "totalVigente": 53391.0
+    },
+    {
+      "categoria": "Seguridad Social",
+      "mesesPareados": [
+        {
+          "mes": "Sep",
+          "anterior": 0.0,
+          "vigente": 4398.0
+        },
+        {
+          "mes": "Oct",
+          "anterior": 0.0,
+          "vigente": 3403.0
+        },
+        {
+          "mes": "Nov",
+          "anterior": 0.0,
+          "vigente": 2020.0
+        },
+        {
+          "mes": "Dic",
+          "anterior": 0.0,
+          "vigente": 2326.0
+        },
+        {
+          "mes": "Ene",
+          "anterior": 0.0,
+          "vigente": 3792.0
+        },
+        {
+          "mes": "Feb",
+          "anterior": 0.0,
+          "vigente": 3166.0
+        },
+        {
+          "mes": "Mar",
+          "anterior": 0.0,
+          "vigente": 986.0
+        },
+        {
+          "mes": "Abr",
+          "anterior": 0.0,
+          "vigente": 3157.0
+        },
+        {
+          "mes": "May",
+          "anterior": 3712.0,
+          "vigente": 6120.0
+        },
+        {
+          "mes": "Jun",
+          "anterior": 3886.0,
+          "vigente": 5766.0
+        },
+        {
+          "mes": "Jul",
+          "anterior": 5027.0,
+          "vigente": 5997.0
+        },
+        {
+          "mes": "Ago",
+          "anterior": 4780.0,
+          "vigente": 6837.0
+        }
+      ],
+      "totalAnterior": 17405.0,
+      "totalVigente": 47968.0
+    },
+    {
+      "categoria": "Alquiler local",
+      "mesesPareados": [
+        {
+          "mes": "Sep",
+          "anterior": 2269.0,
+          "vigente": 5332.0
+        },
+        {
+          "mes": "Oct",
+          "anterior": 2269.0,
+          "vigente": 5392.0
+        },
+        {
+          "mes": "Nov",
+          "anterior": 2269.0,
+          "vigente": 5392.0
+        },
+        {
+          "mes": "Dic",
+          "anterior": 2269.0,
+          "vigente": 5392.0
+        },
+        {
+          "mes": "Ene",
+          "anterior": 2269.0,
+          "vigente": 3000.0
+        },
+        {
+          "mes": "Feb",
+          "anterior": 2269.0,
+          "vigente": 3000.0
+        },
+        {
+          "mes": "Mar",
+          "anterior": 0.0,
+          "vigente": 3000.0
+        },
+        {
+          "mes": "Abr",
+          "anterior": 2332.0,
+          "vigente": 3000.0
+        },
+        {
+          "mes": "May",
+          "anterior": 2332.0,
+          "vigente": 3060.0
+        },
+        {
+          "mes": "Jun",
+          "anterior": 2332.0,
+          "vigente": 3060.0
+        },
+        {
+          "mes": "Jul",
+          "anterior": 2332.0,
+          "vigente": 3060.0
+        },
+        {
+          "mes": "Ago",
+          "anterior": 2332.0,
+          "vigente": 3060.0
+        }
+      ],
+      "totalAnterior": 25274.0,
+      "totalVigente": 45748.0
+    },
+    {
+      "categoria": "Mantenimiento / limpieza / varios operativos",
+      "mesesPareados": [
+        {
+          "mes": "Sep",
+          "anterior": 2808.0,
+          "vigente": 2375.0
+        },
+        {
+          "mes": "Oct",
+          "anterior": 1894.0,
+          "vigente": 871.0
+        },
+        {
+          "mes": "Nov",
+          "anterior": 1524.0,
+          "vigente": 596.0
+        },
+        {
+          "mes": "Dic",
+          "anterior": 348.0,
+          "vigente": 180.0
+        },
+        {
+          "mes": "Ene",
+          "anterior": 1433.0,
+          "vigente": 17.0
+        },
+        {
+          "mes": "Feb",
+          "anterior": 3025.0,
+          "vigente": 1954.0
+        },
+        {
+          "mes": "Mar",
+          "anterior": 5966.0,
+          "vigente": 212.0
+        },
+        {
+          "mes": "Abr",
+          "anterior": 124.0,
+          "vigente": 9095.0
+        },
+        {
+          "mes": "May",
+          "anterior": 4343.0,
+          "vigente": 646.0
+        },
+        {
+          "mes": "Jun",
+          "anterior": 2436.0,
+          "vigente": 2748.0
+        },
+        {
+          "mes": "Jul",
+          "anterior": 302.0,
+          "vigente": 1439.0
+        },
+        {
+          "mes": "Ago",
+          "anterior": 1036.0,
+          "vigente": 13565.0
+        }
+      ],
+      "totalAnterior": 25239.0,
+      "totalVigente": 33698.0
+    },
+    {
+      "categoria": "Impuestos (Hacienda/AEAT)",
+      "mesesPareados": [
+        {
+          "mes": "Sep",
+          "anterior": 0.0,
+          "vigente": 1402.0
+        },
+        {
+          "mes": "Oct",
+          "anterior": 4323.0,
+          "vigente": 7479.0
+        },
+        {
+          "mes": "Nov",
+          "anterior": 600.0,
+          "vigente": 1164.0
+        },
+        {
+          "mes": "Dic",
+          "anterior": 0.0,
+          "vigente": 1168.0
+        },
+        {
+          "mes": "Ene",
+          "anterior": 0.0,
+          "vigente": 8012.0
+        },
+        {
+          "mes": "Feb",
+          "anterior": 0.0,
+          "vigente": 1195.0
+        },
+        {
+          "mes": "Mar",
+          "anterior": 0.0,
+          "vigente": 0.0
+        },
+        {
+          "mes": "Abr",
+          "anterior": 0.0,
+          "vigente": 9560.0
+        },
+        {
+          "mes": "May",
+          "anterior": 242.0,
+          "vigente": 29.0
+        },
+        {
+          "mes": "Jun",
+          "anterior": 243.0,
+          "vigente": 0.0
+        },
+        {
+          "mes": "Jul",
+          "anterior": 4580.0,
+          "vigente": 2677.0
+        },
+        {
+          "mes": "Ago",
+          "anterior": 1051.0,
+          "vigente": 695.0
+        }
+      ],
+      "totalAnterior": 11039.0,
+      "totalVigente": 33381.0
+    },
+    {
+      "categoria": "Suministros: electricidad/gas",
+      "mesesPareados": [
+        {
+          "mes": "Sep",
+          "anterior": 4148.0,
+          "vigente": 3126.0
+        },
+        {
+          "mes": "Oct",
+          "anterior": 1969.0,
+          "vigente": 1157.0
+        },
+        {
+          "mes": "Nov",
+          "anterior": 1094.0,
+          "vigente": 984.0
+        },
+        {
+          "mes": "Dic",
+          "anterior": 1589.0,
+          "vigente": 2494.0
+        },
+        {
+          "mes": "Ene",
+          "anterior": 3442.0,
+          "vigente": 1859.0
+        },
+        {
+          "mes": "Feb",
+          "anterior": 1097.0,
+          "vigente": 1166.0
+        },
+        {
+          "mes": "Mar",
+          "anterior": 723.0,
+          "vigente": 663.0
+        },
+        {
+          "mes": "Abr",
+          "anterior": 733.0,
+          "vigente": 70.0
+        },
+        {
+          "mes": "May",
+          "anterior": 1786.0,
+          "vigente": 2098.0
+        },
+        {
+          "mes": "Jun",
+          "anterior": 1516.0,
+          "vigente": 1480.0
+        },
+        {
+          "mes": "Jul",
+          "anterior": 1897.0,
+          "vigente": 1917.0
+        },
+        {
+          "mes": "Ago",
+          "anterior": 1389.0,
+          "vigente": 95.0
+        }
+      ],
+      "totalAnterior": 21383.0,
+      "totalVigente": 17109.0
+    },
+    {
+      "categoria": "Leasing vehículo (Xpeng G6)",
+      "mesesPareados": [
+        {
+          "mes": "Sep",
+          "anterior": 0.0,
+          "vigente": 0.0
+        },
+        {
+          "mes": "Oct",
+          "anterior": 0.0,
+          "vigente": 0.0
+        },
+        {
+          "mes": "Nov",
+          "anterior": 0.0,
+          "vigente": 0.0
+        },
+        {
+          "mes": "Dic",
+          "anterior": 0.0,
+          "vigente": 0.0
+        },
+        {
+          "mes": "Ene",
+          "anterior": 0.0,
+          "vigente": 0.0
+        },
+        {
+          "mes": "Feb",
+          "anterior": 0.0,
+          "vigente": 0.0
+        },
+        {
+          "mes": "Mar",
+          "anterior": 0.0,
+          "vigente": 10000.0
+        },
+        {
+          "mes": "Abr",
+          "anterior": 0.0,
+          "vigente": 517.0
+        },
+        {
+          "mes": "May",
+          "anterior": 0.0,
+          "vigente": 517.0
+        },
+        {
+          "mes": "Jun",
+          "anterior": 0.0,
+          "vigente": 517.0
+        },
+        {
+          "mes": "Jul",
+          "anterior": 0.0,
+          "vigente": 517.0
+        },
+        {
+          "mes": "Ago",
+          "anterior": 0.0,
+          "vigente": 517.0
+        }
+      ],
+      "totalAnterior": 0.0,
+      "totalVigente": 12585.0
+    },
+    {
+      "categoria": "Ayuntamiento / tasas municipales",
+      "mesesPareados": [
+        {
+          "mes": "Sep",
+          "anterior": 822.0,
+          "vigente": 1278.0
+        },
+        {
+          "mes": "Oct",
+          "anterior": 0.0,
+          "vigente": 2706.0
+        },
+        {
+          "mes": "Nov",
+          "anterior": 704.0,
+          "vigente": 3810.0
+        },
+        {
+          "mes": "Dic",
+          "anterior": 0.0,
+          "vigente": 2724.0
+        },
+        {
+          "mes": "Ene",
+          "anterior": 1835.0,
+          "vigente": 0.0
+        },
+        {
+          "mes": "Feb",
+          "anterior": 1841.0,
+          "vigente": 0.0
+        },
+        {
+          "mes": "Mar",
+          "anterior": 1846.0,
+          "vigente": 0.0
+        },
+        {
+          "mes": "Abr",
+          "anterior": 1852.0,
+          "vigente": 0.0
+        },
+        {
+          "mes": "May",
+          "anterior": 1858.0,
+          "vigente": 157.0
+        },
+        {
+          "mes": "Jun",
+          "anterior": 0.0,
+          "vigente": 0.0
+        },
+        {
+          "mes": "Jul",
+          "anterior": 1278.0,
+          "vigente": 1121.0
+        },
+        {
+          "mes": "Ago",
+          "anterior": 0.0,
+          "vigente": 0.0
+        }
+      ],
+      "totalAnterior": 12036.0,
+      "totalVigente": 11796.0
+    },
+    {
+      "categoria": "Sin clasificar",
+      "mesesPareados": [
+        {
+          "mes": "Sep",
+          "anterior": 3371.0,
+          "vigente": 0.0
+        },
+        {
+          "mes": "Oct",
+          "anterior": 770.0,
+          "vigente": 3171.0
+        },
+        {
+          "mes": "Nov",
+          "anterior": 1852.0,
+          "vigente": 3025.0
+        },
+        {
+          "mes": "Dic",
+          "anterior": 2911.0,
+          "vigente": 150.0
+        },
+        {
+          "mes": "Ene",
+          "anterior": 4127.0,
+          "vigente": 0.0
+        },
+        {
+          "mes": "Feb",
+          "anterior": 56.0,
+          "vigente": 0.0
+        },
+        {
+          "mes": "Mar",
+          "anterior": 1162.0,
+          "vigente": 0.0
+        },
+        {
+          "mes": "Abr",
+          "anterior": 512.0,
+          "vigente": 240.0
+        },
+        {
+          "mes": "May",
+          "anterior": 1792.0,
+          "vigente": 1583.0
+        },
+        {
+          "mes": "Jun",
+          "anterior": 1564.0,
+          "vigente": 0.0
+        },
+        {
+          "mes": "Jul",
+          "anterior": 187.0,
+          "vigente": 0.0
+        },
+        {
+          "mes": "Ago",
+          "anterior": 3146.0,
+          "vigente": 3165.0
+        }
+      ],
+      "totalAnterior": 21450.0,
+      "totalVigente": 11334.0
+    },
+    {
+      "categoria": "Seguros",
+      "mesesPareados": [
+        {
+          "mes": "Sep",
+          "anterior": 811.0,
+          "vigente": 1333.0
+        },
+        {
+          "mes": "Oct",
+          "anterior": 1318.0,
+          "vigente": 691.0
+        },
+        {
+          "mes": "Nov",
+          "anterior": 811.0,
+          "vigente": 741.0
+        },
+        {
+          "mes": "Dic",
+          "anterior": 816.0,
+          "vigente": 703.0
+        },
+        {
+          "mes": "Ene",
+          "anterior": 856.0,
+          "vigente": 734.0
+        },
+        {
+          "mes": "Feb",
+          "anterior": 659.0,
+          "vigente": 703.0
+        },
+        {
+          "mes": "Mar",
+          "anterior": 659.0,
+          "vigente": 825.0
+        },
+        {
+          "mes": "Abr",
+          "anterior": 686.0,
+          "vigente": 1372.0
+        },
+        {
+          "mes": "May",
+          "anterior": 729.0,
+          "vigente": 703.0
+        },
+        {
+          "mes": "Jun",
+          "anterior": 679.0,
+          "vigente": 703.0
+        },
+        {
+          "mes": "Jul",
+          "anterior": 691.0,
+          "vigente": 703.0
+        },
+        {
+          "mes": "Ago",
+          "anterior": 1034.0,
+          "vigente": 703.0
+        }
+      ],
+      "totalAnterior": 9749.0,
+      "totalVigente": 9914.0
+    },
+    {
+      "categoria": "Tarjetas Amex/Carrefour (gasto empresa)",
+      "mesesPareados": [
+        {
+          "mes": "Sep",
+          "anterior": 0.0,
+          "vigente": 0.0
+        },
+        {
+          "mes": "Oct",
+          "anterior": 600.0,
+          "vigente": 112.0
+        },
+        {
+          "mes": "Nov",
+          "anterior": 0.0,
+          "vigente": 694.0
+        },
+        {
+          "mes": "Dic",
+          "anterior": 600.0,
+          "vigente": 0.0
+        },
+        {
+          "mes": "Ene",
+          "anterior": 615.0,
+          "vigente": 407.0
+        },
+        {
+          "mes": "Feb",
+          "anterior": 600.0,
+          "vigente": 263.0
+        },
+        {
+          "mes": "Mar",
+          "anterior": 0.0,
+          "vigente": 0.0
+        },
+        {
+          "mes": "Abr",
+          "anterior": 113.0,
+          "vigente": 369.0
+        },
+        {
+          "mes": "May",
+          "anterior": 600.0,
+          "vigente": 1525.0
+        },
+        {
+          "mes": "Jun",
+          "anterior": 0.0,
+          "vigente": 1997.0
+        },
+        {
+          "mes": "Jul",
+          "anterior": 0.0,
+          "vigente": 2296.0
+        },
+        {
+          "mes": "Ago",
+          "anterior": 160.0,
+          "vigente": 0.0
+        }
+      ],
+      "totalAnterior": 3288.0,
+      "totalVigente": 7663.0
+    },
+    {
+      "categoria": "Comisiones y gastos bancarios",
+      "mesesPareados": [
+        {
+          "mes": "Sep",
+          "anterior": 13.0,
+          "vigente": 1637.0
+        },
+        {
+          "mes": "Oct",
+          "anterior": 15.0,
+          "vigente": 916.0
+        },
+        {
+          "mes": "Nov",
+          "anterior": 32.0,
+          "vigente": 76.0
+        },
+        {
+          "mes": "Dic",
+          "anterior": 922.0,
+          "vigente": 52.0
+        },
+        {
+          "mes": "Ene",
+          "anterior": 851.0,
+          "vigente": 355.0
+        },
+        {
+          "mes": "Feb",
+          "anterior": 10.0,
+          "vigente": 82.0
+        },
+        {
+          "mes": "Mar",
+          "anterior": 171.0,
+          "vigente": 341.0
+        },
+        {
+          "mes": "Abr",
+          "anterior": 987.0,
+          "vigente": 998.0
+        },
+        {
+          "mes": "May",
+          "anterior": 3017.0,
+          "vigente": 1023.0
+        },
+        {
+          "mes": "Jun",
+          "anterior": 2135.0,
+          "vigente": 784.0
+        },
+        {
+          "mes": "Jul",
+          "anterior": 1315.0,
+          "vigente": 582.0
+        },
+        {
+          "mes": "Ago",
+          "anterior": 1733.0,
+          "vigente": 539.0
+        }
+      ],
+      "totalAnterior": 11201.0,
+      "totalVigente": 7385.0
+    },
+    {
+      "categoria": "Tarjeta American Express (pago)",
+      "mesesPareados": [
+        {
+          "mes": "Sep",
+          "anterior": 2812.0,
+          "vigente": 463.0
+        },
+        {
+          "mes": "Oct",
+          "anterior": 630.0,
+          "vigente": 238.0
+        },
+        {
+          "mes": "Nov",
+          "anterior": 1174.0,
+          "vigente": 168.0
+        },
+        {
+          "mes": "Dic",
+          "anterior": 1906.0,
+          "vigente": 154.0
+        },
+        {
+          "mes": "Ene",
+          "anterior": 116.0,
+          "vigente": 76.0
+        },
+        {
+          "mes": "Feb",
+          "anterior": 2983.0,
+          "vigente": 130.0
+        },
+        {
+          "mes": "Mar",
+          "anterior": 5515.0,
+          "vigente": 3.0
+        },
+        {
+          "mes": "Abr",
+          "anterior": 321.0,
+          "vigente": 2117.0
+        },
+        {
+          "mes": "May",
+          "anterior": 2566.0,
+          "vigente": 334.0
+        },
+        {
+          "mes": "Jun",
+          "anterior": 1581.0,
+          "vigente": 615.0
+        },
+        {
+          "mes": "Jul",
+          "anterior": 506.0,
+          "vigente": 2888.0
+        },
+        {
+          "mes": "Ago",
+          "anterior": 2857.0,
+          "vigente": 0.0
+        }
+      ],
+      "totalAnterior": 22967.0,
+      "totalVigente": 7186.0
+    },
+    {
+      "categoria": "Alquiler vivienda personal",
+      "mesesPareados": [
+        {
+          "mes": "Sep",
+          "anterior": 0.0,
+          "vigente": 786.0
+        },
+        {
+          "mes": "Oct",
+          "anterior": 0.0,
+          "vigente": 786.0
+        },
+        {
+          "mes": "Nov",
+          "anterior": 0.0,
+          "vigente": 786.0
+        },
+        {
+          "mes": "Dic",
+          "anterior": 0.0,
+          "vigente": 786.0
+        },
+        {
+          "mes": "Ene",
+          "anterior": 0.0,
+          "vigente": 786.0
+        },
+        {
+          "mes": "Feb",
+          "anterior": 0.0,
+          "vigente": 786.0
+        },
+        {
+          "mes": "Mar",
+          "anterior": 0.0,
+          "vigente": 786.0
+        },
+        {
+          "mes": "Abr",
+          "anterior": 0.0,
+          "vigente": 786.0
+        },
+        {
+          "mes": "May",
+          "anterior": 0.0,
+          "vigente": 786.0
+        },
+        {
+          "mes": "Jun",
+          "anterior": 0.0,
+          "vigente": 0.0
+        },
+        {
+          "mes": "Jul",
+          "anterior": 0.0,
+          "vigente": 0.0
+        },
+        {
+          "mes": "Ago",
+          "anterior": 1693.0,
+          "vigente": 0.0
+        }
+      ],
+      "totalAnterior": 1693.0,
+      "totalVigente": 7074.0
+    },
+    {
+      "categoria": "Servicios profesionales / gestoría",
+      "mesesPareados": [
+        {
+          "mes": "Sep",
+          "anterior": 737.0,
+          "vigente": 729.0
+        },
+        {
+          "mes": "Oct",
+          "anterior": 323.0,
+          "vigente": 342.0
+        },
+        {
+          "mes": "Nov",
+          "anterior": 354.0,
+          "vigente": 332.0
+        },
+        {
+          "mes": "Dic",
+          "anterior": 295.0,
+          "vigente": 322.0
+        },
+        {
+          "mes": "Ene",
+          "anterior": 505.0,
+          "vigente": 303.0
+        },
+        {
+          "mes": "Feb",
+          "anterior": 303.0,
+          "vigente": 318.0
+        },
+        {
+          "mes": "Mar",
+          "anterior": 255.0,
+          "vigente": 262.0
+        },
+        {
+          "mes": "Abr",
+          "anterior": 479.0,
+          "vigente": 302.0
+        },
+        {
+          "mes": "May",
+          "anterior": 342.0,
+          "vigente": 415.0
+        },
+        {
+          "mes": "Jun",
+          "anterior": 332.0,
+          "vigente": 332.0
+        },
+        {
+          "mes": "Jul",
+          "anterior": 1060.0,
+          "vigente": 2127.0
+        },
+        {
+          "mes": "Ago",
+          "anterior": 361.0,
+          "vigente": 972.0
+        }
+      ],
+      "totalAnterior": 5346.0,
+      "totalVigente": 6756.0
+    },
+    {
+      "categoria": "Telecom / Software / TPV",
+      "mesesPareados": [
+        {
+          "mes": "Sep",
+          "anterior": 318.0,
+          "vigente": 316.0
+        },
+        {
+          "mes": "Oct",
+          "anterior": 299.0,
+          "vigente": 343.0
+        },
+        {
+          "mes": "Nov",
+          "anterior": 302.0,
+          "vigente": 328.0
+        },
+        {
+          "mes": "Dic",
+          "anterior": 330.0,
+          "vigente": 282.0
+        },
+        {
+          "mes": "Ene",
+          "anterior": 464.0,
+          "vigente": 287.0
+        },
+        {
+          "mes": "Feb",
+          "anterior": 249.0,
+          "vigente": 520.0
+        },
+        {
+          "mes": "Mar",
+          "anterior": 310.0,
+          "vigente": 280.0
+        },
+        {
+          "mes": "Abr",
+          "anterior": 343.0,
+          "vigente": 692.0
+        },
+        {
+          "mes": "May",
+          "anterior": 300.0,
+          "vigente": 412.0
+        },
+        {
+          "mes": "Jun",
+          "anterior": 1096.0,
+          "vigente": 1178.0
+        },
+        {
+          "mes": "Jul",
+          "anterior": 358.0,
+          "vigente": 412.0
+        },
+        {
+          "mes": "Ago",
+          "anterior": 376.0,
+          "vigente": 179.0
+        }
+      ],
+      "totalAnterior": 4745.0,
+      "totalVigente": 5229.0
+    },
+    {
+      "categoria": "Renting maquinaria (coctelera)",
+      "mesesPareados": [
+        {
+          "mes": "Sep",
+          "anterior": 0.0,
+          "vigente": 374.0
+        },
+        {
+          "mes": "Oct",
+          "anterior": 0.0,
+          "vigente": 374.0
+        },
+        {
+          "mes": "Nov",
+          "anterior": 0.0,
+          "vigente": 374.0
+        },
+        {
+          "mes": "Dic",
+          "anterior": 0.0,
+          "vigente": 374.0
+        },
+        {
+          "mes": "Ene",
+          "anterior": 0.0,
+          "vigente": 374.0
+        },
+        {
+          "mes": "Feb",
+          "anterior": 0.0,
+          "vigente": 374.0
+        },
+        {
+          "mes": "Mar",
+          "anterior": 0.0,
+          "vigente": 374.0
+        },
+        {
+          "mes": "Abr",
+          "anterior": 0.0,
+          "vigente": 374.0
+        },
+        {
+          "mes": "May",
+          "anterior": 374.0,
+          "vigente": 374.0
+        },
+        {
+          "mes": "Jun",
+          "anterior": 374.0,
+          "vigente": 374.0
+        },
+        {
+          "mes": "Jul",
+          "anterior": 374.0,
+          "vigente": 374.0
+        },
+        {
+          "mes": "Ago",
+          "anterior": 374.0,
+          "vigente": 374.0
+        }
+      ],
+      "totalAnterior": 1496.0,
+      "totalVigente": 4488.0
+    },
+    {
+      "categoria": "Donaciones / cuotas asociativas",
+      "mesesPareados": [
+        {
+          "mes": "Sep",
+          "anterior": 20.0,
+          "vigente": 20.0
+        },
+        {
+          "mes": "Oct",
+          "anterior": 95.0,
+          "vigente": 99.0
+        },
+        {
+          "mes": "Nov",
+          "anterior": 71.0,
+          "vigente": 20.0
+        },
+        {
+          "mes": "Dic",
+          "anterior": 20.0,
+          "vigente": 20.0
+        },
+        {
+          "mes": "Ene",
+          "anterior": 187.0,
+          "vigente": 193.0
+        },
+        {
+          "mes": "Feb",
+          "anterior": 108.0,
+          "vigente": 205.0
+        },
+        {
+          "mes": "Mar",
+          "anterior": 112.0,
+          "vigente": 149.0
+        },
+        {
+          "mes": "Abr",
+          "anterior": 191.0,
+          "vigente": 101.0
+        },
+        {
+          "mes": "May",
+          "anterior": 0.0,
+          "vigente": 20.0
+        },
+        {
+          "mes": "Jun",
+          "anterior": 20.0,
+          "vigente": 20.0
+        },
+        {
+          "mes": "Jul",
+          "anterior": 99.0,
+          "vigente": 101.0
+        },
+        {
+          "mes": "Ago",
+          "anterior": 20.0,
+          "vigente": 20.0
+        }
+      ],
+      "totalAnterior": 943.0,
+      "totalVigente": 968.0
+    },
+    {
+      "categoria": "Vehículo (combustible/taller)",
+      "mesesPareados": [
+        {
+          "mes": "Sep",
+          "anterior": 0.0,
+          "vigente": 0.0
+        },
+        {
+          "mes": "Oct",
+          "anterior": 0.0,
+          "vigente": 0.0
+        },
+        {
+          "mes": "Nov",
+          "anterior": 0.0,
+          "vigente": 0.0
+        },
+        {
+          "mes": "Dic",
+          "anterior": 0.0,
+          "vigente": 0.0
+        },
+        {
+          "mes": "Ene",
+          "anterior": 0.0,
+          "vigente": 0.0
+        },
+        {
+          "mes": "Feb",
+          "anterior": 0.0,
+          "vigente": 0.0
+        },
+        {
+          "mes": "Mar",
+          "anterior": 0.0,
+          "vigente": 0.0
+        },
+        {
+          "mes": "Abr",
+          "anterior": 0.0,
+          "vigente": 496.0
+        },
+        {
+          "mes": "May",
+          "anterior": 0.0,
+          "vigente": 0.0
+        },
+        {
+          "mes": "Jun",
+          "anterior": 0.0,
+          "vigente": 0.0
+        },
+        {
+          "mes": "Jul",
+          "anterior": 0.0,
+          "vigente": 142.0
+        },
+        {
+          "mes": "Ago",
+          "anterior": 0.0,
+          "vigente": 0.0
+        }
+      ],
+      "totalAnterior": 0.0,
+      "totalVigente": 638.0
+    },
+    {
+      "categoria": "Prevención de riesgos laborales",
+      "mesesPareados": [
+        {
+          "mes": "Sep",
+          "anterior": 0.0,
+          "vigente": 263.0
+        },
+        {
+          "mes": "Oct",
+          "anterior": 0.0,
+          "vigente": 60.0
+        },
+        {
+          "mes": "Nov",
+          "anterior": 0.0,
+          "vigente": 0.0
+        },
+        {
+          "mes": "Dic",
+          "anterior": 0.0,
+          "vigente": 0.0
+        },
+        {
+          "mes": "Ene",
+          "anterior": 0.0,
+          "vigente": 0.0
+        },
+        {
+          "mes": "Feb",
+          "anterior": 0.0,
+          "vigente": 0.0
+        },
+        {
+          "mes": "Mar",
+          "anterior": 0.0,
+          "vigente": 0.0
+        },
+        {
+          "mes": "Abr",
+          "anterior": 0.0,
+          "vigente": 0.0
+        },
+        {
+          "mes": "May",
+          "anterior": 0.0,
+          "vigente": 0.0
+        },
+        {
+          "mes": "Jun",
+          "anterior": 0.0,
+          "vigente": 0.0
+        },
+        {
+          "mes": "Jul",
+          "anterior": 0.0,
+          "vigente": 0.0
+        },
+        {
+          "mes": "Ago",
+          "anterior": 263.0,
+          "vigente": 271.0
+        }
+      ],
+      "totalAnterior": 263.0,
+      "totalVigente": 594.0
+    },
+    {
+      "categoria": "Seguridad: alarma (centralita)",
+      "mesesPareados": [
+        {
+          "mes": "Sep",
+          "anterior": 31.0,
+          "vigente": 33.0
+        },
+        {
+          "mes": "Oct",
+          "anterior": 31.0,
+          "vigente": 33.0
+        },
+        {
+          "mes": "Nov",
+          "anterior": 31.0,
+          "vigente": 71.0
+        },
+        {
+          "mes": "Dic",
+          "anterior": 31.0,
+          "vigente": 33.0
+        },
+        {
+          "mes": "Ene",
+          "anterior": 33.0,
+          "vigente": 33.0
+        },
+        {
+          "mes": "Feb",
+          "anterior": 33.0,
+          "vigente": 33.0
+        },
+        {
+          "mes": "Mar",
+          "anterior": 33.0,
+          "vigente": 33.0
+        },
+        {
+          "mes": "Abr",
+          "anterior": 33.0,
+          "vigente": 33.0
+        },
+        {
+          "mes": "May",
+          "anterior": 33.0,
+          "vigente": 33.0
+        },
+        {
+          "mes": "Jun",
+          "anterior": 33.0,
+          "vigente": 33.0
+        },
+        {
+          "mes": "Jul",
+          "anterior": 81.0,
+          "vigente": 47.0
+        },
+        {
+          "mes": "Ago",
+          "anterior": 33.0,
+          "vigente": 33.0
+        }
+      ],
+      "totalAnterior": 436.0,
+      "totalVigente": 448.0
+    },
+    {
+      "categoria": "Publicidad",
+      "mesesPareados": [
+        {
+          "mes": "Sep",
+          "anterior": 0.0,
+          "vigente": 0.0
+        },
+        {
+          "mes": "Oct",
+          "anterior": 0.0,
+          "vigente": 0.0
+        },
+        {
+          "mes": "Nov",
+          "anterior": 0.0,
+          "vigente": 0.0
+        },
+        {
+          "mes": "Dic",
+          "anterior": 0.0,
+          "vigente": 0.0
+        },
+        {
+          "mes": "Ene",
+          "anterior": 0.0,
+          "vigente": 0.0
+        },
+        {
+          "mes": "Feb",
+          "anterior": 0.0,
+          "vigente": 0.0
+        },
+        {
+          "mes": "Mar",
+          "anterior": 0.0,
+          "vigente": 0.0
+        },
+        {
+          "mes": "Abr",
+          "anterior": 0.0,
+          "vigente": 0.0
+        },
+        {
+          "mes": "May",
+          "anterior": 0.0,
+          "vigente": 0.0
+        },
+        {
+          "mes": "Jun",
+          "anterior": 0.0,
+          "vigente": 0.0
+        },
+        {
+          "mes": "Jul",
+          "anterior": 0.0,
+          "vigente": 0.0
+        },
+        {
+          "mes": "Ago",
+          "anterior": 0.0,
+          "vigente": 0.0
+        }
+      ],
+      "totalAnterior": 0.0,
+      "totalVigente": 0.0
+    }
+  ]
 }
