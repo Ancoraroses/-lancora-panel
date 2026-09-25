@@ -215,6 +215,15 @@
 
   <div class="section-label">2. Gasto por categoría vs. año anterior</div>
   <div class="section-note" id="gastos-yoy-note">Últimos 12 meses vs. los 12 anteriores.</div>
+  <div class="section-note">Impacto real en euros, ordenado de mayor a menor — así ves qué categorías pesan de verdad, no solo el %.</div>
+  <div class="chart-card">
+    <svg id="gastos-impact-chart" viewBox="0 0 720 480" style="width:100%;height:auto;"></svg>
+    <div class="legend-row" style="margin-top:10px;">
+      <span><span class="dot" style="background:#E15B4F"></span>gasta más</span>
+      <span><span class="dot" style="background:#4CAF87"></span>gasta menos</span>
+      <span><span class="dot" style="background:#5C7A94;opacity:0.5"></span>rayado = dato no fiable (hueco BBVA/categoría nueva)</span>
+    </div>
+  </div>
   <div id="gastos-yoy-table"></div>
 
   <div class="section-label">3. Estimación de cierre (dinámica, se recalcula sola)</div>
@@ -418,6 +427,33 @@
     return svg;
   }
 
+  function gastosImpactChart(rows){
+    var w=720, rowH=26, padL=180, padR=70, padT=10, padB=10;
+    var n = rows.length;
+    var h = padT + padB + n*rowH;
+    var innerW = w - padL - padR;
+    var maxAbs = Math.max.apply(null, rows.map(function(r){return Math.abs(r.impactoEur);}).concat([1]));
+    var midX = padL + innerW/2;
+    var scale = (innerW/2) / maxAbs;
+    var defs = '<defs><pattern id="hatchGrey" width="5" height="5" patternTransform="rotate(45)" patternUnits="userSpaceOnUse"><line x1="0" y1="0" x2="0" y2="5" stroke="#5C7A94" stroke-width="2"/></pattern></defs>';
+    var svg = defs;
+    svg += '<line x1="'+midX+'" y1="0" x2="'+midX+'" y2="'+h+'" stroke="#25415F" stroke-width="1"/>';
+    rows.forEach(function(r, i){
+      var y = padT + i*rowH;
+      var barW = Math.abs(r.impactoEur) * scale;
+      var isPos = r.impactoEur >= 0;
+      var x = isPos ? midX : midX - barW;
+      var baseColor = isPos ? '#E15B4F' : '#4CAF87';
+      var fill = r.confiable ? baseColor : 'url(#hatchGrey)';
+      svg += '<text x="'+(padL-8)+'" y="'+(y+rowH*0.65)+'" text-anchor="end" font-size="10.5" fill="#EDE6D6">'+r.categoria+'</text>';
+      svg += '<rect x="'+x.toFixed(1)+'" y="'+(y+4)+'" width="'+barW.toFixed(1)+'" height="'+(rowH-10)+'" rx="2" fill="'+fill+'" '+(!r.confiable?'stroke="'+baseColor+'" stroke-width="1"':'')+'/>';
+      var labelX = isPos ? (midX + barW + 6) : (midX - barW - 6);
+      var anchor = isPos ? 'start' : 'end';
+      svg += '<text x="'+labelX.toFixed(1)+'" y="'+(y+rowH*0.65)+'" text-anchor="'+anchor+'" font-size="10" fill="#8FA5BD" font-family="ui-monospace,monospace">'+(isPos?'+':'')+Math.round(r.impactoEur).toLocaleString('es-ES')+'€</text>';
+    });
+    return {svg: svg, height: h};
+  }
+
   function gastosYoyTable(rows){
     var html = '<div class="chart-card" style="padding:0;overflow:hidden;">';
     html += '<table style="width:100%;border-collapse:collapse;font-size:11px;">';
@@ -499,8 +535,12 @@
 
     var gyoy = data.gastosYoy;
     if (gyoy && gyoy.length) {
+      var impact = gastosImpactChart(gyoy);
+      var chartSvg = document.getElementById('gastos-impact-chart');
+      chartSvg.setAttribute('viewBox', '0 0 720 '+impact.height);
+      chartSvg.innerHTML = impact.svg;
       document.getElementById('gastos-yoy-table').innerHTML = gastosYoyTable(gyoy);
-      document.getElementById('gastos-yoy-note').innerHTML = 'Últimos 12 meses vs. los 12 anteriores. <b style="color:var(--coral)">Aviso:</b> el año anterior no tiene BBVA completo (falta sep24-abr25) y "Alquiler local" solo existe como categoría propia desde 2026 — algunas subidas grandes (nóminas, SS, impuestos, alquiler) son en parte artefacto de datos, no solo crecimiento real.';
+      document.getElementById('gastos-yoy-note').innerHTML = 'Últimos 12 meses vs. los 12 anteriores. <b style="color:var(--coral)">Aviso:</b> el año anterior no tiene BBVA completo (falta sep24-abr25) y "Alquiler local" solo existe como categoría propia desde 2026 — las categorías rayadas en el gráfico (nóminas, SS, impuestos, alquiler, financiación) están afectadas por esto, su subida no es 100% real crecimiento.';
     }
 
     var dp = data.proyeccionDinamica;
