@@ -449,7 +449,8 @@
       svg += '<rect x="'+x.toFixed(1)+'" y="'+(y+4)+'" width="'+barW.toFixed(1)+'" height="'+(rowH-10)+'" rx="2" fill="'+fill+'" '+(!r.confiable?'stroke="'+baseColor+'" stroke-width="1"':'')+'/>';
       var labelX = isPos ? (midX + barW + 6) : (midX - barW - 6);
       var anchor = isPos ? 'start' : 'end';
-      svg += '<text x="'+labelX.toFixed(1)+'" y="'+(y+rowH*0.65)+'" text-anchor="'+anchor+'" font-size="10" fill="#8FA5BD" font-family="ui-monospace,monospace">'+(isPos?'+':'')+Math.round(r.impactoEur).toLocaleString('es-ES')+'€</text>';
+      var labelTxt = r.confiable ? ((isPos?'+':'')+Math.round(r.impactoEur).toLocaleString('es-ES')+'€') : 'año anterior incompleto';
+      svg += '<text x="'+labelX.toFixed(1)+'" y="'+(y+rowH*0.65)+'" text-anchor="'+anchor+'" font-size="10" fill="#8FA5BD" font-family="ui-monospace,monospace">'+labelTxt+'</text>';
     });
     return {svg: svg, height: h};
   }
@@ -460,9 +461,10 @@
     html += '<tr style="background:var(--panel-2);"><th style="text-align:left;padding:8px 10px;">Categoría</th><th style="text-align:right;padding:8px 10px;">Año anterior</th><th style="text-align:right;padding:8px 10px;">Año vigente</th><th style="text-align:right;padding:8px 10px;">Δ%</th></tr>';
     rows.forEach(function(r, i){
       var bg = i%2===0 ? 'var(--panel)' : 'var(--panel-2)';
-      var deltaTxt = r.deltaPct===null ? '—' : (r.deltaPct>=0?'+':'')+(r.deltaPct*100).toFixed(0)+'%';
+      var deltaTxt = (!r.confiable) ? '—' : (r.deltaPct===null ? '—' : (r.deltaPct>=0?'+':'')+(r.deltaPct*100).toFixed(0)+'%');
       var deltaColor = r.deltaPct===null ? 'var(--muted)' : (r.deltaPct>0.15 ? 'var(--coral)' : (r.deltaPct<-0.05 ? 'var(--green)' : 'var(--paper)'));
-      html += '<tr style="background:'+bg+';"><td style="padding:7px 10px;">'+r.categoria+'</td><td style="text-align:right;padding:7px 10px;" class="num">'+fmtEUR(r.anterior)+'</td><td style="text-align:right;padding:7px 10px;" class="num">'+fmtEUR(r.vigente)+'</td><td style="text-align:right;padding:7px 10px;color:'+deltaColor+';" class="num">'+deltaTxt+'</td></tr>';
+      var anteriorTxt = r.confiable ? fmtEUR(r.anterior) : '<span style="color:var(--muted);font-style:italic;">incompleto</span>';
+      html += '<tr style="background:'+bg+';"><td style="padding:7px 10px;">'+r.categoria+'</td><td style="text-align:right;padding:7px 10px;" class="num">'+anteriorTxt+'</td><td style="text-align:right;padding:7px 10px;" class="num">'+fmtEUR(r.vigente)+'</td><td style="text-align:right;padding:7px 10px;color:'+deltaColor+';" class="num">'+deltaTxt+'</td></tr>';
     });
     html += '</table></div>';
     return html;
