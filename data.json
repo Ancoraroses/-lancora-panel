@@ -1,34 +1,34 @@
 {
-  "actualizado": "2026-09-25",
-  "cobertura": "01/09/2024 – 10/09/2026",
+  "actualizado": "2026-09-26",
+  "cobertura": "01/09/2024 – 25/09/2026",
   "tesoreria": {
-    "bbva": 27060.26,
-    "caixa": -2094.06,
+    "bbva": 26788.9,
+    "caixa": -4956.93,
     "bbvaNominas": 696.0,
     "cajaCashdro": 1242.0,
     "efectivoCasa": 700.0,
-    "actualizado": "2026-09-12"
+    "actualizado": "2026-09-25"
   },
   "runway": {
-    "gastoFijoMensual": 20479.0,
-    "cajaPropia": 27604.0,
-    "mesesCaja": 1.3,
-    "disponibleFinanciacion": 77906.0,
-    "mesesFinanciacionAdicional": 3.8,
-    "mesesTotal": 5.2,
+    "gastoFijoMensual": 20595.0,
+    "cajaPropia": 24470.0,
+    "mesesCaja": 1.2,
+    "disponibleFinanciacion": 75043.0,
+    "mesesFinanciacionAdicional": 3.6,
+    "mesesTotal": 4.8,
     "polizas": [
       {
         "nombre": "BBVA (5 años, 3,7%)",
         "limite": 50000,
-        "saldoActual": 27060.26,
+        "saldoActual": 26788.9,
         "disponible": 50000,
         "prioridad": "MANTENER"
       },
       {
         "nombre": "CaixaBank (renov. 27 ene, 5%)",
         "limite": 30000,
-        "saldoActual": -2094.06,
-        "disponible": 27906.0,
+        "saldoActual": -4956.93,
+        "disponible": 25043.0,
         "prioridad": "ELIMINAR"
       }
     ],
@@ -188,20 +188,20 @@
     {
       "mes": "2026-09",
       "ingresos": 34273.0,
-      "costeAlimentacion": 7299.0,
+      "costeAlimentacion": 9426.0,
       "costeBebidas": 2058.0,
       "costePersonal": 7946.0,
-      "foodPct": 0.213,
+      "foodPct": 0.275,
       "bevPct": 0.0601,
       "personnelPct": 0.2318,
-      "primeCostPct": 0.5049
+      "primeCostPct": 0.5669
     }
   ],
   "categorias": [
     {
       "categoria": "Préstamos y financiación",
-      "total": 159849.0,
-      "mediaMensual": 12296.0,
+      "total": 160547.0,
+      "mediaMensual": 12350.0,
       "mesesActivo": 13,
       "semaforo": "verde",
       "meses": [
@@ -217,13 +217,13 @@
         11059.0,
         8559.0,
         5372.0,
-        4674.0
+        5372.0
       ]
     },
     {
       "categoria": "Proveedores alimentación",
-      "total": 122200.0,
-      "mediaMensual": 9400.0,
+      "total": 124327.0,
+      "mediaMensual": 9564.0,
       "mesesActivo": 13,
       "semaforo": "rojo",
       "meses": [
@@ -239,7 +239,7 @@
         11835.0,
         12062.0,
         17143.0,
-        7299.0
+        9426.0
       ]
     },
     {
@@ -376,8 +376,8 @@
     },
     {
       "categoria": "Suministros: electricidad/gas",
-      "total": 20171.0,
-      "mediaMensual": 1552.0,
+      "total": 20209.0,
+      "mediaMensual": 1555.0,
       "mesesActivo": 13,
       "semaforo": "verde",
       "meses": [
@@ -393,7 +393,7 @@
         1480.0,
         1917.0,
         95.0,
-        3062.0
+        3100.0
       ]
     },
     {
@@ -661,6 +661,28 @@
       ]
     },
     {
+      "categoria": "Prevención de riesgos laborales",
+      "total": 866.0,
+      "mediaMensual": 216.0,
+      "mesesActivo": 4,
+      "semaforo": "sin-datos",
+      "meses": [
+        263.0,
+        60.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        271.0,
+        271.0
+      ]
+    },
+    {
       "categoria": "Vehículo (combustible/taller)",
       "total": 638.0,
       "mediaMensual": 319.0,
@@ -679,28 +701,6 @@
         0.0,
         142.0,
         0.0,
-        0.0
-      ]
-    },
-    {
-      "categoria": "Prevención de riesgos laborales",
-      "total": 595.0,
-      "mediaMensual": 198.0,
-      "mesesActivo": 3,
-      "semaforo": "sin-datos",
-      "meses": [
-        263.0,
-        60.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        271.0,
         0.0
       ]
     },
@@ -750,212 +750,9 @@
     }
   ],
   "avisos": [
-    "RECUPERACIÓN 11/09/2026: el entorno de trabajo se reinició y se reconstruyó la lógica de categorización a partir de la auditoría guardada — los totales deberían coincidir con los de antes del reinicio.",
     "Coste de personal es parcial en general (parte de nóminas vía cuenta BBVA oculta).",
     "El reparto alimentación/bebidas es una aproximación por nombre de proveedor.",
     "Ratios de agosto usan datos REALES de Haddock (food 15,92%, personal 22,53%). Bebidas 14,28% incluye una compra grande de stock, no es el ritmo mensual normal."
-  ],
-  "gastosYoy": [
-    {
-      "categoria": "Préstamos y financiación",
-      "anterior": 74632.0,
-      "vigente": 42472.0,
-      "deltaPct": -0.4309,
-      "impactoEur": -32160.0,
-      "confiable": true
-    },
-    {
-      "categoria": "Nóminas y personal",
-      "anterior": 51720.0,
-      "vigente": 28494.0,
-      "deltaPct": -0.4491,
-      "impactoEur": -23226.0,
-      "confiable": true
-    },
-    {
-      "categoria": "Proveedores alimentación",
-      "anterior": 78787.0,
-      "vigente": 58136.0,
-      "deltaPct": -0.2621,
-      "impactoEur": -20651.0,
-      "confiable": true
-    },
-    {
-      "categoria": "Mantenimiento / limpieza / varios operativos",
-      "anterior": 9064.0,
-      "vigente": 28182.0,
-      "deltaPct": 2.1093,
-      "impactoEur": 19118.0,
-      "confiable": true
-    },
-    {
-      "categoria": "Proveedores bebidas",
-      "anterior": 29815.0,
-      "vigente": 21785.0,
-      "deltaPct": -0.2693,
-      "impactoEur": -8029.0,
-      "confiable": true
-    },
-    {
-      "categoria": "Seguridad Social",
-      "anterior": 17406.0,
-      "vigente": 24720.0,
-      "deltaPct": 0.4202,
-      "impactoEur": 7314.0,
-      "confiable": true
-    },
-    {
-      "categoria": "Tarjetas Amex/Carrefour (gasto empresa)",
-      "anterior": 160.0,
-      "vigente": 4746.0,
-      "deltaPct": 28.6635,
-      "impactoEur": 4586.0,
-      "confiable": true
-    },
-    {
-      "categoria": "Comisiones y gastos bancarios",
-      "anterior": 6821.0,
-      "vigente": 2518.0,
-      "deltaPct": -0.6309,
-      "impactoEur": -4303.0,
-      "confiable": true
-    },
-    {
-      "categoria": "Impuestos (Hacienda/AEAT)",
-      "anterior": 7518.0,
-      "vigente": 3401.0,
-      "deltaPct": -0.5477,
-      "impactoEur": -4118.0,
-      "confiable": true
-    },
-    {
-      "categoria": "Alquiler vivienda personal",
-      "anterior": 2480.0,
-      "vigente": 0.0,
-      "deltaPct": -1.0,
-      "impactoEur": -2480.0,
-      "confiable": true
-    },
-    {
-      "categoria": "Ayuntamiento / tasas municipales",
-      "anterior": 4414.0,
-      "vigente": 2117.0,
-      "deltaPct": -0.5204,
-      "impactoEur": -2297.0,
-      "confiable": true
-    },
-    {
-      "categoria": "Sin clasificar",
-      "anterior": 6609.0,
-      "vigente": 8835.0,
-      "deltaPct": 0.3368,
-      "impactoEur": 2226.0,
-      "confiable": true
-    },
-    {
-      "categoria": "Leasing vehículo (Xpeng G6)",
-      "anterior": 0.0,
-      "vigente": 2067.0,
-      "deltaPct": null,
-      "impactoEur": 2067.0,
-      "confiable": true
-    },
-    {
-      "categoria": "Tarjeta American Express (pago)",
-      "anterior": 5756.0,
-      "vigente": 3837.0,
-      "deltaPct": -0.3334,
-      "impactoEur": -1919.0,
-      "confiable": true
-    },
-    {
-      "categoria": "Servicios profesionales / gestoría",
-      "anterior": 2482.0,
-      "vigente": 4187.0,
-      "deltaPct": 0.6872,
-      "impactoEur": 1705.0,
-      "confiable": true
-    },
-    {
-      "categoria": "Suministros: electricidad/gas",
-      "anterior": 9639.0,
-      "vigente": 7997.0,
-      "deltaPct": -0.1704,
-      "impactoEur": -1643.0,
-      "confiable": true
-    },
-    {
-      "categoria": "Seguros",
-      "anterior": 3787.0,
-      "vigente": 3169.0,
-      "deltaPct": -0.1633,
-      "impactoEur": -618.0,
-      "confiable": true
-    },
-    {
-      "categoria": "Telecom / Software / TPV",
-      "anterior": 2446.0,
-      "vigente": 2116.0,
-      "deltaPct": -0.1349,
-      "impactoEur": -330.0,
-      "confiable": true
-    },
-    {
-      "categoria": "Prevención de riesgos laborales",
-      "anterior": 525.0,
-      "vigente": 271.0,
-      "deltaPct": -0.4834,
-      "impactoEur": -254.0,
-      "confiable": true
-    },
-    {
-      "categoria": "Publicidad",
-      "anterior": 0.0,
-      "vigente": 156.0,
-      "deltaPct": null,
-      "impactoEur": 156.0,
-      "confiable": true
-    },
-    {
-      "categoria": "Vehículo (combustible/taller)",
-      "anterior": 0.0,
-      "vigente": 142.0,
-      "deltaPct": null,
-      "impactoEur": 142.0,
-      "confiable": true
-    },
-    {
-      "categoria": "Alquiler local",
-      "anterior": 12330.0,
-      "vigente": 12240.0,
-      "deltaPct": -0.0073,
-      "impactoEur": -90.0,
-      "confiable": true
-    },
-    {
-      "categoria": "Seguridad: alarma (centralita)",
-      "anterior": 179.0,
-      "vigente": 145.0,
-      "deltaPct": -0.1892,
-      "impactoEur": -34.0,
-      "confiable": true
-    },
-    {
-      "categoria": "Donaciones / cuotas asociativas",
-      "anterior": 159.0,
-      "vigente": 181.0,
-      "deltaPct": 0.1384,
-      "impactoEur": 22.0,
-      "confiable": true
-    },
-    {
-      "categoria": "Renting maquinaria (coctelera)",
-      "anterior": 1870.0,
-      "vigente": 1870.0,
-      "deltaPct": 0.0,
-      "impactoEur": 0.0,
-      "confiable": true
-    }
   ],
   "comparativaInteranual": [
     {
@@ -1611,9 +1408,9 @@
       "mes": "Septiembre",
       "objetivoIngresos": 16250,
       "ventaReal": 7231,
-      "saldoRitmoAnterior": 693.0,
-      "saldoEscMinimo": 5106.0,
-      "saldoEscObjetivo": 11677.0,
+      "saldoRitmoAnterior": -2441.0,
+      "saldoEscMinimo": 1972.0,
+      "saldoEscObjetivo": 8543.0,
       "saldoRealCombinado": null
     },
     {
@@ -1623,9 +1420,9 @@
       "mes": "Septiembre",
       "objetivoIngresos": 16250,
       "ventaReal": 11127,
-      "saldoRitmoAnterior": -1505.0,
-      "saldoEscMinimo": 14398.0,
-      "saldoEscObjetivo": 24280.0,
+      "saldoRitmoAnterior": -4639.0,
+      "saldoEscMinimo": 11264.0,
+      "saldoEscObjetivo": 21145.0,
       "saldoRealCombinado": null
     },
     {
@@ -1635,9 +1432,9 @@
       "mes": "Septiembre",
       "objetivoIngresos": 16250,
       "ventaReal": 9808,
-      "saldoRitmoAnterior": -9419.0,
-      "saldoEscMinimo": 17956.0,
-      "saldoEscObjetivo": 31789.0,
+      "saldoRitmoAnterior": -12553.0,
+      "saldoEscMinimo": 14822.0,
+      "saldoEscObjetivo": 28655.0,
       "saldoRealCombinado": null
     },
     {
@@ -1647,9 +1444,9 @@
       "mes": "Septiembre",
       "objetivoIngresos": 16250,
       "ventaReal": null,
-      "saldoRitmoAnterior": -10359.0,
-      "saldoEscMinimo": 27999.0,
-      "saldoEscObjetivo": 45059.0,
+      "saldoRitmoAnterior": -13493.0,
+      "saldoEscMinimo": 24865.0,
+      "saldoEscObjetivo": 41924.0,
       "saldoRealCombinado": null
     },
     {
@@ -1659,9 +1456,9 @@
       "mes": "Octubre",
       "objetivoIngresos": 11250,
       "ventaReal": null,
-      "saldoRitmoAnterior": -30061.0,
-      "saldoEscMinimo": 11555.0,
-      "saldoEscObjetivo": 33465.0,
+      "saldoRitmoAnterior": -33195.0,
+      "saldoEscMinimo": 8420.0,
+      "saldoEscObjetivo": 30330.0,
       "saldoRealCombinado": null
     },
     {
@@ -1671,9 +1468,9 @@
       "mes": "Octubre",
       "objetivoIngresos": 11250,
       "ventaReal": null,
-      "saldoRitmoAnterior": -25820.0,
-      "saldoEscMinimo": 17377.0,
-      "saldoEscObjetivo": 41648.0,
+      "saldoRitmoAnterior": -28954.0,
+      "saldoEscMinimo": 14243.0,
+      "saldoEscObjetivo": 38513.0,
       "saldoRealCombinado": null
     },
     {
@@ -1683,9 +1480,9 @@
       "mes": "Octubre",
       "objetivoIngresos": 11250,
       "ventaReal": null,
-      "saldoRitmoAnterior": -26289.0,
-      "saldoEscMinimo": 18820.0,
-      "saldoEscObjetivo": 45940.0,
+      "saldoRitmoAnterior": -29424.0,
+      "saldoEscMinimo": 15685.0,
+      "saldoEscObjetivo": 42806.0,
       "saldoRealCombinado": null
     },
     {
@@ -1695,9 +1492,9 @@
       "mes": "Octubre",
       "objetivoIngresos": 11250,
       "ventaReal": null,
-      "saldoRitmoAnterior": -21432.0,
-      "saldoEscMinimo": 25216.0,
-      "saldoEscObjetivo": 54632.0,
+      "saldoRitmoAnterior": -24566.0,
+      "saldoEscMinimo": 22082.0,
+      "saldoEscObjetivo": 51498.0,
       "saldoRealCombinado": null
     },
     {
@@ -1707,9 +1504,9 @@
       "mes": "Noviembre",
       "objetivoIngresos": 5000,
       "ventaReal": null,
-      "saldoRitmoAnterior": -48628.0,
-      "saldoEscMinimo": 758.0,
-      "saldoEscObjetivo": 34248.0,
+      "saldoRitmoAnterior": -51763.0,
+      "saldoEscMinimo": -2376.0,
+      "saldoEscObjetivo": 31114.0,
       "saldoRealCombinado": null
     },
     {
@@ -1719,9 +1516,9 @@
       "mes": "Noviembre",
       "objetivoIngresos": 5000,
       "ventaReal": null,
-      "saldoRitmoAnterior": -50919.0,
-      "saldoEscMinimo": -537.0,
-      "saldoEscObjetivo": 34436.0,
+      "saldoRitmoAnterior": -54053.0,
+      "saldoEscMinimo": -3671.0,
+      "saldoEscObjetivo": 31302.0,
       "saldoRealCombinado": null
     },
     {
@@ -1731,9 +1528,9 @@
       "mes": "Noviembre",
       "objetivoIngresos": 5000,
       "ventaReal": null,
-      "saldoRitmoAnterior": -58110.0,
-      "saldoEscMinimo": -6389.0,
-      "saldoEscObjetivo": 30577.0,
+      "saldoRitmoAnterior": -61244.0,
+      "saldoEscMinimo": -9523.0,
+      "saldoEscObjetivo": 27442.0,
       "saldoRealCombinado": null
     },
     {
@@ -1743,9 +1540,9 @@
       "mes": "Noviembre",
       "objetivoIngresos": 5000,
       "ventaReal": null,
-      "saldoRitmoAnterior": -59759.0,
-      "saldoEscMinimo": -7088.0,
-      "saldoEscObjetivo": 31294.0,
+      "saldoRitmoAnterior": -62893.0,
+      "saldoEscMinimo": -10222.0,
+      "saldoEscObjetivo": 28160.0,
       "saldoRealCombinado": null
     },
     {
@@ -1755,9 +1552,9 @@
       "mes": "Diciembre",
       "objetivoIngresos": 10500,
       "ventaReal": null,
-      "saldoRitmoAnterior": -77549.0,
-      "saldoEscMinimo": -21879.0,
-      "saldoEscObjetivo": 20968.0,
+      "saldoRitmoAnterior": -80683.0,
+      "saldoEscMinimo": -25013.0,
+      "saldoEscObjetivo": 17834.0,
       "saldoRealCombinado": null
     },
     {
@@ -1767,9 +1564,9 @@
       "mes": "Diciembre",
       "objetivoIngresos": 10500,
       "ventaReal": null,
-      "saldoRitmoAnterior": -73455.0,
-      "saldoEscMinimo": -16319.0,
-      "saldoEscObjetivo": 28717.0,
+      "saldoRitmoAnterior": -76589.0,
+      "saldoEscMinimo": -19453.0,
+      "saldoEscObjetivo": 25583.0,
       "saldoRealCombinado": null
     },
     {
@@ -1779,9 +1576,9 @@
       "mes": "Diciembre",
       "objetivoIngresos": 10500,
       "ventaReal": null,
-      "saldoRitmoAnterior": -73666.0,
-      "saldoEscMinimo": -14762.0,
-      "saldoEscObjetivo": 32911.0,
+      "saldoRitmoAnterior": -76801.0,
+      "saldoEscMinimo": -17896.0,
+      "saldoEscObjetivo": 29776.0,
       "saldoRealCombinado": null
     },
     {
@@ -1791,9 +1588,9 @@
       "mes": "Diciembre",
       "objetivoIngresos": 10500,
       "ventaReal": null,
-      "saldoRitmoAnterior": -69009.0,
-      "saldoEscMinimo": -8677.0,
-      "saldoEscObjetivo": 41126.0,
+      "saldoRitmoAnterior": -72143.0,
+      "saldoEscMinimo": -11811.0,
+      "saldoEscObjetivo": 37992.0,
       "saldoRealCombinado": null
     }
   ],
@@ -1804,6 +1601,208 @@
     "proyeccionDinamicaTotal16Semanas": 99375,
     "pctDelObjetivo": 57.8
   },
+  "gastosYoy": [
+    {
+      "categoria": "Préstamos y financiación",
+      "anterior": 74632.0,
+      "vigente": 43170.0,
+      "deltaPct": -0.4216,
+      "impactoEur": -31462.0,
+      "confiable": true
+    },
+    {
+      "categoria": "Nóminas y personal",
+      "anterior": 51720.0,
+      "vigente": 28494.0,
+      "deltaPct": -0.4491,
+      "impactoEur": -23226.0,
+      "confiable": true
+    },
+    {
+      "categoria": "Proveedores alimentación",
+      "anterior": 80770.0,
+      "vigente": 60263.0,
+      "deltaPct": -0.2539,
+      "impactoEur": -20507.0,
+      "confiable": true
+    },
+    {
+      "categoria": "Mantenimiento / limpieza / varios operativos",
+      "anterior": 9064.0,
+      "vigente": 28182.0,
+      "deltaPct": 2.1093,
+      "impactoEur": 19118.0,
+      "confiable": true
+    },
+    {
+      "categoria": "Proveedores bebidas",
+      "anterior": 29815.0,
+      "vigente": 21785.0,
+      "deltaPct": -0.2693,
+      "impactoEur": -8029.0,
+      "confiable": true
+    },
+    {
+      "categoria": "Seguridad Social",
+      "anterior": 17406.0,
+      "vigente": 24720.0,
+      "deltaPct": 0.4202,
+      "impactoEur": 7314.0,
+      "confiable": true
+    },
+    {
+      "categoria": "Tarjetas Amex/Carrefour (gasto empresa)",
+      "anterior": 160.0,
+      "vigente": 4746.0,
+      "deltaPct": 28.6635,
+      "impactoEur": 4586.0,
+      "confiable": true
+    },
+    {
+      "categoria": "Comisiones y gastos bancarios",
+      "anterior": 6821.0,
+      "vigente": 2518.0,
+      "deltaPct": -0.6309,
+      "impactoEur": -4303.0,
+      "confiable": true
+    },
+    {
+      "categoria": "Impuestos (Hacienda/AEAT)",
+      "anterior": 7518.0,
+      "vigente": 3401.0,
+      "deltaPct": -0.5477,
+      "impactoEur": -4118.0,
+      "confiable": true
+    },
+    {
+      "categoria": "Alquiler vivienda personal",
+      "anterior": 2480.0,
+      "vigente": 0.0,
+      "deltaPct": -1.0,
+      "impactoEur": -2480.0,
+      "confiable": true
+    },
+    {
+      "categoria": "Ayuntamiento / tasas municipales",
+      "anterior": 4414.0,
+      "vigente": 2117.0,
+      "deltaPct": -0.5204,
+      "impactoEur": -2297.0,
+      "confiable": true
+    },
+    {
+      "categoria": "Sin clasificar",
+      "anterior": 6609.0,
+      "vigente": 8835.0,
+      "deltaPct": 0.3368,
+      "impactoEur": 2226.0,
+      "confiable": true
+    },
+    {
+      "categoria": "Leasing vehículo (Xpeng G6)",
+      "anterior": 0.0,
+      "vigente": 2067.0,
+      "deltaPct": null,
+      "impactoEur": 2067.0,
+      "confiable": true
+    },
+    {
+      "categoria": "Tarjeta American Express (pago)",
+      "anterior": 5756.0,
+      "vigente": 3837.0,
+      "deltaPct": -0.3334,
+      "impactoEur": -1919.0,
+      "confiable": true
+    },
+    {
+      "categoria": "Servicios profesionales / gestoría",
+      "anterior": 2482.0,
+      "vigente": 4187.0,
+      "deltaPct": 0.6872,
+      "impactoEur": 1705.0,
+      "confiable": true
+    },
+    {
+      "categoria": "Suministros: electricidad/gas",
+      "anterior": 9639.0,
+      "vigente": 8034.0,
+      "deltaPct": -0.1665,
+      "impactoEur": -1605.0,
+      "confiable": true
+    },
+    {
+      "categoria": "Seguros",
+      "anterior": 3787.0,
+      "vigente": 3169.0,
+      "deltaPct": -0.1633,
+      "impactoEur": -618.0,
+      "confiable": true
+    },
+    {
+      "categoria": "Telecom / Software / TPV",
+      "anterior": 2446.0,
+      "vigente": 2116.0,
+      "deltaPct": -0.1349,
+      "impactoEur": -330.0,
+      "confiable": true
+    },
+    {
+      "categoria": "Publicidad",
+      "anterior": 0.0,
+      "vigente": 156.0,
+      "deltaPct": null,
+      "impactoEur": 156.0,
+      "confiable": true
+    },
+    {
+      "categoria": "Vehículo (combustible/taller)",
+      "anterior": 0.0,
+      "vigente": 142.0,
+      "deltaPct": null,
+      "impactoEur": 142.0,
+      "confiable": true
+    },
+    {
+      "categoria": "Alquiler local",
+      "anterior": 12330.0,
+      "vigente": 12240.0,
+      "deltaPct": -0.0073,
+      "impactoEur": -90.0,
+      "confiable": true
+    },
+    {
+      "categoria": "Seguridad: alarma (centralita)",
+      "anterior": 179.0,
+      "vigente": 145.0,
+      "deltaPct": -0.1892,
+      "impactoEur": -34.0,
+      "confiable": true
+    },
+    {
+      "categoria": "Donaciones / cuotas asociativas",
+      "anterior": 159.0,
+      "vigente": 181.0,
+      "deltaPct": 0.1384,
+      "impactoEur": 22.0,
+      "confiable": true
+    },
+    {
+      "categoria": "Prevención de riesgos laborales",
+      "anterior": 525.0,
+      "vigente": 543.0,
+      "deltaPct": 0.0332,
+      "impactoEur": 17.0,
+      "confiable": true
+    },
+    {
+      "categoria": "Renting maquinaria (coctelera)",
+      "anterior": 1870.0,
+      "vigente": 1870.0,
+      "deltaPct": 0.0,
+      "impactoEur": 0.0,
+      "confiable": true
+    }
+  ],
   "categoriasPareadas": [
     {
       "categoria": "Préstamos y financiación",
@@ -3480,5 +3479,10 @@
       "totalAnterior": 0.0,
       "totalVigente": 0.0
     }
-  ]
+  ],
+  "gastosYoyPeriodo": {
+    "anterior": "07/05/2025 - 26/09/2025",
+    "vigente": "07/05/2026 - 26/09/2026",
+    "nota": "Ventana con datos completos (BBVA desde 07/05/2025)."
+  }
 }
