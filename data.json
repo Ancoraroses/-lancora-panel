@@ -18,7 +18,7 @@
     "mesesTotal": 3.7,
     "polizas": [
       {
-        "nombre": "BBVA (5 años, 3,7%)",
+        "nombre": "BBVA (3,7% · vence 13/10/2026, renovación a 13/10/2027 pendiente de firma)",
         "limite": 50000,
         "saldoActual": -179.15,
         "disponible": 49821.0,
@@ -789,7 +789,8 @@
     "Coste de personal es parcial en general (parte de nóminas vía cuenta BBVA oculta).",
     "El reparto alimentación/bebidas es una aproximación por nombre de proveedor.",
     "Ratios de agosto usan datos REALES de Haddock (food 15,92%, personal 22,53%). Bebidas 14,28% incluye una compra grande de stock, no es el ritmo mensual normal.",
-    "08/10/2026: TOTAL LIQUIDEZ NEGATIVA por primera vez (-648,68 EUR). BBVA y CaixaBank ambas dispuestas. Situacion critica."
+    "08/10/2026: TOTAL LIQUIDEZ NEGATIVA por primera vez (-648,68 EUR). BBVA y CaixaBank ambas dispuestas. Situacion critica.",
+    "08/10/2026: la póliza BBVA (50.000 EUR) vence el 13/10/2026. El anexo de renovación (hasta 13/10/2027) debe firmarse por la empresa y los dos fiadores; si no se firma a tiempo, la póliza vence."
   ],
   "comparativaInteranual": [
     {
