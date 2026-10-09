@@ -1,34 +1,34 @@
 {
-  "actualizado": "2026-10-08",
+  "actualizado": "2026-10-09",
   "cobertura": "01/09/2024 – 25/09/2026",
   "tesoreria": {
-    "bbva": -179.15,
-    "caixa": -3635.53,
+    "bbva": -102.29,
+    "caixa": -3038.49,
     "bbvaNominas": 696.0,
     "cajaCashdro": 1970.0,
     "efectivoCasa": 500.0,
-    "actualizado": "2026-09-25"
+    "actualizado": "2026-10-09"
   },
   "runway": {
     "gastoFijoMensual": 20257.0,
-    "cajaPropia": -649.0,
-    "mesesCaja": -0.0,
-    "disponibleFinanciacion": 76185.0,
+    "cajaPropia": 25,
+    "mesesCaja": 0.0,
+    "disponibleFinanciacion": 76860,
     "mesesFinanciacionAdicional": 3.8,
-    "mesesTotal": 3.7,
+    "mesesTotal": 3.8,
     "polizas": [
       {
         "nombre": "BBVA (3,7% · vence 13/10/2026, renovación a 13/10/2027 pendiente de firma)",
         "limite": 50000,
-        "saldoActual": -179.15,
-        "disponible": 49821.0,
+        "saldoActual": -102.29,
+        "disponible": 49898,
         "prioridad": "MANTENER"
       },
       {
         "nombre": "CaixaBank (renov. 27 ene, 5%)",
         "limite": 30000,
-        "saldoActual": -3635.53,
-        "disponible": 26364.0,
+        "saldoActual": -3038.49,
+        "disponible": 26962,
         "prioridad": "ELIMINAR"
       }
     ],
@@ -789,8 +789,8 @@
     "Coste de personal es parcial en general (parte de nóminas vía cuenta BBVA oculta).",
     "El reparto alimentación/bebidas es una aproximación por nombre de proveedor.",
     "Ratios de agosto usan datos REALES de Haddock (food 15,92%, personal 22,53%). Bebidas 14,28% incluye una compra grande de stock, no es el ritmo mensual normal.",
-    "08/10/2026: TOTAL LIQUIDEZ NEGATIVA por primera vez (-648,68 EUR). BBVA y CaixaBank ambas dispuestas. Situacion critica.",
-    "08/10/2026: la póliza BBVA (50.000 EUR) vence el 13/10/2026. El anexo de renovación (hasta 13/10/2027) debe firmarse por la empresa y los dos fiadores; si no se firma a tiempo, la póliza vence."
+    "08/10/2026: la póliza BBVA (50.000 EUR) vence el 13/10/2026. El anexo de renovación (hasta 13/10/2027) debe firmarse por la empresa y los dos fiadores; si no se firma a tiempo, la póliza vence.",
+    "09/10/2026: liquidez total 25.22 EUR (banco combinado -3140.78). Sube respecto al 08/10 (-648,68), pero incluye un ingreso de cajero de 870 EUR en CaixaBank el 08/10: si salió del Cashdro/efectivo, hay que restarlo de esas cajas. Sigue en zona crítica."
   ],
   "comparativaInteranual": [
     {
