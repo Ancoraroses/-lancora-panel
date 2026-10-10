@@ -1,34 +1,34 @@
 {
-  "actualizado": "2026-10-09",
+  "actualizado": "2026-10-10",
   "cobertura": "01/09/2024 – 25/09/2026",
   "tesoreria": {
-    "bbva": -102.29,
-    "caixa": -3038.49,
+    "bbva": -109.59,
+    "caixa": -2506.88,
     "bbvaNominas": 696.0,
-    "cajaCashdro": 1970.0,
+    "cajaCashdro": 500.0,
     "efectivoCasa": 500.0,
-    "actualizado": "2026-10-09"
+    "actualizado": "2026-10-10"
   },
   "runway": {
     "gastoFijoMensual": 20257.0,
-    "cajaPropia": 25,
+    "cajaPropia": -920,
     "mesesCaja": 0.0,
-    "disponibleFinanciacion": 76860,
+    "disponibleFinanciacion": 77383,
     "mesesFinanciacionAdicional": 3.8,
     "mesesTotal": 3.8,
     "polizas": [
       {
         "nombre": "BBVA (3,7% · renovada hasta 13/10/2027, anexo firmado 09/10/2026)",
         "limite": 50000,
-        "saldoActual": -102.29,
-        "disponible": 49898,
+        "saldoActual": -109.59,
+        "disponible": 49890,
         "prioridad": "MANTENER"
       },
       {
         "nombre": "CaixaBank (renov. 27 ene, 5%)",
         "limite": 30000,
-        "saldoActual": -3038.49,
-        "disponible": 26962,
+        "saldoActual": -2506.88,
+        "disponible": 27493,
         "prioridad": "ELIMINAR"
       }
     ],
@@ -789,8 +789,8 @@
     "Coste de personal es parcial en general (parte de nóminas vía cuenta BBVA oculta).",
     "El reparto alimentación/bebidas es una aproximación por nombre de proveedor.",
     "Ratios de agosto usan datos REALES de Haddock (food 15,92%, personal 22,53%). Bebidas 14,28% incluye una compra grande de stock, no es el ritmo mensual normal.",
-    "09/10/2026: liquidez total 25.22 EUR (banco combinado -3140.78). Sube respecto al 08/10 (-648,68), pero incluye un ingreso de cajero de 870 EUR en CaixaBank el 08/10: si salió del Cashdro/efectivo, hay que restarlo de esas cajas. Sigue en zona crítica.",
-    "09/10/2026: anexo de renovación de la póliza BBVA (50.000 EUR) firmado y aprobado. Vigente hasta 13/10/2027."
+    "09/10/2026: anexo de renovación de la póliza BBVA (50.000 EUR) firmado y aprobado. Vigente hasta 13/10/2027.",
+    "10/10/2026: liquidez total -920.47 EUR (banco combinado -2616.47; Cashdro 500). Negativa otra vez: el cajero de 870 EUR del 08/10 salió de las cajas y los cargos de proveedores siguen entrando."
   ],
   "comparativaInteranual": [
     {
