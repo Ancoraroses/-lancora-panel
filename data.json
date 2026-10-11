@@ -1,34 +1,34 @@
 {
-  "actualizado": "2026-10-10",
+  "actualizado": "2026-10-11",
   "cobertura": "01/09/2024 – 25/09/2026",
   "tesoreria": {
-    "bbva": -109.59,
-    "caixa": -2506.88,
+    "bbva": 561.08,
+    "caixa": -2494.81,
     "bbvaNominas": 696.0,
     "cajaCashdro": 500.0,
     "efectivoCasa": 500.0,
-    "actualizado": "2026-10-10"
+    "actualizado": "2026-10-11"
   },
   "runway": {
     "gastoFijoMensual": 20257.0,
-    "cajaPropia": -920,
+    "cajaPropia": -238,
     "mesesCaja": 0.0,
-    "disponibleFinanciacion": 77383,
-    "mesesFinanciacionAdicional": 3.8,
-    "mesesTotal": 3.8,
+    "disponibleFinanciacion": 78066,
+    "mesesFinanciacionAdicional": 3.9,
+    "mesesTotal": 3.9,
     "polizas": [
       {
         "nombre": "BBVA (3,7% · renovada hasta 13/10/2027, anexo firmado 09/10/2026)",
         "limite": 50000,
-        "saldoActual": -109.59,
-        "disponible": 49890,
+        "saldoActual": 561.08,
+        "disponible": 50561,
         "prioridad": "MANTENER"
       },
       {
         "nombre": "CaixaBank (renov. 27 ene, 5%)",
         "limite": 30000,
-        "saldoActual": -2506.88,
-        "disponible": 27493,
+        "saldoActual": -2494.81,
+        "disponible": 27505,
         "prioridad": "ELIMINAR"
       }
     ],
@@ -790,7 +790,7 @@
     "El reparto alimentación/bebidas es una aproximación por nombre de proveedor.",
     "Ratios de agosto usan datos REALES de Haddock (food 15,92%, personal 22,53%). Bebidas 14,28% incluye una compra grande de stock, no es el ritmo mensual normal.",
     "09/10/2026: anexo de renovación de la póliza BBVA (50.000 EUR) firmado y aprobado. Vigente hasta 13/10/2027.",
-    "10/10/2026: liquidez total -920.47 EUR (banco combinado -2616.47; Cashdro 500). Negativa otra vez: el cajero de 870 EUR del 08/10 salió de las cajas y los cargos de proveedores siguen entrando."
+    "11/10/2026: liquidez total -237.73 EUR (banco combinado -1933.73). BBVA sube +670,67 EUR respecto al 09/10 (cobros del fin de semana); Era aún no ha listado esos movimientos."
   ],
   "comparativaInteranual": [
     {
