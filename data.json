@@ -3,19 +3,19 @@
   "cobertura": "01/09/2024 – 25/09/2026",
   "tesoreria": {
     "bbva": 561.08,
-    "caixa": -2494.81,
+    "caixa": 297.97,
     "bbvaNominas": 696.0,
-    "cajaCashdro": 500.0,
+    "cajaCashdro": 200.0,
     "efectivoCasa": 500.0,
     "actualizado": "2026-10-11"
   },
   "runway": {
     "gastoFijoMensual": 20257.0,
-    "cajaPropia": -238,
-    "mesesCaja": 0.0,
-    "disponibleFinanciacion": 78066,
-    "mesesFinanciacionAdicional": 3.9,
-    "mesesTotal": 3.9,
+    "cajaPropia": 2255,
+    "mesesCaja": 0.1,
+    "disponibleFinanciacion": 80859,
+    "mesesFinanciacionAdicional": 4.0,
+    "mesesTotal": 4.1,
     "polizas": [
       {
         "nombre": "BBVA (3,7% · renovada hasta 13/10/2027, anexo firmado 09/10/2026)",
@@ -27,8 +27,8 @@
       {
         "nombre": "CaixaBank (renov. 27 ene, 5%)",
         "limite": 30000,
-        "saldoActual": -2494.81,
-        "disponible": 27505,
+        "saldoActual": 297.97,
+        "disponible": 30298,
         "prioridad": "ELIMINAR"
       }
     ],
@@ -790,7 +790,7 @@
     "El reparto alimentación/bebidas es una aproximación por nombre de proveedor.",
     "Ratios de agosto usan datos REALES de Haddock (food 15,92%, personal 22,53%). Bebidas 14,28% incluye una compra grande de stock, no es el ritmo mensual normal.",
     "09/10/2026: anexo de renovación de la póliza BBVA (50.000 EUR) firmado y aprobado. Vigente hasta 13/10/2027.",
-    "11/10/2026: liquidez total -237.73 EUR (banco combinado -1933.73). BBVA sube +670,67 EUR respecto al 09/10 (cobros del fin de semana); Era aún no ha listado esos movimientos."
+    "11/10/2026: liquidez total 2255.05 EUR. CaixaBank 297.97 (saldo dado por Carlos, positivo por primera vez en semanas), Cashdro 200, BBVA 561.08 (último dato de Era, puede haber cambiado)."
   ],
   "comparativaInteranual": [
     {
